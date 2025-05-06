@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pakete laden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\usepackage{ifluatex}
+\usepackage{babel}
+%
+\ifluatex
+ % LuaLaTeX
+ \usepackage{fontspec}
+ \usepackage{selnolig}
+\else
+ % PdfLaTeX
+ \usepackage[T1]{fontenc}
+ \usepackage{lmodern}
+\fi
+%
+\usepackage{csquotes}
+\usepackage{scrlayer-scrpage}
+\usepackage{microtype}
+\usepackage{seqsplit}
+%
+%\usepackage{ziffer}% optional
+%\usepackage[locale=DE]{siunitx}% optional
+%
+\usepackage{tikz}
+\usepackage{pgfplots}
+%
+\usepackage[
+  backend=biber,
+  style=apa,     % oder numeric, authoryear, alphabetic, verbose, etc.
+]{biblatex}
+%\usepackage[style=apa]{biblatex}
+%% Define custom sorting template to sort books first, followed by online sources
+%\DeclareSortingTemplate{books_first}{
+%  \sort{
+%    \field{type}
+%  }
+%  \sort{
+%    \field{sortname}
+%    \field{author}
+%    \field{editor}
+%    \field{translator}
+%    \field{sorttitle}
+%    \field{title}
+%  }
+%  \sort{
+%    \field{year}
+%  }
+%}
+%
+%% Use the custom sorting template
+%\ExecuteBibliographyOptions{sorting=books_first}
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+%
+\usepackage{hyperref}
+%
+%=== wichtig, dass folgende Pakete NACH hyperref geladen werden ===============
+\usepackage{scrhack}% Um Warnung bzgl. \float@addtolists im listings-Paket (s.u.) zu vermeiden
+\usepackage{listings}
+%
+\usepackage[nameinlink]{cleveref}
+\usepackage[all]{hypcap}
+\usepackage[
+	toc,
+	symbols,
+	acronyms,
+]{glossaries}

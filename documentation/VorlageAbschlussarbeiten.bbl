@@ -1,0 +1,2393 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{Bazarevsky2019}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=dfb2aa3f22269786162c9a57cea77fe8}{%
+           family={Bazarevsky},
+           familyi={B\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37772eda308fc43ed0997d30b5d826f6}{%
+           family={Kartynnik},
+           familyi={K\bibinitperiod},
+           given={Yury},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1dd0e6dedc8fc6459e7f328d6a50f578}{%
+           family={Vakunov},
+           familyi={V\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00821d21b98f6ba602fb8b5b8900bf21}{%
+           family={Raveendran},
+           familyi={R\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc9b23f96eed985127659775e2b92e3e}{%
+           family={Grundmann},
+           familyi={G\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1bd15b089228fd239d9cd7e38d190e14}
+      \strng{fullhash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{fullhashraw}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{bibnamehash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{authorbibnamehash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{authornamehash}{1bd15b089228fd239d9cd7e38d190e14}
+      \strng{authorfullhash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{authorfullhashraw}{ee4cdc71ca463d8824bdef148ca08828}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{BlazeFace: Sub-millisecond Neural Face Detection on Mobile GPUs}
+      \field{volume}{abs/1907.05047}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1907.05047
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1907.05047
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1907.05047
+      \endverb
+    \endentry
+    \entry{1467360}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=521763e082baf91e4935f956c6c0f8b3}{%
+           family={Dalal},
+           familyi={D\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d90650ec8434180101eb4aeec8e4a0c6}{%
+           family={Triggs},
+           familyi={T\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{bibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorbibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authornamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)}
+      \field{title}{Histograms of oriented gradients for human detection}
+      \field{volume}{1}
+      \field{year}{2005}
+      \field{pages}{886\bibrangedash 893 vol. 1}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2005.177
+      \endverb
+      \keyw{Histograms;Humans;Robustness;Object recognition;Support vector machines;Object detection;Testing;Image edge detection;High performance computing;Image databases}
+    \endentry
+    \entry{abs-1905-00641}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=6ead2c77e3080af378f5abe533067479}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Jiankang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dfa2e1cec77c8779469085a05d6a696}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bbca0c1f1986cc6fc4ad133baf8d1f4}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yuxiang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a71ec9b0799a46b55b420dbeb4bb4057}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jinke},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77919a913a57cee542eae85d6b4b3a96}{%
+           family={Kotsia},
+           familyi={K\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ac8d8aacb76b57beadc21f996305b69}{%
+           family={Zafeiriou},
+           familyi={Z\bibinitperiod},
+           given={Stefanos},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{496a2d2cd89373a6e59c36c3c978ab6a}
+      \strng{fullhash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{fullhashraw}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{bibnamehash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{authorbibnamehash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{authornamehash}{496a2d2cd89373a6e59c36c3c978ab6a}
+      \strng{authorfullhash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{authorfullhashraw}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{RetinaFace: Single-stage Dense Face Localisation in the Wild}
+      \field{volume}{abs/1905.00641}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1905.00641
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1905.00641
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1905.00641
+      \endverb
+    \endentry
+    \entry{dlib2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{1}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für dlib}
+      \field{title}{{Dlib C++ Library}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net
+      \endverb
+      \verb{url}
+      \verb https://dlib.net
+      \endverb
+    \endentry
+    \entry{cnnFaceDetectoroD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{2}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für cnn-face-detector.py von dlib}
+      \field{title}{{cnn-face-detector}}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb dlib.net/cnn_face_detector.py.html
+      \endverb
+      \verb{url}
+      \verb dlib.net/cnn_face_detector.py.html
+      \endverb
+    \endentry
+    \entry{DlibPythonoD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{3}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dlib Python API Documentation}
+      \field{title}{{Dlib C++ Library}}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb dclib.sourceforge.net/python/index.html
+      \endverb
+      \verb{url}
+      \verb dclib.sourceforge.net/python/index.html
+      \endverb
+    \endentry
+    \entry{faceLandmarkDetectionoD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{4}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für face-landmark-detection.py von dlib}
+      \field{title}{{face-landmark-detection.py}}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net/face_landmark_detection.py.html
+      \endverb
+      \verb{url}
+      \verb https://dlib.net/face_landmark_detection.py.html
+      \endverb
+    \endentry
+    \entry{faceDetectoroD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{5}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für get-frontal-face-detector von dlib}
+      \field{title}{{get-frontal-face-detector}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net/face_detector.py.html
+      \endverb
+      \verb{url}
+      \verb https://dlib.net/face_detector.py.html
+      \endverb
+    \endentry
+    \entry{trainObjectDetectoroD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{6}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für scan-fhog-pyramid von dlib}
+      \field{title}{{scan-fhog-pyramid}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net/train_object_detector.py.html
+      \endverb
+      \verb{url}
+      \verb https://dlib.net/train_object_detector.py.html
+      \endverb
+    \endentry
+    \entry{Esri2025SSD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=388e822485dfebf754da44907051b1c1}{%
+           family={{Esri Developer}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{388e822485dfebf754da44907051b1c1}
+      \strng{fullhash}{388e822485dfebf754da44907051b1c1}
+      \strng{fullhashraw}{388e822485dfebf754da44907051b1c1}
+      \strng{bibnamehash}{388e822485dfebf754da44907051b1c1}
+      \strng{authorbibnamehash}{388e822485dfebf754da44907051b1c1}
+      \strng{authornamehash}{388e822485dfebf754da44907051b1c1}
+      \strng{authorfullhash}{388e822485dfebf754da44907051b1c1}
+      \strng{authorfullhashraw}{388e822485dfebf754da44907051b1c1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{ArcGIS API for Python Documentation}
+      \field{title}{{How single-shot detector (SSD) works?}}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.arcgis.com/python/latest/guide/how-ssd-works/
+      \endverb
+      \verb{url}
+      \verb https://developers.arcgis.com/python/latest/guide/how-ssd-works/
+      \endverb
+    \endentry
+    \entry{GeeksforGeeks25}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f1e069787ece74531d112559945c6871}{%
+           family={GeeksforGeeks},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Erklärung von CNNs}
+      \field{title}{Introduction to Convolution Neural Network}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb www.geeksforgeeks.org/introduction-convolution-neural-network/
+      \endverb
+      \verb{url}
+      \verb www.geeksforgeeks.org/introduction-convolution-neural-network/
+      \endverb
+    \endentry
+    \entry{mediapipeFramework}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e7cf69b9d54a4a6e396b40a294351a}{%
+           family={{Google AI Edge}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{bibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorbibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authornamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für MediaPipe}
+      \field{title}{MediaPipe Framework}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb ai.google.dev/edge/mediapipe/framework
+      \endverb
+      \verb{url}
+      \verb ai.google.dev/edge/mediapipe/framework
+      \endverb
+    \endentry
+    \entry{mediapipeFace}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e7cf69b9d54a4a6e396b40a294351a}{%
+           family={{Google AI Edge}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{bibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorbibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authornamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für MediaPipe}
+      \field{title}{Face detection guide}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector
+      \endverb
+      \verb{url}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector
+      \endverb
+    \endentry
+    \entry{mediapipeSolutions}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e7cf69b9d54a4a6e396b40a294351a}{%
+           family={{Google AI Edge}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{bibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorbibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authornamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für MediaPipe}
+      \field{title}{MediaPipe Solutions guide}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/guide.md
+      \endverb
+      \verb{url}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/guide.md
+      \endverb
+    \endentry
+    \entry{howse2019opencv}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cf0d2be4147350c791e09506da23a8c6}{%
+           family={Howse},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing}%
+      }
+      \strng{namehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{fullhash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{fullhashraw}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{bibnamehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authorbibnamehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authornamehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authorfullhash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authorfullhashraw}{cf0d2be4147350c791e09506da23a8c6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781789344585}
+      \field{title}{OpenCV 4 for Secret Agents: Use OpenCV 4 in secret projects to classify cats, reveal the unseen, and react to rogue drivers, 2nd Edition}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=b1qWDwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=b1qWDwAAQBAJ
+      \endverb
+    \endentry
+    \entry{JiaSDKLGGD14}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=9fce03efe6b3331a1b93ed2e7c0da9d5}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Yangqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ce499f8943cac7cba0a73388d289a2e}{%
+           family={Shelhamer},
+           familyi={S\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=913090a0d65c7a300c602f5a5a5a61e3}{%
+           family={Donahue},
+           familyi={D\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ebce94a92f410fe090dc3da9c8b632e}{%
+           family={Karayev},
+           familyi={K\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17faae490b91366d25e0e2d774e7b6b1}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2c60ceb4a241891e128295a5ae80aef}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7cd28a25c761aa64034ab0997a2b6ec}{%
+           family={Guadarrama},
+           familyi={G\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90180e1a30742e0d15328bfe637c2ef4}{%
+           family={Darrell},
+           familyi={D\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{782e24b57c1ce46bd023e6fd3c9a4b69}
+      \strng{fullhash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{fullhashraw}{29de2099997d5c8115f94d6807df6bec}
+      \strng{bibnamehash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{authorbibnamehash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{authornamehash}{782e24b57c1ce46bd023e6fd3c9a4b69}
+      \strng{authorfullhash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{authorfullhashraw}{29de2099997d5c8115f94d6807df6bec}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Caffe: Convolutional Architecture for Fast Feature Embedding}
+      \field{volume}{abs/1408.5093}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1408.5093
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1408.5093
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1408.5093
+      \endverb
+    \endentry
+    \entry{Kazemi2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f9f7b64329b77e00c6475a990b84d37f}{%
+           family={Kazemi},
+           familyi={K\bibinitperiod},
+           given={Vahid},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=978b385f0a467be210c02e0d38d629b3}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Josephine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{fullhash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{fullhashraw}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{bibnamehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authorbibnamehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authornamehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authorfullhash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authorfullhashraw}{683a03a342f13c8b2c1d1d539447f473}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{One Millisecond Face Alignment with an Ensemble of Regression Trees}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.13140/2.1.1212.2243
+      \endverb
+    \endentry
+    \entry{dlib09}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dea76727c3eb87de81b639bfc2976762}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Davis\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \strng{bibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorbibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authornamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{title}{Dlib-ml: A Machine Learning Toolkit}
+      \field{volume}{10}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{1755\bibrangedash 1758}
+      \range{pages}{4}
+    \endentry
+    \entry{King15}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dea76727c3eb87de81b639bfc2976762}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Davis\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \strng{bibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorbibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authornamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Max-Margin Object Detection}
+      \field{volume}{abs/1502.00046}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1502.00046
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1502.00046
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.00046
+      \endverb
+    \endentry
+    \entry{King24}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dea76727c3eb87de81b639bfc2976762}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Davis\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \strng{bibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorbibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authornamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{GitHub Page von dlib-models}
+      \field{title}{dlib-models}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb github.com/davisking/dlib-models
+      \endverb
+      \verb{url}
+      \verb github.com/davisking/dlib-models
+      \endverb
+    \endentry
+    \entry{Liu2016}{inbook}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=c0e0d23e2d09e45e6f51cc2bcea6d9f9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1826f3465579186aff299a9b0e16ed7}{%
+           family={Anguelov},
+           familyi={A\bibinitperiod},
+           given={Dragomir},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bbc4c5d96f205bada839e74e0202146}{%
+           family={Erhan},
+           familyi={E\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698ee61a2f3fa29734204496d2d36aef}{%
+           family={Reed},
+           familyi={R\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec820780d594e36d11c6e30c7a2614e0}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Cheng-Yang},
+           giveni={C\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=963e9b2526a7150c418b4e9e9d19a82f}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={Alexander\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=89e3f1ee83923a2c7a44b7597b35fccd}{%
+           family={Leibe},
+           familyi={L\bibinitperiod},
+           given={Bastian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7df17ebc3cfb4cf295bff60b579d5638}{%
+           family={Matas},
+           familyi={M\bibinitperiod},
+           given={Jiri},
+           giveni={J\bibinitperiod}}}%
+        {{hash=da5596827b4ee2721d6b0cc1010c9fa4}{%
+           family={Sebe},
+           familyi={S\bibinitperiod},
+           given={Nicu},
+           giveni={N\bibinitperiod}}}%
+        {{hash=53d2880ad8047b61cdae2c6b2803e763}{%
+           family={Welling},
+           familyi={W\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{623b50f45b666c1e9b84e5228e255810}
+      \strng{fullhash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{fullhashraw}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{bibnamehash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{authorbibnamehash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{authornamehash}{623b50f45b666c1e9b84e5228e255810}
+      \strng{authorfullhash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{authorfullhashraw}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{editorbibnamehash}{5d022b1b57b06bafadc79950b7fdba9b}
+      \strng{editornamehash}{fe75fea4df059cd110c5212ee61f2454}
+      \strng{editorfullhash}{5d022b1b57b06bafadc79950b7fdba9b}
+      \strng{editorfullhashraw}{5d022b1b57b06bafadc79950b7fdba9b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Vision -- ECCV 2016}
+      \field{isbn}{978-3-319-46448-0}
+      \field{title}{SSD: Single Shot MultiBox Detector}
+      \field{year}{2016}
+      \field{pages}{21\bibrangedash 37}
+      \range{pages}{17}
+    \endentry
+    \entry{sefiks14451}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a4e862fec042210ef4a7013f4e56e9a}{%
+           family={Serengil},
+           familyi={S\bibinitperiod},
+           given={Sefik\bibnamedelima Ilkin},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{fullhash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{fullhashraw}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{bibnamehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authorbibnamehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authornamehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authorfullhash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authorfullhashraw}{4a4e862fec042210ef4a7013f4e56e9a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{{Online; accessed 2025-04-26}}
+      \field{title}{Deep Face Detection with OpenCV in Python}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sefiks.com/2020/08/25/deep-face-detection-with-opencv-in-python/
+      \endverb
+      \verb{url}
+      \verb https://sefiks.com/2020/08/25/deep-face-detection-with-opencv-in-python/
+      \endverb
+    \endentry
+    \entry{ViolaJones2001}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=03e2a9b081a845bb9dbb7bb508516191}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3656094aa90ce6b5927293e625dedee3}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{fullhash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{fullhashraw}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{bibnamehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authorbibnamehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authornamehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authorfullhash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authorfullhashraw}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}
+      \field{title}{Rapid object detection using a boosted cascade of simple features}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{I\bibrangedash I}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2001.990517
+      \endverb
+      \keyw{Object detection;Face detection;Pixel;Detectors;Filters;Machine learning;Image representation;Focusing;Skin;Robustness}
+    \endentry
+    \entry{Wang2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=74e0379620ccfe0f5100f49109cddd56}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chengji},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b7be320f4a37b5c679a3719f4908616}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Zhiming},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e92d0b3a68fc731f7e6ebecc9e3b7c5}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Sheng},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc6feb32222eb9129e27d20dbc31167a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shaozi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00d0fabd2c6ee35a3f5aa480fec06212}
+      \strng{fullhash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{fullhashraw}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{bibnamehash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{authorbibnamehash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{authornamehash}{00d0fabd2c6ee35a3f5aa480fec06212}
+      \strng{authorfullhash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{authorfullhashraw}{cc2179fca51be1f2f8552a6e69b77a88}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Anchor Free Network for Multi-Scale Face Detection}
+      \field{year}{2018}
+      \field{pages}{1554\bibrangedash 1559}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICPR.2018.8545814
+      \endverb
+    \endentry
+    \entry{wu2023yunet}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7bb2d83991df51fab82e334ba89d1132}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7a55881cb261787fefdc7f2311dab03}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bea96c65bfe89c528ad7c2ebaba9d5df}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Shiyang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{95a5b9d20e620247996b4690be15bbe3}
+      \strng{fullhash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{fullhashraw}{2bb27902fa11483151ee79f167d642d4}
+      \strng{bibnamehash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{authorbibnamehash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{authornamehash}{95a5b9d20e620247996b4690be15bbe3}
+      \strng{authorfullhash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{authorfullhashraw}{2bb27902fa11483151ee79f167d642d4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Intelligence Research}
+      \field{month}{10}
+      \field{title}{YuNet: A Tiny Millisecond-level Face Detector}
+      \field{volume}{20}
+      \field{year}{2023}
+      \field{pages}{656\bibrangedash 665}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/s11633-023-1423-y
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11633-023-1423-y
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11633-023-1423-y
+      \endverb
+    \endentry
+    \entry{ZhangZL016}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8d2b1627b2e3b6cff1b1ed025022d0df}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Kaipeng},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=038d1a58d8d49317592eda66c39ac456}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhanpeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=828a5b63771fe4db7767e6bd65ec78ce}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhifeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2addc56ce0ea3a8fc05ff9b0995f74f4}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0ca2f38f79c3c5d127a13a17d7b27590}
+      \strng{fullhash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{fullhashraw}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{bibnamehash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{authorbibnamehash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{authornamehash}{0ca2f38f79c3c5d127a13a17d7b27590}
+      \strng{authorfullhash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{authorfullhashraw}{7cf250efdbc56a875fede85b42f8b85e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks}
+      \field{volume}{abs/1604.02878}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.02878
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1604.02878
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1604.02878
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{Bazarevsky2019}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=dfb2aa3f22269786162c9a57cea77fe8}{%
+           family={Bazarevsky},
+           familyi={B\bibinitperiod},
+           given={Valentin},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=37772eda308fc43ed0997d30b5d826f6}{%
+           family={Kartynnik},
+           familyi={K\bibinitperiod},
+           given={Yury},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1dd0e6dedc8fc6459e7f328d6a50f578}{%
+           family={Vakunov},
+           familyi={V\bibinitperiod},
+           given={Andrey},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00821d21b98f6ba602fb8b5b8900bf21}{%
+           family={Raveendran},
+           familyi={R\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc9b23f96eed985127659775e2b92e3e}{%
+           family={Grundmann},
+           familyi={G\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1bd15b089228fd239d9cd7e38d190e14}
+      \strng{fullhash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{fullhashraw}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{bibnamehash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{authorbibnamehash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{authornamehash}{1bd15b089228fd239d9cd7e38d190e14}
+      \strng{authorfullhash}{ee4cdc71ca463d8824bdef148ca08828}
+      \strng{authorfullhashraw}{ee4cdc71ca463d8824bdef148ca08828}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{BlazeFace: Sub-millisecond Neural Face Detection on Mobile GPUs}
+      \field{volume}{abs/1907.05047}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1907.05047
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1907.05047
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1907.05047
+      \endverb
+    \endentry
+    \entry{1467360}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=521763e082baf91e4935f956c6c0f8b3}{%
+           family={Dalal},
+           familyi={D\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d90650ec8434180101eb4aeec8e4a0c6}{%
+           family={Triggs},
+           familyi={T\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{fullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{bibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorbibnamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authornamehash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhash}{8316a8a4748fedae6ff9c5414cecc95a}
+      \strng{authorfullhashraw}{8316a8a4748fedae6ff9c5414cecc95a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)}
+      \field{title}{Histograms of oriented gradients for human detection}
+      \field{volume}{1}
+      \field{year}{2005}
+      \field{pages}{886\bibrangedash 893 vol. 1}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2005.177
+      \endverb
+      \keyw{Histograms;Humans;Robustness;Object recognition;Support vector machines;Object detection;Testing;Image edge detection;High performance computing;Image databases}
+    \endentry
+    \entry{abs-1905-00641}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=6ead2c77e3080af378f5abe533067479}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Jiankang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5dfa2e1cec77c8779469085a05d6a696}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jia},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6bbca0c1f1986cc6fc4ad133baf8d1f4}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Yuxiang},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a71ec9b0799a46b55b420dbeb4bb4057}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jinke},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77919a913a57cee542eae85d6b4b3a96}{%
+           family={Kotsia},
+           familyi={K\bibinitperiod},
+           given={Irene},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ac8d8aacb76b57beadc21f996305b69}{%
+           family={Zafeiriou},
+           familyi={Z\bibinitperiod},
+           given={Stefanos},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{496a2d2cd89373a6e59c36c3c978ab6a}
+      \strng{fullhash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{fullhashraw}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{bibnamehash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{authorbibnamehash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{authornamehash}{496a2d2cd89373a6e59c36c3c978ab6a}
+      \strng{authorfullhash}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \strng{authorfullhashraw}{e04e8a5ee8bc08dc6e19049ed04d2c30}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{RetinaFace: Single-stage Dense Face Localisation in the Wild}
+      \field{volume}{abs/1905.00641}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1905.00641
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1905.00641
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1905.00641
+      \endverb
+    \endentry
+    \entry{dlib2022}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{1}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für dlib}
+      \field{title}{{Dlib C++ Library}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net
+      \endverb
+      \verb{url}
+      \verb https://dlib.net
+      \endverb
+    \endentry
+    \entry{cnnFaceDetectoroD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{2}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für cnn-face-detector.py von dlib}
+      \field{title}{{cnn-face-detector}}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb dlib.net/cnn_face_detector.py.html
+      \endverb
+      \verb{url}
+      \verb dlib.net/cnn_face_detector.py.html
+      \endverb
+    \endentry
+    \entry{DlibPythonoD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{3}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Dlib Python API Documentation}
+      \field{title}{{Dlib C++ Library}}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb dclib.sourceforge.net/python/index.html
+      \endverb
+      \verb{url}
+      \verb dclib.sourceforge.net/python/index.html
+      \endverb
+    \endentry
+    \entry{faceLandmarkDetectionoD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{4}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für face-landmark-detection.py von dlib}
+      \field{title}{{face-landmark-detection.py}}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net/face_landmark_detection.py.html
+      \endverb
+      \verb{url}
+      \verb https://dlib.net/face_landmark_detection.py.html
+      \endverb
+    \endentry
+    \entry{faceDetectoroD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{5}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für get-frontal-face-detector von dlib}
+      \field{title}{{get-frontal-face-detector}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net/face_detector.py.html
+      \endverb
+      \verb{url}
+      \verb https://dlib.net/face_detector.py.html
+      \endverb
+    \endentry
+    \entry{trainObjectDetectoroD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=204151369b0775e8003dda9f100dccc8}{%
+           family={dlib},
+           familyi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{fullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \strng{bibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorbibnamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authornamehash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhash}{204151369b0775e8003dda9f100dccc8}
+      \strng{authorfullhashraw}{204151369b0775e8003dda9f100dccc8}
+      \field{extraname}{6}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für scan-fhog-pyramid von dlib}
+      \field{title}{{scan-fhog-pyramid}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dlib.net/train_object_detector.py.html
+      \endverb
+      \verb{url}
+      \verb https://dlib.net/train_object_detector.py.html
+      \endverb
+    \endentry
+    \entry{Esri2025SSD}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=388e822485dfebf754da44907051b1c1}{%
+           family={{Esri Developer}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{388e822485dfebf754da44907051b1c1}
+      \strng{fullhash}{388e822485dfebf754da44907051b1c1}
+      \strng{fullhashraw}{388e822485dfebf754da44907051b1c1}
+      \strng{bibnamehash}{388e822485dfebf754da44907051b1c1}
+      \strng{authorbibnamehash}{388e822485dfebf754da44907051b1c1}
+      \strng{authornamehash}{388e822485dfebf754da44907051b1c1}
+      \strng{authorfullhash}{388e822485dfebf754da44907051b1c1}
+      \strng{authorfullhashraw}{388e822485dfebf754da44907051b1c1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{ArcGIS API for Python Documentation}
+      \field{title}{{How single-shot detector (SSD) works?}}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.arcgis.com/python/latest/guide/how-ssd-works/
+      \endverb
+      \verb{url}
+      \verb https://developers.arcgis.com/python/latest/guide/how-ssd-works/
+      \endverb
+    \endentry
+    \entry{GeeksforGeeks25}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f1e069787ece74531d112559945c6871}{%
+           family={GeeksforGeeks},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Erklärung von CNNs}
+      \field{title}{Introduction to Convolution Neural Network}
+      \field{urlday}{3}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb www.geeksforgeeks.org/introduction-convolution-neural-network/
+      \endverb
+      \verb{url}
+      \verb www.geeksforgeeks.org/introduction-convolution-neural-network/
+      \endverb
+    \endentry
+    \entry{mediapipeFramework}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e7cf69b9d54a4a6e396b40a294351a}{%
+           family={{Google AI Edge}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{bibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorbibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authornamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für MediaPipe}
+      \field{title}{MediaPipe Framework}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb ai.google.dev/edge/mediapipe/framework
+      \endverb
+      \verb{url}
+      \verb ai.google.dev/edge/mediapipe/framework
+      \endverb
+    \endentry
+    \entry{mediapipeFace}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e7cf69b9d54a4a6e396b40a294351a}{%
+           family={{Google AI Edge}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{bibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorbibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authornamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für MediaPipe}
+      \field{title}{Face detection guide}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector
+      \endverb
+      \verb{url}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector
+      \endverb
+    \endentry
+    \entry{mediapipeSolutions}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52e7cf69b9d54a4a6e396b40a294351a}{%
+           family={{Google AI Edge}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{fullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{bibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorbibnamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authornamehash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhash}{52e7cf69b9d54a4a6e396b40a294351a}
+      \strng{authorfullhashraw}{52e7cf69b9d54a4a6e396b40a294351a}
+      \field{extraname}{3}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Developer Documentation für MediaPipe}
+      \field{title}{MediaPipe Solutions guide}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/guide.md
+      \endverb
+      \verb{url}
+      \verb https://ai.google.dev/edge/mediapipe/solutions/guide.md
+      \endverb
+    \endentry
+    \entry{howse2019opencv}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cf0d2be4147350c791e09506da23a8c6}{%
+           family={Howse},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing}%
+      }
+      \strng{namehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{fullhash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{fullhashraw}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{bibnamehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authorbibnamehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authornamehash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authorfullhash}{cf0d2be4147350c791e09506da23a8c6}
+      \strng{authorfullhashraw}{cf0d2be4147350c791e09506da23a8c6}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781789344585}
+      \field{title}{OpenCV 4 for Secret Agents: Use OpenCV 4 in secret projects to classify cats, reveal the unseen, and react to rogue drivers, 2nd Edition}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=b1qWDwAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=b1qWDwAAQBAJ
+      \endverb
+    \endentry
+    \entry{JiaSDKLGGD14}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=9fce03efe6b3331a1b93ed2e7c0da9d5}{%
+           family={Jia},
+           familyi={J\bibinitperiod},
+           given={Yangqing},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ce499f8943cac7cba0a73388d289a2e}{%
+           family={Shelhamer},
+           familyi={S\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=913090a0d65c7a300c602f5a5a5a61e3}{%
+           family={Donahue},
+           familyi={D\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1ebce94a92f410fe090dc3da9c8b632e}{%
+           family={Karayev},
+           familyi={K\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=17faae490b91366d25e0e2d774e7b6b1}{%
+           family={Long},
+           familyi={L\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c2c60ceb4a241891e128295a5ae80aef}{%
+           family={Girshick},
+           familyi={G\bibinitperiod},
+           given={Ross\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7cd28a25c761aa64034ab0997a2b6ec}{%
+           family={Guadarrama},
+           familyi={G\bibinitperiod},
+           given={Sergio},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=90180e1a30742e0d15328bfe637c2ef4}{%
+           family={Darrell},
+           familyi={D\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{782e24b57c1ce46bd023e6fd3c9a4b69}
+      \strng{fullhash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{fullhashraw}{29de2099997d5c8115f94d6807df6bec}
+      \strng{bibnamehash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{authorbibnamehash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{authornamehash}{782e24b57c1ce46bd023e6fd3c9a4b69}
+      \strng{authorfullhash}{29de2099997d5c8115f94d6807df6bec}
+      \strng{authorfullhashraw}{29de2099997d5c8115f94d6807df6bec}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Caffe: Convolutional Architecture for Fast Feature Embedding}
+      \field{volume}{abs/1408.5093}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1408.5093
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1408.5093
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1408.5093
+      \endverb
+    \endentry
+    \entry{Kazemi2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f9f7b64329b77e00c6475a990b84d37f}{%
+           family={Kazemi},
+           familyi={K\bibinitperiod},
+           given={Vahid},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=978b385f0a467be210c02e0d38d629b3}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Josephine},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{fullhash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{fullhashraw}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{bibnamehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authorbibnamehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authornamehash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authorfullhash}{683a03a342f13c8b2c1d1d539447f473}
+      \strng{authorfullhashraw}{683a03a342f13c8b2c1d1d539447f473}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{06}
+      \field{title}{One Millisecond Face Alignment with an Ensemble of Regression Trees}
+      \field{year}{2014}
+      \verb{doi}
+      \verb 10.13140/2.1.1212.2243
+      \endverb
+    \endentry
+    \entry{dlib09}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dea76727c3eb87de81b639bfc2976762}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Davis\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \strng{bibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorbibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authornamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Machine Learning Research}
+      \field{title}{Dlib-ml: A Machine Learning Toolkit}
+      \field{volume}{10}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{1755\bibrangedash 1758}
+      \range{pages}{4}
+    \endentry
+    \entry{King15}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dea76727c3eb87de81b639bfc2976762}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Davis\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \strng{bibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorbibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authornamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Max-Margin Object Detection}
+      \field{volume}{abs/1502.00046}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1502.00046
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1502.00046
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.00046
+      \endverb
+    \endentry
+    \entry{King24}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=dea76727c3eb87de81b639bfc2976762}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Davis\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{fullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \strng{bibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorbibnamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authornamehash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhash}{dea76727c3eb87de81b639bfc2976762}
+      \strng{authorfullhashraw}{dea76727c3eb87de81b639bfc2976762}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{GitHub Page von dlib-models}
+      \field{title}{dlib-models}
+      \field{urlday}{2}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb github.com/davisking/dlib-models
+      \endverb
+      \verb{url}
+      \verb github.com/davisking/dlib-models
+      \endverb
+    \endentry
+    \entry{Liu2016}{inbook}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=c0e0d23e2d09e45e6f51cc2bcea6d9f9}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1826f3465579186aff299a9b0e16ed7}{%
+           family={Anguelov},
+           familyi={A\bibinitperiod},
+           given={Dragomir},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8bbc4c5d96f205bada839e74e0202146}{%
+           family={Erhan},
+           familyi={E\bibinitperiod},
+           given={Dumitru},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           familyi={S\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=698ee61a2f3fa29734204496d2d36aef}{%
+           family={Reed},
+           familyi={R\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec820780d594e36d11c6e30c7a2614e0}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Cheng-Yang},
+           giveni={C\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=963e9b2526a7150c418b4e9e9d19a82f}{%
+           family={Berg},
+           familyi={B\bibinitperiod},
+           given={Alexander\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=89e3f1ee83923a2c7a44b7597b35fccd}{%
+           family={Leibe},
+           familyi={L\bibinitperiod},
+           given={Bastian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7df17ebc3cfb4cf295bff60b579d5638}{%
+           family={Matas},
+           familyi={M\bibinitperiod},
+           given={Jiri},
+           giveni={J\bibinitperiod}}}%
+        {{hash=da5596827b4ee2721d6b0cc1010c9fa4}{%
+           family={Sebe},
+           familyi={S\bibinitperiod},
+           given={Nicu},
+           giveni={N\bibinitperiod}}}%
+        {{hash=53d2880ad8047b61cdae2c6b2803e763}{%
+           family={Welling},
+           familyi={W\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{623b50f45b666c1e9b84e5228e255810}
+      \strng{fullhash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{fullhashraw}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{bibnamehash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{authorbibnamehash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{authornamehash}{623b50f45b666c1e9b84e5228e255810}
+      \strng{authorfullhash}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{authorfullhashraw}{d5e1ac3dfe6687980f91e701611520ad}
+      \strng{editorbibnamehash}{5d022b1b57b06bafadc79950b7fdba9b}
+      \strng{editornamehash}{fe75fea4df059cd110c5212ee61f2454}
+      \strng{editorfullhash}{5d022b1b57b06bafadc79950b7fdba9b}
+      \strng{editorfullhashraw}{5d022b1b57b06bafadc79950b7fdba9b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Vision -- ECCV 2016}
+      \field{isbn}{978-3-319-46448-0}
+      \field{title}{SSD: Single Shot MultiBox Detector}
+      \field{year}{2016}
+      \field{pages}{21\bibrangedash 37}
+      \range{pages}{17}
+    \endentry
+    \entry{sefiks14451}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4a4e862fec042210ef4a7013f4e56e9a}{%
+           family={Serengil},
+           familyi={S\bibinitperiod},
+           given={Sefik\bibnamedelima Ilkin},
+           giveni={S\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{fullhash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{fullhashraw}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{bibnamehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authorbibnamehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authornamehash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authorfullhash}{4a4e862fec042210ef4a7013f4e56e9a}
+      \strng{authorfullhashraw}{4a4e862fec042210ef4a7013f4e56e9a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{{Online; accessed 2025-04-26}}
+      \field{title}{Deep Face Detection with OpenCV in Python}
+      \field{urlday}{26}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sefiks.com/2020/08/25/deep-face-detection-with-opencv-in-python/
+      \endverb
+      \verb{url}
+      \verb https://sefiks.com/2020/08/25/deep-face-detection-with-opencv-in-python/
+      \endverb
+    \endentry
+    \entry{ViolaJones2001}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=03e2a9b081a845bb9dbb7bb508516191}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3656094aa90ce6b5927293e625dedee3}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{fullhash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{fullhashraw}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{bibnamehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authorbibnamehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authornamehash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authorfullhash}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \strng{authorfullhashraw}{227ecf38573bbc68c4d6e1852ffa83ff}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}
+      \field{title}{Rapid object detection using a boosted cascade of simple features}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{I\bibrangedash I}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2001.990517
+      \endverb
+      \keyw{Object detection;Face detection;Pixel;Detectors;Filters;Machine learning;Image representation;Focusing;Skin;Robustness}
+    \endentry
+    \entry{Wang2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=74e0379620ccfe0f5100f49109cddd56}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chengji},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6b7be320f4a37b5c679a3719f4908616}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Zhiming},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e92d0b3a68fc731f7e6ebecc9e3b7c5}{%
+           family={Lian},
+           familyi={L\bibinitperiod},
+           given={Sheng},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bc6feb32222eb9129e27d20dbc31167a}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shaozi},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{00d0fabd2c6ee35a3f5aa480fec06212}
+      \strng{fullhash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{fullhashraw}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{bibnamehash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{authorbibnamehash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{authornamehash}{00d0fabd2c6ee35a3f5aa480fec06212}
+      \strng{authorfullhash}{cc2179fca51be1f2f8552a6e69b77a88}
+      \strng{authorfullhashraw}{cc2179fca51be1f2f8552a6e69b77a88}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Anchor Free Network for Multi-Scale Face Detection}
+      \field{year}{2018}
+      \field{pages}{1554\bibrangedash 1559}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICPR.2018.8545814
+      \endverb
+    \endentry
+    \entry{wu2023yunet}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7bb2d83991df51fab82e334ba89d1132}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a7a55881cb261787fefdc7f2311dab03}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bea96c65bfe89c528ad7c2ebaba9d5df}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Shiyang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{95a5b9d20e620247996b4690be15bbe3}
+      \strng{fullhash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{fullhashraw}{2bb27902fa11483151ee79f167d642d4}
+      \strng{bibnamehash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{authorbibnamehash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{authornamehash}{95a5b9d20e620247996b4690be15bbe3}
+      \strng{authorfullhash}{2bb27902fa11483151ee79f167d642d4}
+      \strng{authorfullhashraw}{2bb27902fa11483151ee79f167d642d4}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine Intelligence Research}
+      \field{month}{10}
+      \field{title}{YuNet: A Tiny Millisecond-level Face Detector}
+      \field{volume}{20}
+      \field{year}{2023}
+      \field{pages}{656\bibrangedash 665}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/s11633-023-1423-y
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11633-023-1423-y
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11633-023-1423-y
+      \endverb
+    \endentry
+    \entry{ZhangZL016}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=8d2b1627b2e3b6cff1b1ed025022d0df}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Kaipeng},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=038d1a58d8d49317592eda66c39ac456}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Zhanpeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=828a5b63771fe4db7767e6bd65ec78ce}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhifeng},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2addc56ce0ea3a8fc05ff9b0995f74f4}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Yu},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0ca2f38f79c3c5d127a13a17d7b27590}
+      \strng{fullhash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{fullhashraw}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{bibnamehash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{authorbibnamehash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{authornamehash}{0ca2f38f79c3c5d127a13a17d7b27590}
+      \strng{authorfullhash}{7cf250efdbc56a875fede85b42f8b85e}
+      \strng{authorfullhashraw}{7cf250efdbc56a875fede85b42f8b85e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Joint Face Detection and Alignment using Multi-task Cascaded Convolutional Networks}
+      \field{volume}{abs/1604.02878}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1604.02878
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1604.02878
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1604.02878
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

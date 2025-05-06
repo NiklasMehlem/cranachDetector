@@ -1,0 +1,92 @@
+\documentclass[
+	ngerman,
+	%twoside,
+	BCOR=8mm,
+	headings=normal,
+	parskip=half,
+	headsepline,
+	automark,
+	listof=totoc,
+	bibliography=totoc,
+	%,captions=tableabove
+	%draft
+]{scrreprt}
+%
+%
+\input{packages}
+%
+\input{definitions}
+%
+\input{glsdefs}
+%
+\makeglossaries
+%
+\graphicspath{{images/}}
+%
+\addbibresource{references.bib}
+
+\nocite{*} % listet alle Quellen (auch die nicht zitierten!)
+%
+%=== für schnelleres kopilieren alle ungeänderten Dateien auskommentieren =====
+\includeonly{
+	content/chapDeclaration,
+	content/chapAbstract,
+	content/chapEinleitung,
+	content/chapRecherche,
+	content/chapForm,
+	content/chapGestaltung,
+	content/chapLiteratur,
+}
+%
+%
+%==============================================================================
+%
+\begin{document}
+%
+\pdfbookmark[0]{Titelseite}{titel}
+\input{content/Cover}
+\cleardoublepage
+\pagenumbering{Roman}
+\include{content/chapAbstract}
+
+\cleardoublepage
+\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+\tableofcontents
+\listoftables
+\listoffigures
+\printglossary
+\printglossary[type=\acronymtype, title={Abkürzungsverzeichnis}]
+\printglossary[type=symbols, title={Symbolverzeichnis}]
+%
+\cleardoublepage
+\KOMAoptions{open=right}
+\pagenumbering{arabic}
+\include{content/chapEinleitung}
+\include{content/chapRecherche}
+
+\include{content/chapForm}
+\include{content/chapGestaltung}
+\include{content/chapLiteratur}
+%
+%\printbibliography[prenote=mynote]
+\printbibliography
+%\thispagestyle{empty}
+%\section{Quellenverzeichnis}
+%\printbibliography[type=book,title={Literatur}]
+%\printbibliography[type=inbook,title={\_\_\_}]
+%\printbibliography[type=thesis,title={\_\_\_}]
+%\printbibliography[type=article,title={\_\_\_}]
+%\printbibliography[type=inproceedings,title={\_\_\_}]
+%        
+%%\subsection{Internetquellen}
+%\printbibliography[type=online,title={Internetquellen}]
+%\printbibliography[type=misc,title={\_\_\_}]
+%
+\appendix
+\addchap{Anhang}
+\KOMAoptions{open=any}
+%
+\include{content/chapDeclaration}
+%
+%
+\end{document}

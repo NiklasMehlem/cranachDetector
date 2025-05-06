@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+ \begin{axis}[axis lines=center, xmin=-0.1, xmax=1.1, ymin=-0.1, ymax=1.1, xlabel={$x$}, ylabel={$y$},/pgf/number format/.cd, use comma,1000 sep={}]
+%
+ \addplot[red, thick, domain=0:0.5] {0};
+ \addplot[red, thick, domain=0.5:1, samples=100] {4*(x-0.5)^2};
+%
+ \addplot[THRed, only marks, mark=*]table[col sep=comma,x index=0,y index=1]{data/pointsFleuret.csv};%
+ \addplot[THPurple, only marks, mark=x, mark options={scale=2}]table[col sep=comma,x index=0,y index=2]{data/pointsFleuret.csv};%
+%
+ \end{axis}
+\end{tikzpicture}

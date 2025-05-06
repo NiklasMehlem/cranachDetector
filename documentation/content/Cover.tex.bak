@@ -1,0 +1,43 @@
+\begin{titlepage}
+%
+\sffamily% Umschalten auf serifenlose Schrift
+%
+\begin{center}
+\begin{tikzpicture}
+ \fill[THRed] (0, 0) rectangle (\textwidth/3, 3pt);
+ \fill[THOrange] (\textwidth/3, 0) rectangle (2*\textwidth/3, 3pt);
+ \fill[THPurple] (2*\textwidth/3, 0) rectangle (\textwidth, 3pt);
+\end{tikzpicture}
+\end{center}
+%
+\vfill
+%
+\begin{huge}
+Evaluierung von Gesichtserkennungsmodellen für historische Gemälde am Beispiel ausgewählter Werke Lucas Cranachs zur optimierten Positionierung von Overlays\\[10mm]
+\end{huge}
+%
+Bachelorarbeit zur Erlangung des akademischen Grades\newline
+\emph{Bachelor of Arts}\newline
+im Studiengang Medieninformatik\newline
+an der Fakultät für Informatik und Ingenieurwissenschaften\newline
+der Technischen Hochschule Köln
+%
+\vfill
+%
+\begin{tabular}{@{}ll}
+vorgelegt von: & Niklas Mehlem\\
+Matrikel-Nr.:  & 111 405 18\\
+Adresse:       & Brucknerstraße~78\\
+               & 53721 Siegburg\\
+               & niklas.mehlem@smail.th-koeln.de\\[5mm]
+eingereicht bei:   & Prof. Christian Noss\\
+Zweitgutachter*in: & Prof. Dr. Daniel Gaida
+\end{tabular}	
+%
+\\[10mm]
+%
+Siegburg, 13.06.2025%
+%
+\rmfamily% Umschalten auf Standard-Schrift mit Serifen
+%
+\end{titlepage}

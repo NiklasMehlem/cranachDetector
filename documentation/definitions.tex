@@ -1,0 +1,109 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Globale Definitionen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%=== pdf Metadaten ============================================================
+\hypersetup{
+	pdfauthor={Vorname Nachname},
+	pdftitle={Vorlage für wissenschaftliche Abschlussarbeiten an der TH Köln},
+	pdfsubject={Abschlussarbeit},
+	pdfkeywords={
+		LaTeX,
+		Abschlussarbeit,
+		Vorlage,
+	},
+	bookmarksnumbered=true,
+	pdfstartview=FitH,
+	hidelinks,
+}
+
+%=== Vorwort vor Literatur ====================================================
+\defbibnote{mynote}{%
+%	Wie in \cref{sec:bib-content} erläutert, werden im Literaturverzeichnis 
+%	ausschließlich die Quellen angegeben, auf die im Rahmen einer Arbeit 
+%	tatsächlich verwiesen wird. Bitte prüfen Sie also das Literaturverzeichnis 
+%	Ihrer Arbeit immer dahingehend, ob alle zitierten Quellen~--~und nur
+%	diese~--~erfasst wurden. Dies trifft auf das nun folgende Verzeichnis
+%	\emph{nicht} zu; die 
+%	meisten der hier aufgeführten Quellen werden in dieser Vorlage nicht 
+%	zitiert. Es handelt sich lediglich um ein Beispiel für ein 
+%	Literaturverzeichnis mit Literaturempfehlungen zum wissenschaftlichen 
+%	Schreiben.
+}
+
+%\bibliographystyle{apa}  % Oder z. B. alpha, ieee, apa, etc.
+%\bibliography{references}  % Ohne .bib-Endung!
+\addbibresource{references.bib}
+
+
+%=== Kopf-/Fusszeile definieren ===============================================
+\clearpairofpagestyles
+\ohead[]{\headmark}
+\ofoot[\pagemark]{\pagemark}
+
+%=== Farben definieren ========================================================
+\definecolor{THRed}{RGB}{207,24,32}
+\definecolor{THOrange}{RGB}{236,101,37}
+\definecolor{THPurple}{RGB}{175,54,140}
+
+%=== Einstellungen für cref ===================================================
+\newcommand{\crefpairconjunction}{ und~}
+\newcommand{\crefrangeconjunction}{ bis~}
+\crefname{figure}{Abbildung}{Abbildungen}
+
+%=== Einstellungen für plots ==================================================
+\pgfplotsset{
+	compat=newest,
+	/pgf/number format/.cd,
+	dec sep={\text{,}},
+	1000 sep={\,},
+}
+
+%=== Einstellungen für listings ===============================================
+\lstdefinestyle{myLaTeX}{
+	basicstyle=\footnotesize\ttfamily,
+	language=TeX,
+	keywordstyle=\color{blue},
+	frame=single,
+	backgroundcolor=\color{gray!10},
+	tabsize=2,
+	morekeywords={
+		lstdefinestyle,
+		footnotesize,
+		ttfamily,
+		color,
+	},
+}
+
+\lstdefinestyle{myBasic}{
+	basicstyle=\footnotesize\ttfamily,
+	frame=single,
+	escapechar={|_},
+	backgroundcolor=\color{white},
+	keywordstyle=\color{black},
+}
+
+\lstset{style=myLaTeX}
+
+%\lstset{language=Python, basicstyle=\small, frame=single, numbers=left, xleftmargin=2em, framexleftmargin=1.5em}
+%\renewcommand{\lstlistingname}{Algorithmus}
+
+
+%=== paar convenience Sachen definieren =======================================
+\DeclareMathOperator{\sgn}{sgn}
+\newcommand{\vecW}{\ensuremath{\mathbf{w}}}%
+\newcommand{\ci}{\ensuremath{\mathrm{i}}}%
+%
+\newcommand{\tb}{\textbackslash}
+%
+\newcommand{\comm}[1]{\enquote{\texttt{\tb #1}}}
+%
+\newcommand{\param}[1]{%
+	$\langle$\textrm{\textit{#1}}$\rangle$%
+}
+
+\newcommand{\monofett}[1]{\textbf{\texttt{\seqsplit{#1}}}}
+
+%=== Arial als Hauptschriftart ================================================
+%\setsansfont{Arial}
+%\renewcommand{\familydefault}{\sfdefault}

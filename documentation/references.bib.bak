@@ -1,0 +1,302 @@
+@Article{dlib09,
+  author = {Davis E. King},
+  title = {Dlib-ml: A Machine Learning Toolkit},
+  journal = {Journal of Machine Learning Research},
+  year = {2009},
+  volume = {10},
+  pages = {1755-1758},
+}
+
+@article{JiaSDKLGGD14,
+  author       = {Yangqing Jia and
+                  Evan Shelhamer and
+                  Jeff Donahue and
+                  Sergey Karayev and
+                  Jonathan Long and
+                  Ross B. Girshick and
+                  Sergio Guadarrama and
+                  Trevor Darrell},
+  title        = {Caffe: Convolutional Architecture for Fast Feature Embedding},
+  journal      = {CoRR},
+  volume       = {abs/1408.5093},
+  year         = {2014},
+  url          = {http://arxiv.org/abs/1408.5093},
+  eprinttype    = {arXiv},
+  eprint       = {1408.5093},
+  timestamp    = {Mon, 13 Aug 2018 16:46:41 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/JiaSDKLGGD14.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Bazarevsky2019,
+  author       = {Valentin Bazarevsky and
+                  Yury Kartynnik and
+                  Andrey Vakunov and
+                  Karthik Raveendran and
+                  Matthias Grundmann},
+  title        = {BlazeFace: Sub-millisecond Neural Face Detection on Mobile GPUs},
+  journal      = {CoRR},
+  volume       = {abs/1907.05047},
+  year         = {2019},
+  url          = {http://arxiv.org/abs/1907.05047},
+  eprinttype    = {arXiv},
+  eprint       = {1907.05047},
+  timestamp    = {Wed, 17 Jul 2019 10:27:36 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-1907-05047.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{King15,
+  author       = {Davis E. King},
+  title        = {Max-Margin Object Detection},
+  journal      = {CoRR},
+  volume       = {abs/1502.00046},
+  year         = {2015},
+  url          = {http://arxiv.org/abs/1502.00046},
+  eprinttype    = {arXiv},
+  eprint       = {1502.00046},
+  timestamp    = {Mon, 13 Aug 2018 16:48:21 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/King15.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{ZhangZL016,
+  author       = {Kaipeng Zhang and
+                  Zhanpeng Zhang and
+                  Zhifeng Li and
+                  Yu Qiao},
+  title        = {Joint Face Detection and Alignment using Multi-task Cascaded Convolutional
+                  Networks},
+  journal      = {CoRR},
+  volume       = {abs/1604.02878},
+  year         = {2016},
+  url          = {http://arxiv.org/abs/1604.02878},
+  eprinttype    = {arXiv},
+  eprint       = {1604.02878},
+  timestamp    = {Thu, 09 Sep 2021 01:19:36 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/ZhangZL016.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{wu2023yunet,
+  author    = {Wu, Wei and Peng, Hao and Yu, Shiyang},
+  title     = {YuNet: A Tiny Millisecond-level Face Detector},
+  journal   = {Machine Intelligence Research},
+  volume    = {20},
+  pages     = {656--665},
+  year      = {2023},
+  doi       = {10.1007/s11633-023-1423-y},
+  url       = {https://doi.org/10.1007/s11633-023-1423-y},
+  publisher = {Springer},
+  month     = {October}
+}
+
+@article{abs-1905-00641,
+  author       = {Jiankang Deng and
+                  Jia Guo and
+                  Yuxiang Zhou and
+                  Jinke Yu and
+                  Irene Kotsia and
+                  Stefanos Zafeiriou},
+  title        = {RetinaFace: Single-stage Dense Face Localisation in the Wild},
+  journal      = {CoRR},
+  volume       = {abs/1905.00641},
+  year         = {2019},
+  url          = {http://arxiv.org/abs/1905.00641},
+  eprinttype    = {arXiv},
+  eprint       = {1905.00641},
+  timestamp    = {Thu, 19 Dec 2024 16:41:11 +0100},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-1905-00641.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+
+@book{howse2019opencv,
+  title={OpenCV 4 for Secret Agents: Use OpenCV 4 in secret projects to classify cats, reveal the unseen, and react to rogue drivers, 2nd Edition},
+  author={Howse, J.},
+  isbn={9781789344585},
+  url={https://books.google.de/books?id=b1qWDwAAQBAJ},
+  year={2019},
+  publisher={Packt Publishing}
+}
+
+@INPROCEEDINGS{ViolaJones2001,
+  author={Viola, P. and Jones, M.},
+  booktitle={Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}, 
+  title={Rapid object detection using a boosted cascade of simple features}, 
+  year={2001},
+  volume={1},
+  number={},
+  pages={I-I},
+  keywords={Object detection;Face detection;Pixel;Detectors;Filters;Machine learning;Image representation;Focusing;Skin;Robustness},
+  doi={10.1109/CVPR.2001.990517}}
+  
+@InProceedings{Liu2016,
+author="Liu, Wei
+and Anguelov, Dragomir
+and Erhan, Dumitru
+and Szegedy, Christian
+and Reed, Scott
+and Fu, Cheng-Yang
+and Berg, Alexander C.",
+editor="Leibe, Bastian
+and Matas, Jiri
+and Sebe, Nicu
+and Welling, Max",
+title="SSD: Single Shot MultiBox Detector",
+booktitle="Computer Vision -- ECCV 2016",
+year="2016",
+publisher="Springer International Publishing",
+address="Cham",
+pages="21--37",
+isbn="978-3-319-46448-0"
+}
+
+@INPROCEEDINGS{1467360,
+  author={Dalal, N. and Triggs, B.},
+  booktitle={2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05)}, 
+  title={Histograms of oriented gradients for human detection}, 
+  year={2005},
+  volume={1},
+  number={},
+  pages={886-893 vol. 1},
+  keywords={Histograms;Humans;Robustness;Object recognition;Support vector machines;Object detection;Testing;Image edge detection;High performance computing;Image databases},
+  doi={10.1109/CVPR.2005.177}}
+  
+@inproceedings{Kazemi2014,
+author = {Kazemi, Vahid and Sullivan, Josephine},
+year = {2014},
+month = {06},
+pages = {},
+title = {One Millisecond Face Alignment with an Ensemble of Regression Trees},
+doi = {10.13140/2.1.1212.2243}
+}
+
+@inproceedings{Wang2018,
+author = {Wang, Chengji and Luo, Zhiming and Lian, Sheng and Li, Shaozi},
+year = {2018},
+month = {08},
+pages = {1554-1559},
+title = {Anchor Free Network for Multi-Scale Face Detection},
+doi = {10.1109/ICPR.2018.8545814}
+}
+
+@online{Esri2025SSD,
+  author  = {{Esri Developer}},
+  title   = {{How single-shot detector (SSD) works?}},
+  year    = {o.D.},
+  url     = {https://developers.arcgis.com/python/latest/guide/how-ssd-works/},
+  urldate = {2025-04-26},
+  note    = {ArcGIS API for Python Documentation}
+}
+
+@online{sefiks14451,
+  author  = {Serengil, Sefik Ilkin},
+  title   = {Deep Face Detection with OpenCV in Python},
+  year    = {2020},
+  url     = {https://sefiks.com/2020/08/25/deep-face-detection-with-opencv-in-python/},
+  urldate = {2025-04-26},
+  note    = {{Online; accessed 2025-04-26}}
+}
+
+@online{mediapipeFramework,
+  author  = {{Google AI Edge}},
+  title   = {MediaPipe Framework},
+  year    = {2024},
+  url     = {ai.google.dev/edge/mediapipe/framework},
+  urldate = {2025-04-26},
+  note    = {Developer Documentation für MediaPipe}
+}
+
+@online{mediapipeSolutions,
+  author  = {{Google AI Edge}},
+  title   = {MediaPipe Solutions guide},
+  year    = {2025},
+  url     = {https://ai.google.dev/edge/mediapipe/solutions/guide.md},
+  urldate = {2025-04-26},
+  note    = {Developer Documentation für MediaPipe}
+}
+
+@online{mediapipeFace,
+  author  = {{Google AI Edge}},
+  title   = {Face detection guide},
+  year    = {2025},
+  url     = {https://ai.google.dev/edge/mediapipe/solutions/vision/face_detector},
+  urldate = {2025-04-26},
+  note    = {Developer Documentation für MediaPipe}
+}
+
+@online{dlib2022,
+  author  = {dlib},
+  title   = {{Dlib C++ Library}},
+  year    = {2022},
+  url     = {https://dlib.net},
+  urldate = {2025-04-28},
+  note    = {Developer Documentation für dlib}
+}
+
+@online{faceDetectoroD,
+  author  = {dlib},
+  title   = {{get-frontal-face-detector}},
+  year    = {o.D.},
+  url     = {https://dlib.net/face_detector.py.html},
+  urldate = {2025-04-28},
+  note    = {Developer Documentation für get-frontal-face-detector von dlib}
+}
+
+@online{trainObjectDetectoroD,
+  author  = {dlib},
+  title   = {{scan-fhog-pyramid}},
+  year    = {o.D.},
+  url     = {https://dlib.net/train_object_detector.py.html},
+  urldate = {2025-04-28},
+  note    = {Developer Documentation für scan-fhog-pyramid von dlib}
+}
+
+@online{King24,
+  author  = {Davis E. King},
+  title   = {dlib-models},
+  year    = {2024},
+  url     = {github.com/davisking/dlib-models},
+  urldate = {2025-05-02},
+  note    = {GitHub Page von dlib-models}
+}
+
+@online{faceLandmarkDetectionoD,
+  author  = {dlib},
+  title   = {{face-landmark-detection.py}},
+  year    = {o.D.},
+  url     = {https://dlib.net/face_landmark_detection.py.html},
+  urldate = {2025-05-02},
+  note    = {Developer Documentation für face-landmark-detection.py von dlib}
+}
+
+@online{DlibPythonoD,
+  author  = {dlib},
+  title   = {{Dlib C++ Library}},
+  year    = {o.D.},
+  url     = {dclib.sourceforge.net/python/index.html},
+  urldate = {2025-05-02},
+  note    = {Dlib Python API Documentation}
+}
+
+@online{cnnFaceDetectoroD,
+  author  = {dlib},
+  title   = {{cnn-face-detector}},
+  year    = {o.D.},
+  url     = {dlib.net/cnn_face_detector.py.html},
+  urldate = {2025-05-03},
+  note    = {Developer Documentation für cnn-face-detector.py von dlib}
+}
+
+@online{GeeksforGeeks25,
+  author  = {GeeksforGeeks},
+  title   = {Introduction to Convolution Neural Network},
+  year    = {2025},
+  url     = {www.geeksforgeeks.org/introduction-convolution-neural-network/},
+  urldate = {2025-05-03},
+  note    = {Erklärung von CNNs}
+}	
+
+
+%%% END OF BIB %%%
