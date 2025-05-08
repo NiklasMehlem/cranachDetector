@@ -20,6 +20,7 @@
 \newacronym{rnet}{R-Net}{\textbf{Refine Network}}
 \newacronym{onet}{O-Net}{\textbf{Output Network}}
 \newacronym{nms}{NMS}{\textbf{Non-Maximum Suppression}}
+\newacronym{caffe}{Caffe}{\textbf{Convolutional Architecture for Fast Feature Embedding}}
 
 %=== Symbole ==================================================================
 \newglossaryentry{sym:force}{

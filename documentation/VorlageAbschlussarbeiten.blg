@@ -1,27 +1,27 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'VorlageAbschlussarbeiten.blg'
-[177] biber-MSWIN64:340> INFO - === 
-[248] Biber.pm:420> INFO - Reading 'VorlageAbschlussarbeiten.bcf'
-[351] Biber.pm:991> INFO - Using all citekeys in bib section 0
-[367] Biber.pm:4463> INFO - Processing section 0
-[395] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
-[436] bibtex.pm:1713> INFO - LaTeX decoding ...
-[471] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[694] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[695] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[695] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
-[695] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[738] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[738] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[738] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
-[738] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[788] bbl.pm:676> INFO - Writing 'VorlageAbschlussarbeiten.bbl' with encoding 'UTF-8'
-[818] bbl.pm:779> INFO - Output to VorlageAbschlussarbeiten.bbl
-[818] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'trainObjectDetectoroD' is not an integer - this will probably not sort properly.
-[818] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'Esri2025SSD' is not an integer - this will probably not sort properly.
-[818] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'faceLandmarkDetectionoD' is not an integer - this will probably not sort properly.
-[818] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'DlibPythonoD' is not an integer - this will probably not sort properly.
-[818] Biber.pm:131> WARN - legacy month field 'October' in entry 'wu2023yunet' is not an integer - this will probably not sort properly.
-[818] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'faceDetectoroD' is not an integer - this will probably not sort properly.
-[819] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'cnnFaceDetectoroD' is not an integer - this will probably not sort properly.
-[819] Biber.pm:133> INFO - WARNINGS: 7
+[95] biber-MSWIN64:340> INFO - === 
+[123] Biber.pm:420> INFO - Reading 'VorlageAbschlussarbeiten.bcf'
+[254] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[274] Biber.pm:4463> INFO - Processing section 0
+[286] Biber.pm:4654> INFO - Looking for bibtex file 'references.bib' for section 0
+[333] bibtex.pm:1713> INFO - LaTeX decoding ...
+[370] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[542] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[542] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[542] Biber.pm:4283> INFO - Sorting list 'apa/apasortcite//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
+[542] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[599] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[599] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[599] Biber.pm:4283> INFO - Sorting list 'apa/global//global/global/global' of type 'entry' with template 'apa' and locale 'de-DE'
+[599] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[630] bbl.pm:676> INFO - Writing 'VorlageAbschlussarbeiten.bbl' with encoding 'UTF-8'
+[659] bbl.pm:779> INFO - Output to VorlageAbschlussarbeiten.bbl
+[659] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'trainObjectDetectoroD' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'Esri2025SSD' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'DlibPythonoD' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'faceDetectoroD' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - legacy month field 'October' in entry 'wu2023yunet' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'cnnFaceDetectoroD' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - legacy year field 'o.D.' in entry 'faceLandmarkDetectionoD' is not an integer - this will probably not sort properly.
+[659] Biber.pm:133> INFO - WARNINGS: 7
