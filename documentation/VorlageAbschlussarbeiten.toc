@@ -15,48 +15,49 @@
 \contentsline {section}{\numberline {2.7}MTCNN}{8}{section.2.7}%
 \contentsline {section}{\numberline {2.8}Yunet}{9}{section.2.8}%
 \contentsline {section}{\numberline {2.9}RetinaFace (CPU)}{9}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Formaler Aufbau}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Reihenfolge}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Deckblatt}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Inhaltsverzeichnis}{12}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Abbildungsverzeichnis und Tabellenverzeichnis}{12}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Abkürzungsverzeichnis}{12}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Literaturverzeichnis}{12}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Rechtschreibung, Grammatik}{13}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Umfang der Arbeit}{13}{section.3.8}%
-\contentsline {chapter}{\numberline {4}Gestaltung: Textsatz mit \LaTeX }{14}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Unter der Haube}{15}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Überschriften}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Absätze}{16}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Silbentrennung}{16}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Aufzählungen}{16}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Abbildungen}{17}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Bilder}{17}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Vektorgrafiken}{18}{subsection.4.6.2}%
-\contentsline {section}{\numberline {4.7}Tabellen}{19}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Abbildungs- und Tabellenverzeichnis}{19}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Formeln}{19}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Quellcode, Pseudocode}{20}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Weitere Verzeichnisse}{21}{section.4.11}%
-\contentsline {subsection}{\numberline {4.11.1}Glossar erstellen}{22}{subsection.4.11.1}%
-\contentsline {subsection}{\numberline {4.11.2}Abkürzungsverzeichnis erstellen}{22}{subsection.4.11.2}%
-\contentsline {subsection}{\numberline {4.11.3}Symbolverzeichnis erstellen}{22}{subsection.4.11.3}%
-\contentsline {section}{\numberline {4.12}Verweise}{23}{section.4.12}%
-\contentsline {section}{\numberline {4.13}Besondere Abstände und Zeichen}{23}{section.4.13}%
-\contentsline {section}{\numberline {4.14}Wahl der Grundschriftart}{24}{section.4.14}%
-\contentsline {section}{\numberline {4.15}Metadaten für den pdf-Betrachter}{24}{section.4.15}%
-\contentsline {section}{\numberline {4.16}Wechsel zwischen ein- und doppelseitigem Layout}{25}{section.4.16}%
-\contentsline {section}{\numberline {4.17}Kompilieren}{25}{section.4.17}%
-\contentsline {section}{\numberline {4.18}Diese Vorlage}{26}{section.4.18}%
-\contentsline {chapter}{\numberline {5}Zitate und Literaturangaben}{28}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Zitieren}{28}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Quellenverweise}{28}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Derselbe und Ebenda}{29}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Zitate aus zweiter Hand}{29}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}Abbildungen und Tabellen zitieren}{29}{subsection.5.1.4}%
-\contentsline {section}{\numberline {5.2}Literaturverzeichnis}{30}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Inhalt und Anordnung der Literaturangaben}{30}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Bibliographische Angaben im Literaturverzeichnis}{31}{subsection.5.2.2}%
-\contentsline {chapter}{\nonumberline Literatur}{32}{chapter*.11}%
-\contentsline {chapter}{\nonumberline Anhang}{34}{chapter*.12}%
+\contentsline {chapter}{\numberline {3}Tests}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Formaler Aufbau}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Reihenfolge}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Deckblatt}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Inhaltsverzeichnis}{13}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Abbildungsverzeichnis und Tabellenverzeichnis}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Abkürzungsverzeichnis}{13}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Literaturverzeichnis}{13}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Rechtschreibung, Grammatik}{14}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Umfang der Arbeit}{14}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Gestaltung: Textsatz mit \LaTeX }{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Unter der Haube}{16}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Überschriften}{16}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Absätze}{17}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Silbentrennung}{17}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Aufzählungen}{17}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Abbildungen}{18}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Bilder}{18}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Vektorgrafiken}{19}{subsection.5.6.2}%
+\contentsline {section}{\numberline {5.7}Tabellen}{20}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Abbildungs- und Tabellenverzeichnis}{20}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Formeln}{20}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Quellcode, Pseudocode}{21}{section.5.10}%
+\contentsline {section}{\numberline {5.11}Weitere Verzeichnisse}{22}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Glossar erstellen}{23}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Abkürzungsverzeichnis erstellen}{23}{subsection.5.11.2}%
+\contentsline {subsection}{\numberline {5.11.3}Symbolverzeichnis erstellen}{23}{subsection.5.11.3}%
+\contentsline {section}{\numberline {5.12}Verweise}{24}{section.5.12}%
+\contentsline {section}{\numberline {5.13}Besondere Abstände und Zeichen}{24}{section.5.13}%
+\contentsline {section}{\numberline {5.14}Wahl der Grundschriftart}{25}{section.5.14}%
+\contentsline {section}{\numberline {5.15}Metadaten für den pdf-Betrachter}{25}{section.5.15}%
+\contentsline {section}{\numberline {5.16}Wechsel zwischen ein- und doppelseitigem Layout}{26}{section.5.16}%
+\contentsline {section}{\numberline {5.17}Kompilieren}{26}{section.5.17}%
+\contentsline {section}{\numberline {5.18}Diese Vorlage}{27}{section.5.18}%
+\contentsline {chapter}{\numberline {6}Zitate und Literaturangaben}{29}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Zitieren}{29}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Quellenverweise}{29}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Derselbe und Ebenda}{30}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Zitate aus zweiter Hand}{30}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Abbildungen und Tabellen zitieren}{30}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}Literaturverzeichnis}{31}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Inhalt und Anordnung der Literaturangaben}{31}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Bibliographische Angaben im Literaturverzeichnis}{32}{subsection.6.2.2}%
+\contentsline {chapter}{\nonumberline Literatur}{33}{chapter*.11}%
+\contentsline {chapter}{\nonumberline Anhang}{35}{chapter*.12}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
