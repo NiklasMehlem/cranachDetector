@@ -4,27 +4,45 @@ import dlib
 import matplotlib.pyplot as plt
 import mediapipe as mp
 import numpy as np
-import tkinter as tk
 from mtcnn import MTCNN
 from insightface.app import FaceAnalysis
 
 ### variables
 ########## Selection Menu ##########
-# | 1 -> 1er Portrait | 2 -> 2er Portrait | 3 -> 3er Portrait | 4 -> Cranach |
+# | 51 -> 1er Portrait | 52 -> 2er Portrait | 53 -> 3er Portrait | 54 -> GruppenBild 
+# | 61 -> 1er S | 62 -> 2er S | 63 -> 3er S | 64 -> Gruppen S |
+# | 71 -> 1er M | 72 -> 2er M | 73 -> 3er M | 74 -> Gruppen M |
 # | 10 -> 1er Portrait L | 20 -> 2er Portrait L | 30 -> 3er Portrait L | 40 -> Gruppen Bild L
-SELECTED_PICTURE = 3
-# | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina
-SELECTED_MODEL = "cnn"
+SELECTED_PICTURE = 73
+# | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
+# | ---- |(caffe)| ---- |(hog)| -------- |(cnn)| mtcnn | yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
+SELECTED_MODEL = "caffe"
 ########## Selection Menu END ##########
 match SELECTED_PICTURE:
-    case 1:
+    case 51:
         BILD_PFAD = "project/img/stichproben/1Portrait.png"
-    case 2:
+    case 52:
         BILD_PFAD = "project/img/stichproben/2Portrait.png"
-    case 3:
+    case 53:
         BILD_PFAD = "project/img/stichproben/3Portrait.png"
-    case 4:
+    case 54:
         BILD_PFAD = "project/img/stichproben/GruppenBild.jpg"
+    case 61:
+        BILD_PFAD = "project/img/stichproben/Bildnis_des_Johannes_Cuspinian_S.jfif"
+    case 62:
+        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Genoveva_und_Hl_Apollonia_S.jfif"
+    case 63:
+        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Dorothea_Hl_Agnes_Hl_Kunigunde_S.jfif"
+    case 64:
+        BILD_PFAD = "project/img/stichproben/Kreuzigung_Christi_Schottenkreuzigung_S.jfif"
+    case 71:
+        BILD_PFAD = "project/img/stichproben/Bildnis_des_Johannes_Cuspinian_M.jfif"
+    case 72:
+        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Genoveva_und_Hl_Apollonia_M.jfif"
+    case 73:
+        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Dorothea_Hl_Agnes_Hl_Kunigunde_M.jfif"
+    case 74:
+        BILD_PFAD = "project/img/stichproben/Kreuzigung_Christi_Schottenkreuzigung_M.jfif"
     case 10:
         BILD_PFAD = "project/img/1Portrait/Bildnis_des_Johannes_Cuspinian.jfif"
     case 20:
