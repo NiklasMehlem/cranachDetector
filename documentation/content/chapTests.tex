@@ -1,4 +1,6 @@
 \chapter{Tests}
 
 %Provisorischer Text
-Alle größen wurden nochmal mit allen relevanten Kanditaten getestet. Man hat sich für größe L entschieden, da troz False-Positives alle Gesichter hier erkannt werden, was relevanter ist. \gls{hog} ist ausgeschieden da es im Vergleich deutlich mehr Flase-Positives hat und es bereits genug Modelle mit akzeptablen Werten gibt, so dass das Modell als Kandidat nicht mehr relevant ist.
+Alle Größen wurden nochmal mit allen relevanten Kandidaten getestet. Man hat sich für Größe L entschieden, da trotz False-Positives alle Gesichter hier erkannt werden, was relevanter ist. \gls{hog} ist ausgeschieden da es im Vergleich deutlich mehr Flase-Positives hat und es bereits genug Modelle mit akzeptablen Werten gibt, so dass das Modell als Kandidat nicht mehr relevant ist.
+
+Bevor alle verbleibenden Modelle intensiv getestet werden können müssen alle confidence Werte bzw score threshholds angepasst werden, das jedes Modell bestmöglich representiert werden kann. Dafür wird der threshhold auf minimalen Wert gesetzt und die Ausgaben beobachtet und notiert. Am interessantesten sind Werte wie kleinster confidence Wert für ein erkanntes Gesicht und höchster confidence Wert für ein False-Positiv. Sollten sich diese überschneiden, so wird mithilfe des Kontext der anderen Ergebnisse bestimmt welcher confidence Wert sich für das jeweilige Modell am besten eignet zur Gesichtserkennung für historische Gemälde.
