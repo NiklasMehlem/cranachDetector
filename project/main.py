@@ -16,10 +16,10 @@ from pathlib import Path
 # | 10 -> 1er Portrait L | 20 -> 2er Portrait L | 30 -> 3er Portrait L | 40 -> Gruppen Bild L
 SELECTED_PICTURE = 73
 # | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
-# | ---- |(caffe)| ---- | --- | -------- |(cnn)| mtcnn | yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
-SELECTED_MODEL = "retina"
+# | ---- |(caffe)| ---- | --- | -------- |(cnn)|(mtcnn)| yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
+SELECTED_MODEL = "mtcnn"
 ########## Selection Menu END ##########
-FOLDER_PATHS = ["project/img/1Portrait"]
+FOLDER_PATHS = ["project/img/2Portrait", "project/img/3Portrait"]
 match SELECTED_PICTURE:
     case 51:
         BILD_PFAD = "project/img/stichproben/1Portrait.png"
@@ -158,7 +158,7 @@ def test_models(image_paths, model):
                 # Ergebnisse durchgehen
                 for i in range(0, ergebnisse.shape[2]):
                     confidence = ergebnisse[0, 0, i, 2]
-                    if confidence > -1:  # Alter Wert: 0.2
+                    if confidence >= 0.14:  # Alter Wert: 0.2
                         box = ergebnisse[0, 0, i, 3:7] * [
                             bild_breite,
                             bild_hoehe,
@@ -219,12 +219,11 @@ def test_models(image_paths, model):
             case "cnn":
                 # Erkenne Gesichter mit CNN
                 faces = cnn_detector(bild)
-                confidence_threshold = -1  # Alter Wert: -0.5
 
                 # Zeichne Rechtecke um erkannte Gesichter
                 for face in faces:
                     confidence = face.confidence
-                    if confidence > confidence_threshold:
+                    if confidence >= -1: # Alter Wert: -0.5
                         start_x, start_y, width, height = (
                             face.rect.left(),
                             face.rect.top(),
@@ -341,7 +340,7 @@ def test_models(image_paths, model):
                 # Zeichne Rechtecke um erkannte Gesichter
                 for face in faces:
                     confidence = face["confidence"]
-                    if confidence > -1:  # Alter Wert # 0.5
+                    if confidence >= 0.82:  # Alter Wert # 0.5
                         start_x, start_y, width, height = face["box"]
                         cv2.rectangle(
                             bild,
@@ -359,13 +358,6 @@ def test_models(image_paths, model):
                             (0, 255, 0),
                             2,
                         )
-                        # print(f"Gesicht erkannt mit Confidence: {confidence:.2f}")
-                    """    
-                    else:
-                        print(
-                            f"Gesicht mit niedriger Confidence ({confidence:.2f}) ignoriert."
-                        )
-                    """
             case "yunet":
                 # Eingabedimension setzen
                 detektor.setInputSize((bild_breite, bild_hoehe))
@@ -382,7 +374,7 @@ def test_models(image_paths, model):
                             int(width),
                             int(height),
                         )
-                        if confidence > -1:  # Alter Wert: -1
+                        if confidence >= 125:  # Alter Wert: -1
                             cv2.rectangle(
                                 bild,
                                 (start_x, start_y),
@@ -408,7 +400,7 @@ def test_models(image_paths, model):
                 # Rechtecke um erkannte Gesichter zeichnen
                 for gesicht in gesichter:
                     confidence = gesicht.det_score
-                    if confidence > -1:  # Alter Wert: -1
+                    if confidence >= 0.52:  # Alter Wert: -1
                         start_x, start_y, end_x, end_y = map(int, gesicht.bbox)
                         cv2.rectangle(
                             bild, (start_x, start_y), (end_x, end_y), (0, 255, 0), 2
