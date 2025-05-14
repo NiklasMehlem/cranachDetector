@@ -7,6 +7,8 @@ Bevor alle verbleibenden Modelle intensiv getestet werden können müssen alle c
 
 Erklären das Confidence Wert unterschidelich ist pro Modell und nicht der höchste Wert automatisch der Beste ist
 
+Geschwindkigkeit wird nicht getestet weil nicht relevant für Kontext
+
 \section{Caffe}
 Die Ergebnisse von \gls{caffe} waren bei -1 confidence Grenzwert viel zu unkenntlich, also wurde der Test wiederholt. Im zweiten Anlauf wurden alle markieren mit einem confidence Wert > 0.1 akzeptiert, da alle Ergebnisse unter diesem Wert aufgrund der riesigen mengen an Flase-Positv unbrauchbar wären.
 Minimaler Confidence Wert für erkannte Gesichter bei 1er Portraits war 0.11 während der maximale False-Positiv Wert 0.21 ist. Der Wert wurde bei einem Bild gemessen alle anderen erreichten einen Wert von 1.00 oder ca. 0.80. Da nur ein Bruchteil des Cranach Archivs aufgrund der limitierten Zeit getestet werden kann wird der Wert nicht als Ausreißer sondern als gleichwertig betrachtet, da es im restlichen Archiv bestimmt ähnliche Bilder zum 0.11 Kandidaten gibt.
