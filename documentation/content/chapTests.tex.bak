@@ -1,4 +1,34 @@
 \chapter{Tests}
 
 %Provisorischer Text
-Alle größen wurden nochmal mit allen relevanten Kanditaten getestet. Man hat sich für größe L entschieden, da troz False-Positives alle Gesichter hier erkannt werden, was relevanter ist. \gls{hog} ist ausgeschieden da es im Vergleich deutlich mehr Flase-Positives hat und es bereits genug Modelle mit akzeptablen Werten gibt, so dass das Modell als Kandidat nicht mehr relevant ist.
+Alle Größen wurden nochmal mit allen relevanten Kandidaten getestet. Man hat sich für Größe L entschieden, da trotz False-Positives alle Gesichter hier erkannt werden, was relevanter ist. \gls{hog} ist ausgeschieden da es im Vergleich deutlich mehr Flase-Positives hat und es bereits genug Modelle mit akzeptablen Werten gibt, so dass das Modell als Kandidat nicht mehr relevant ist.
+
+Bevor alle verbleibenden Modelle intensiv getestet werden können müssen alle confidence Werte bzw score threshholds angepasst werden, das jedes Modell bestmöglich repräsentiert werden kann. Dafür wird der threshhold auf minimalen Wert gesetzt und die Ausgaben beobachtet und notiert. Am interessantesten sind Werte wie kleinster confidence Wert für ein erkanntes Gesicht und höchster confidence Wert für ein False-Positiv. Sollten sich diese überschneiden, so wird mithilfe des Kontext der anderen Ergebnisse bestimmt welcher confidence Wert sich für das jeweilige Modell am besten eignet zur Gesichtserkennung für historische Gemälde.
+
+Erklären das Confidence Wert unterschidelich ist pro Modell und nicht der höchste Wert automatisch der Beste ist
+
+Geschwindkigkeit wird nicht getestet weil nicht relevant für Kontext
+
+\section{Caffe}
+Die Ergebnisse von \gls{caffe} waren bei -1 confidence Grenzwert viel zu unkenntlich, also wurde der Test wiederholt. Im zweiten Anlauf wurden alle markieren mit einem confidence Wert > 0.1 akzeptiert, da alle Ergebnisse unter diesem Wert aufgrund der riesigen mengen an Flase-Positv unbrauchbar wären.
+Minimaler Confidence Wert für erkannte Gesichter bei 1er Portraits war 0.11 während der maximale False-Positiv Wert 0.21 ist. Der Wert wurde bei einem Bild gemessen alle anderen erreichten einen Wert von 1.00 oder ca. 0.80. Da nur ein Bruchteil des Cranach Archivs aufgrund der limitierten Zeit getestet werden kann wird der Wert nicht als Ausreißer sondern als gleichwertig betrachtet, da es im restlichen Archiv bestimmt ähnliche Bilder zum 0.11 Kandidaten gibt.
+Ergbenisse des Tests mit 2er Portraits waren deutlich weniger konstant als im letzten Test. Geringster Wert für ein erkanntes Gesicht war 0.14, 0.13 wenn Nebengesichter mitgezählt werden. Allerdings gab es ein großes False-Positv sowohl vom Wert als auch von der Fläche her mit 0.4.
+Der Test mit 3er Portraits verlief sehr schlecht für \gls{caffe}. Der geringste erkannte Wert ist 0.1, es ist aber auch sehr wahrscheinlich das der eigentliche Wert noch geringer ist, da in manchen Bilder nicht alle Gesichter erkannt wurden. Auch gab es eine sehr große Menge an False-Positives, höchster Wert in diesem Test 0.28.
+Mit minimaler Geschichtsklitterung Confidence von 0.1 und maximalem False-Positv Confidence von 0.4 ist das bestimmen eines optimalen Grenzwertes sehr schwierig. Nach mehreren weiteren Test wurde sich entschieden den Grenzwert auf 0.14 zu setzen. Leider werden damit einige Ergebnisse von erkannten Gesichtern verworfen, allerdings gibt es bis 0.13 noch große mengen an false-positivs, was die gesamt Ergebnisse brauchbarer macht.
+
+\section{Dlib CNN}
+Dlib \gls{cnn}s Tests mit 1er Portraits haben selbst bei einem Grenzwert von -1 keine False-Positives gehabt. Der Minimale Wert für erkannte Gesichter lag bei 1.03.
+Im Test mit 2er Portraits gab es weiter keine Flase-Positives, allerdings wurde auch einige Neben- so wie Hauptgesichter nicht erkannt. 0.70 war der kleinste gemessene Wert für ein Gesicht.
+Weiter werden im Test mit 3er Portraits keine False-Positv, aber auch Teils manche Gesichter nicht erkannt. Der geringst gemessene Wert für ein erkanntes Gesicht war in diesem Test 0.97 womit 0.7 der gesamt niedrigste Wert für Dlib \gls{cnn} ist. Da bisher keine False-Positves erkannt und Dlib \gls{cnn} sehr streng scheint, wird der verwendete Grenzwert für Dlib \gls{cnn} 0.6 sein.
+
+\section{MTCNN}
+\gls{mtcnn} ist sehr sicher durch den Test mit 1er Portraits gekommen. Keine False-Positives und und ein minimaler confidence Wert bei der Gesichtserkennung von 0.99. Generell sind alle Werte konstant zwischen 0.99 und 1.00.
+Im Test mit 2er Portraits wurden weiter keine Flase-Positives erkannt, allerdings ebenso einige Gesichter nicht. Der geringst gemessene Wert bei der Gesichtserkennung beträgt 0.82. Die Ergebnisse des Tests mit 3er Portrais erschweren das bestimmen eines endgültigen Grenzwertes für \gls{mtcnn}. Der höchst gemessene Wert für Flase-Positives beträgt 0.95, generell haben wie zuvor erwähnt alle False-Positives von \gls{mtcnn} sehr hohe confidence Werte. Die Entscheidung wo der Grenzwert gesetzt werden soll fällt sehr schwer. Die beiden Möglichkeiten sind 0.82 für den minimalen Wert eines erkannten Gesichts, oder 0.91 um den größten Teil der False-Positives auszusortieren. Der Grund warum 0.82 überhaupt in Erwägung gezogen kann liegt daran das die makierten False-Positives bisher immer kleine Bereiche gewesen sind, die ignoriert werden könnten. Der Grenzwert wird vorläufig auf 0.82 gesetzt, je nach Ergebnissen wird das Modell mit 0.91 Grenzwert getestet und entschieden welcher Wert verwendet werden soll.
+
+\section{Yunet}
+Yunet hat bei seinem 1er Portrait Test keine False-Positives gehabt und ein Gesicht übersehen, ansonsten betrug der minimale Wert für ein erkanntes Gesicht 389.12. Der Test mit 2er Portraits verlief mit einem ähnlichen Ergebnis und einem minimalen Wert von 233.79. Der letzte Confidence Test von Yunet mit 3er Portraits ergab weiter keine False-Positives und auch den gesamt minimal Wert für erkannte Gesichter von 154.46. Da Yunet wie Dlib \gls{cnn} eher streng zu sein scheint, wird der Grenzwert für Yunet auf 125 gesetzt um weitere mögliche erkannte Gesichter zuzulassen.
+
+\section{RetinaFace (CPU)}
+RetinaFace hat als minimalen confidence Wert 0.74 für Gesichter im Test mit 1er Portraits, ohne Fehler. Die Ergebnisse für 2er Portraits sind ein minimal Wert von 0.71 und keine False-Positives, es wurden aber auch manche Gesichter nicht erkannt. Ergebnis des Test mit 3er Portraits ist auch gleich der gesamt minimal Wert von RetinaFace 0.68 confidence für Gesichter und 0.52 für Nebengesichter. Da in keinem Test False-Positives markiert wurden wir der absolut geringst gemessen Wert 0.52 als Grenzwert verwendet.
+
+Keines der Modelle hat es geschafft jedes Gesicht aus den Tests Fehlerfrei zu erkennen. Somit werden im letzten Test alle fünf verbliebenen Modelle gleichzeitig getestet. Dabei werden die Anzahl von False-Negatives, False-Positives und Anzahl von Gesichtern die nur von diesem Modell erkannt wurden gezählt. Ziel ist es eine kleine Auswahl von Modellen herauszuarbeiten die genutzt werden können um möglichst viele Gesichter auf historischen Gemälden zu erkennen.

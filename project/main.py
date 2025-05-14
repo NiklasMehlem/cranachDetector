@@ -16,10 +16,10 @@ from pathlib import Path
 # | 10 -> 1er Portrait L | 20 -> 2er Portrait L | 30 -> 3er Portrait L | 40 -> Gruppen Bild L
 SELECTED_PICTURE = 73
 # | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
-# | ---- |(caffe)| ---- | --- | -------- |(cnn)| mtcnn | yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
-SELECTED_MODEL = "caffe"
+# | ---- |(caffe)| ---- | --- | -------- |(cnn)|(mtcnn)| yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
+SELECTED_MODEL = "mtcnn"
 ########## Selection Menu END ##########
-FOLDER_PATHS = ["project/img/3Portrait"]
+FOLDER_PATHS = ["project/img/2Portrait", "project/img/3Portrait"]
 match SELECTED_PICTURE:
     case 51:
         BILD_PFAD = "project/img/stichproben/1Portrait.png"
@@ -67,8 +67,7 @@ match SELECTED_PICTURE:
 match SELECTED_MODEL:
     case "haar":
         haar_cascade = cv2.CascadeClassifier(
-            cv2.data.haarcascades
-            + "project/models/haar_cascade/haarcascade_frontalface_default.xml"
+            "project/models/haar_cascade/haarcascade_frontalface_default.xml"
         )
     case "caffe":
         model = "project/models/caffe/res10_300x300_ssd_iter_140000.caffemodel"
@@ -109,6 +108,7 @@ match SELECTED_MODEL:
     case _:
         print("Initiniere nichts 🎉")
 
+
 # erzeugt eine Liste aus allen .jfif Bildern aus folder_paths
 def get_images(folder_paths, exts=(".jfif")):
     print("getting images")
@@ -117,13 +117,14 @@ def get_images(folder_paths, exts=(".jfif")):
         imgs += list(Path(folder).rglob("*"))
     return [p for p in imgs if p.suffix.lower() in exts]
 
+
 # wendet das Modell auf alle Bilder in image_paths an
 def test_models(image_paths, model):
     print("testing modells")
     for img_path in image_paths:
         print(f"Teste {img_path.name} mit {model}")
         bild = cv2.imread(img_path)
-        hoehe, breite = bild.shape[:2]
+        bild_hoehe, bild_breite = bild.shape[:2]
 
         # Modell ausführen
         match SELECTED_MODEL:
@@ -137,8 +138,14 @@ def test_models(image_paths, model):
                 )
 
                 # Rechtecke um erkannte Gesichter zeichnen
-                for x, y, breite, hoehe in gesichter:
-                    cv2.rectangle(bild, (x, y), (x + breite, y + hoehe), (255, 0, 0), 2)
+                for start_x, start_y, width, height in gesichter:
+                    cv2.rectangle(
+                        bild,
+                        (start_x, start_y),
+                        (start_x + width, start_y + height),
+                        (255, 0, 0),
+                        2,
+                    )
             case "caffe":
                 # Bild vorverarbeiten
                 blob = cv2.dnn.blobFromImage(
@@ -151,13 +158,27 @@ def test_models(image_paths, model):
                 # Ergebnisse durchgehen
                 for i in range(0, ergebnisse.shape[2]):
                     confidence = ergebnisse[0, 0, i, 2]
-                    if confidence > 0.2:
-                        box = ergebnisse[0, 0, i, 3:7] * [breite, hoehe, breite, hoehe]
+                    if confidence >= 0.14:  # Alter Wert: 0.2
+                        box = ergebnisse[0, 0, i, 3:7] * [
+                            bild_breite,
+                            bild_hoehe,
+                            bild_breite,
+                            bild_hoehe,
+                        ]
                         (start_x, start_y, end_x, end_y) = box.astype("int")
 
                         # Rechteck zeichnen
                         cv2.rectangle(
                             bild, (start_x, start_y), (end_x, end_y), (0, 255, 0), 2
+                        )
+                        cv2.putText(
+                            bild,
+                            f"{confidence:.2f}",
+                            (start_x, start_y - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.6,
+                            (0, 255, 0),
+                            2,
                         )
             case "pipe":
                 # MediaPipe Face Detection Setup (MediaPipe arbeitet mit RGB)
@@ -182,29 +203,56 @@ def test_models(image_paths, model):
 
                 # Zeichne Rechtecke um erkannte Gesichter
                 for face in faces:
-                    x, y, w, h = face.left(), face.top(), face.width(), face.height()
-                    cv2.rectangle(bild, (x, y), (x + w, y + h), (0, 255, 0), 2)
+                    start_x, start_y, width, height = (
+                        face.left(),
+                        face.top(),
+                        face.width(),
+                        face.height(),
+                    )
+                    cv2.rectangle(
+                        bild,
+                        (start_x, start_y),
+                        (start_x + width, start_y + height),
+                        (0, 255, 0),
+                        2,
+                    )
             case "cnn":
                 # Erkenne Gesichter mit CNN
                 faces = cnn_detector(bild)
-                confidence_threshold = -0.5
 
                 # Zeichne Rechtecke um erkannte Gesichter
                 for face in faces:
                     confidence = face.confidence
-                    if confidence > confidence_threshold:
-                        x, y, w, h = (
+                    if confidence >= -1: # Alter Wert: -0.5
+                        start_x, start_y, width, height = (
                             face.rect.left(),
                             face.rect.top(),
                             face.rect.width(),
                             face.rect.height(),
                         )
-                        cv2.rectangle(bild, (x, y), (x + w, y + h), (0, 255, 0), 2)
-                        print(f"Gesicht erkannt mit Confidence: {confidence:.2f}")
+                        cv2.rectangle(
+                            bild,
+                            (start_x, start_y),
+                            (start_x + width, start_y + height),
+                            (0, 255, 0),
+                            2,
+                        )
+                        cv2.putText(
+                            bild,
+                            f"{confidence:.2f}",
+                            (start_x, start_y - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.6,
+                            (0, 255, 0),
+                            2,
+                        )
+                        # print(f"Gesicht erkannt mit Confidence: {confidence:.2f}")
+                    """
                     else:
                         print(
                             f"Gesicht mit niedriger Confidence ({confidence:.2f}) ignoriert."
                         )
+                    """
             case "landmark":
                 # ChatGPT Code Start.
                 # Funktionen zur Landmark-Validierung
@@ -291,46 +339,58 @@ def test_models(image_paths, model):
 
                 # Zeichne Rechtecke um erkannte Gesichter
                 for face in faces:
-                    x, y, w, h = face["box"]
                     confidence = face["confidence"]
-                    if confidence > 0.5:
+                    if confidence >= 0.82:  # Alter Wert # 0.5
+                        start_x, start_y, width, height = face["box"]
                         cv2.rectangle(
                             bild,
-                            (x, y),
-                            (x + w, y + h),
-                            (
-                                510 - 510 * confidence,
-                                255 * confidence * confidence * confidence,
-                                510 - 510 * confidence,
-                            ),
+                            (start_x, start_y),
+                            (start_x + width, start_y + height),
+                            (0, 255, 0),
                             2,
                         )
-                        print(f"Gesicht erkannt mit Confidence: {confidence:.2f}")
-                    else:
-                        print(
-                            f"Gesicht mit niedriger Confidence ({confidence:.2f}) ignoriert."
+                        cv2.putText(
+                            bild,
+                            f"{confidence:.2f}",
+                            (start_x, start_y - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.6,
+                            (0, 255, 0),
+                            2,
                         )
             case "yunet":
                 # Eingabedimension setzen
-                detektor.setInputSize((breite, hoehe))
+                detektor.setInputSize((bild_breite, bild_hoehe))
 
                 # Gesicht erkennen
                 _, gesichter = detektor.detect(bild)
 
                 if gesichter is not None and len(gesichter) > 0:
                     for gesicht in gesichter:
-                        x, y, bw, bh, conf = gesicht[:5]
-                        x, y, bw, bh = int(x), int(y), int(bw), int(bh)
-                        cv2.rectangle(bild, (x, y), (x + bw, y + bh), (0, 255, 0), 2)
-                        cv2.putText(
-                            bild,
-                            f"{conf:.2f}",
-                            (x, y - 10),
-                            cv2.FONT_HERSHEY_SIMPLEX,
-                            0.5,
-                            (0, 255, 0),
-                            1,
+                        start_x, start_y, width, height, confidence = gesicht[:5]
+                        start_x, start_y, width, height = (
+                            int(start_x),
+                            int(start_y),
+                            int(width),
+                            int(height),
                         )
+                        if confidence >= 125:  # Alter Wert: -1
+                            cv2.rectangle(
+                                bild,
+                                (start_x, start_y),
+                                (start_x + width, start_y + height),
+                                (0, 255, 0),
+                                2,
+                            )
+                            cv2.putText(
+                                bild,
+                                f"{confidence:.2f}",
+                                (start_x, start_y - 10),
+                                cv2.FONT_HERSHEY_SIMPLEX,
+                                0.6,
+                                (0, 255, 0),
+                                2,
+                            )
                 else:
                     print("Kein Gesicht erkannt.")
             case "retina":
@@ -339,18 +399,21 @@ def test_models(image_paths, model):
 
                 # Rechtecke um erkannte Gesichter zeichnen
                 for gesicht in gesichter:
-                    x1, y1, x2, y2 = map(int, gesicht.bbox)
                     confidence = gesicht.det_score
-                    cv2.rectangle(bild, (x1, y1), (x2, y2), (0, 255, 0), 2)
-                    cv2.putText(
-                        bild,
-                        f"{confidence:.2f}",
-                        (x1, y1 - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX,
-                        0.6,
-                        (0, 255, 0),
-                        2,
-                    )
+                    if confidence >= 0.52:  # Alter Wert: -1
+                        start_x, start_y, end_x, end_y = map(int, gesicht.bbox)
+                        cv2.rectangle(
+                            bild, (start_x, start_y), (end_x, end_y), (0, 255, 0), 2
+                        )
+                        cv2.putText(
+                            bild,
+                            f"{confidence:.2f}",
+                            (start_x, start_y - 10),
+                            cv2.FONT_HERSHEY_SIMPLEX,
+                            0.6,
+                            (0, 255, 0),
+                            2,
+                        )
             case _:
                 print("Ich mach dann mal nichts 🎉")
 
@@ -363,6 +426,7 @@ def test_models(image_paths, model):
             plt.axis("off")
             plt.title(f"{img_path.name} mit {model}")
             plt.show()
+
 
 # ausführung
 imgs = get_images(FOLDER_PATHS)
