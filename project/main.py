@@ -17,21 +17,22 @@ from pathlib import Path
 SELECTED_PICTURE = 73
 ########## Selection Menu END ##########
 
-FOLDER_PATHS = ["project/img/1Portrait"]
+FOLDER_PATHS = ["project/img/3Portrait"]
 # | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
 # | ---- |(caffe)| ---- | --- | -------- |(cnn)|(mtcnn)| yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
-TEST_MODELS = ["caffe", "cnn", "mtcnn", "yunet", "retina"]
+# TEST_MODELS = ["caffe", "cnn", "mtcnn", "yunet", "retina"]
+TEST_MODELS = ["cnn", "mtcnn", "retina"]
 
 CAFFE_CONFIDENCE = 0.14
-CAFFE_COLOR = (255, 0, 0)
+CAFFE_COLOR = (255, 50, 50) # Blau
 CNN_CONFIDENCE = 0.6
-CNN_COLOR = (0, 255, 0)
+CNN_COLOR = (0, 255, 0) # Grün
 MTCNN_CONFIDENCE = 0.82
-MTCNN_COLOR = (0, 0, 255)
+MTCNN_COLOR = (0, 0, 255) # Rot
 YUNET_CONFIDENCE = 125
-YUNET_COLOR = (255, 255, 0)
+YUNET_COLOR = (255, 255, 0) # Türkis
 RETINA_CONFIDENCE = 0.52
-RETINA_COLOR = (0, 255, 255)
+RETINA_COLOR = (0, 255, 255) # Gelb
 
 DETECTION_OFFSET = 10
 DETECTION_THICKNESS = 2
