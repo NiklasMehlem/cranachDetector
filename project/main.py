@@ -129,7 +129,7 @@ for model in TEST_MODELS:
 
 
 # erzeugt eine Liste aus allen .jfif Bildern aus folder_paths
-def get_images(folder_paths, exts=(".jfif")):
+def get_images(folder_paths, exts=(".jfif",)):
     print("getting images")
     imgs = []
     for folder in folder_paths:
