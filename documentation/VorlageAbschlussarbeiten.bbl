@@ -959,6 +959,45 @@
       \field{pages}{21\bibrangedash 37}
       \range{pages}{17}
     \endentry
+    \entry{abs-2107-02270}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fea4214ad88ffd4d9f8f731b211daa28}{%
+           family={Petroff},
+           familyi={P\bibinitperiod},
+           given={Matthew\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{fullhash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{fullhashraw}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{bibnamehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authorbibnamehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authornamehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authorfullhash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authorfullhashraw}{fea4214ad88ffd4d9f8f731b211daa28}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Accessible Color Cycles for Data Visualization}
+      \field{volume}{abs/2107.02270}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2107.02270
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2107.02270
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2107.02270
+      \endverb
+    \endentry
     \entry{sefiks14451}{online}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=4a4e862fec042210ef4a7013f4e56e9a}{%
@@ -2143,6 +2182,45 @@
       \field{year}{2016}
       \field{pages}{21\bibrangedash 37}
       \range{pages}{17}
+    \endentry
+    \entry{abs-2107-02270}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fea4214ad88ffd4d9f8f731b211daa28}{%
+           family={Petroff},
+           familyi={P\bibinitperiod},
+           given={Matthew\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{fullhash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{fullhashraw}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{bibnamehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authorbibnamehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authornamehash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authorfullhash}{fea4214ad88ffd4d9f8f731b211daa28}
+      \strng{authorfullhashraw}{fea4214ad88ffd4d9f8f731b211daa28}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Accessible Color Cycles for Data Visualization}
+      \field{volume}{abs/2107.02270}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2107.02270
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2107.02270
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2107.02270
+      \endverb
     \endentry
     \entry{sefiks14451}{online}{}{}
       \name{author}{1}{}{%
