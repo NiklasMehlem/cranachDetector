@@ -110,6 +110,19 @@
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 
+@article{abs-2107-02270,
+  author       = {Matthew A. Petroff},
+  title        = {Accessible Color Cycles for Data Visualization},
+  journal      = {CoRR},
+  volume       = {abs/2107.02270},
+  year         = {2021},
+  url          = {https://arxiv.org/abs/2107.02270},
+  eprinttype    = {arXiv},
+  eprint       = {2107.02270},
+  timestamp    = {Wed, 07 Jul 2021 15:23:11 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/abs-2107-02270.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
 
 @book{howse2019opencv,
   title={OpenCV 4 for Secret Agents: Use OpenCV 4 in secret projects to classify cats, reveal the unseen, and react to rogue drivers, 2nd Edition},

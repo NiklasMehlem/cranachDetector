@@ -2,6 +2,8 @@
 
 Ursprünglich war die Idee ein Eigenständiges Programm zu entwickeln, welches Selbstständig Wasserzeichen auf Bildern platziert. Dabei sollten die Gesichter freigelassen werden um die Ästhetik des Bildes nicht zu stören. Aufgrund der Limitierten Zeit wird dieser Ansatz reduziert, was ebenfalls ermöglicht ihn flexibler zu gestalten. Indem statt eines eigenständigen Programms ein Package erstellt wird, ermöglicht man noch mehr Anwendungszwecke über das einfache Platzieren von Wasserzeichen hinaus.
 
+Die Farben der markierten Gesichter wurden für das Package angepasst so dass sie von Farbenblinden noch gut unterschieden werden können. Als Basis für die Auswahl der Farben diente das Paper von \cite{abs-2107-02270}. Gewählt wurden \texttt{(87, 144, 252)} Blau für RetinaFace, \texttt{(248, 156, 32)} Orange für \gls{mtcnn} und \texttt{(228, 37, 54)} Rot für Dlib \gls{cnn}. Blau ist die Farbe die sich am besten eignet um von anderen unterschieden werden zu können. Sie wurde bewusst für RetinaFace gewählt, da das Modell als Basis dient und so am häufigsten mit den anderen Farben in Kontakt kommt.
+
 Um möglichst viele Verschiedene Anwendungszwecke abzudecken akzeptiert das Paket verschiedene Arten von eingaben:
 \begin{itemize}
   \item None: Lässt den Nutzer einen Ordner in einem GUI Manuell wählen durch den Iteriert werden soll.
