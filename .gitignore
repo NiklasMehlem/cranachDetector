@@ -175,3 +175,4 @@ cython_debug/
 
 # manual gitignore
 project/img/
+project/models/
