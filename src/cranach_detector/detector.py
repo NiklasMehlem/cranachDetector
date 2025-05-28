@@ -76,6 +76,7 @@ def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
         # overlay = use_models(image_path, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
         start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
 
+
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
 def formatImages(images) -> list:
     if images is None:
@@ -94,6 +95,7 @@ def formatImages(images) -> list:
         return [path] if path.suffix.lower() in exts else []
     else:
         raise TypeError(f"Unbekannter Typ oder Pfad: {images!r}")
+
 
 # wendet alle Modelle auf alle Bilder in image_paths an
 def use_models(
@@ -183,6 +185,7 @@ def use_models(
 
     return mark_faces(image, image_name)
 
+
 # markiert alle erkannten Bereiche auf dem Bild
 def mark_faces(image, image_name, use_dark_colors=False):
     overlay = image.copy()
@@ -228,6 +231,7 @@ def mark_faces(image, image_name, use_dark_colors=False):
 
     return overlay
 
+
 # Entfernt alle makierungen aus EXCLUSION_ZONES von Modellen die nicht auf das Bild angewendet werden
 def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     if all([use_retinaFace, use_mtcnn, use_dlib_cnn]):
@@ -242,6 +246,7 @@ def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
         or (zone["model"] == "Dlib CNN" and use_dlib_cnn)
     ]
 
+
 def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     root = tk.Tk()
     root.title("Cranach Detector GUI")
@@ -251,6 +256,9 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
     frame.pack(padx=10, pady=10)
 
     use_dark_color = False
+    retina_used = (False, 0.0)
+    mtcnn_used = (False, 0.0)
+    dlib_cnn_used = (False, 0.0)
     retinaFace_check = tk.BooleanVar(value=use_retinaFace)
     mtcnn_check = tk.BooleanVar(value=use_mtcnn)
     dlib_cnn_check = tk.BooleanVar(value=use_dlib_cnn)
@@ -275,15 +283,40 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
 
     def start_detection(image):
         nonlocal use_dark_color
+        nonlocal retina_used
+        nonlocal mtcnn_used
+        nonlocal dlib_cnn_used
+        retina_needs_rebuild = True
+        mtcnn_needs_rebuild = True
+        dlib_cnn_needs_rebuild = True
+
+        if retina_used == (retinaFace_check.get(), retina_threshold.get()):
+            retina_needs_rebuild = False
+        else:
+            retina_used = retinaFace_check.get(), retina_threshold.get()
+
+        if mtcnn_used == (mtcnn_check.get(), mtcnn_threshold.get()):
+            mtcnn_needs_rebuild = False
+        else:
+            mtcnn_used = mtcnn_check.get(), mtcnn_threshold.get()
+
+        if dlib_cnn_used == (dlib_cnn_check.get(), dlib_cnn_threshold.get()):
+            dlib_cnn_needs_rebuild = False
+        else:
+            dlib_cnn_used = dlib_cnn_check.get(), dlib_cnn_threshold.get()
+
         clean_marks(
-            image_name, retinaFace_check.get(), mtcnn_check.get(), dlib_cnn_check.get()
+            image_name,
+            retinaFace_check.get() and not retina_needs_rebuild,
+            mtcnn_check.get() and not mtcnn_needs_rebuild,
+            dlib_cnn_check.get() and not dlib_cnn_needs_rebuild,
         )
         overlay = use_models(
             image,
             image_name,
-            retinaFace_check.get(),
-            mtcnn_check.get(),
-            dlib_cnn_check.get(),
+            retinaFace_check.get() and retina_needs_rebuild,
+            mtcnn_check.get() and mtcnn_needs_rebuild,
+            dlib_cnn_check.get() and dlib_cnn_needs_rebuild,
             retina_threshold.get(),
             mtcnn_threshold.get(),
             dlib_cnn_threshold.get(),
