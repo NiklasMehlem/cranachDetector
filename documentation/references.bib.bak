@@ -309,7 +309,16 @@ doi = {10.1109/ICPR.2018.8545814}
   url     = {www.geeksforgeeks.org/introduction-convolution-neural-network/},
   urldate = {2025-05-03},
   note    = {Erklärung von CNNs}
-}	
+}
+
+@online{lizardNttstar25,
+  author  = {lounging-lizard and nttstar},
+  title   = {Does FacialAnalysis.get expect BGR or RGB?},
+  year    = {2025},
+  url     = {https://github.com/deepinsight/insightface/issues/2741},
+  urldate = {2025-05-27},
+  note    = {GitHub Issue zu FacialAnalysis.get}
+}
 
 
 %%% END OF BIB %%%
