@@ -19,13 +19,17 @@ from PIL import Image, ImageTk
 from tkinter import filedialog
 
 ### variables
-cnn_confidence = 0.6
-CNN_COLOR = (228, 37, 54) # Rot
+dlib_cnn_confidence = 0.6
+DLIB_CNN_COLOR = (228, 37, 54)  # Rot
+DLIB_CNN_COLOR_DARK = (255, 0, 4)
 mtcnn_confidence = 0.82
-MTCNN_COLOR = (248, 156, 32) # Orange
+MTCNN_COLOR = (248, 156, 32)  # Orange
+MTCNN_COLOR_DARK = (255, 106, 0)
 retina_confidence = 0.52
-RETINA_COLOR = (87, 144, 252) # Blau
-EXTRA_MODEL_COLOR = (150, 74, 139) # Lila 
+RETINA_COLOR = (87, 144, 252)  # Blau
+RETINA_COLOR_DARK = (37, 94, 255)
+EXTRA_MODEL_COLOR = (150, 74, 139)  # Lila
+
 
 DETECTION_OFFSET = 10
 DETECTION_THICKNESS = 2
@@ -33,58 +37,44 @@ DETECTION_FONT_SCALE = 0.6
 
 EXCLUSION_ZONES = []
 
-#_models = ("retinaFace", "mtcnn", "dlib_cnn",)
-#_models = ("retinaFace",)
-#retinaFace_mode = False
-#mtcnn_mode = False
-#dlib_cnn_mode = False
-
+### initierung
 BASE_DIR = Path(__file__).resolve().parent
 DLIB_CNN_PATH = BASE_DIR / "models" / "dlib_cnn" / "mmod_human_face_detector.dat"
-### initierung
 cnn_detector = dlib.cnn_face_detection_model_v1(str(DLIB_CNN_PATH))
 detector = MTCNN()
 app = FaceAnalysis(name="buffalo_l", providers=["CPUExecutionProvider"])
 app.prepare(ctx_id=0)
 
-def CranachDetector(images=None, use_retinaFace=True, use_mtcnn=False, use_dlib_cnn=False):
-    #root = tk.Tk()
-    #root.withdraw()
-    #global retinaFace_mode, mtcnn_mode, dlib_cnn_mode
-    #retinaFace_mode = use_retinaFace
-    #mtcnn_mode = use_mtcnn
-    #dlib_cnn_mode = use_dlib_cnn
 
+def CranachDetector(
+    images=None, use_retinaFace=True, use_mtcnn=False, use_dlib_cnn=False
+):
+    # root = tk.Tk()
+    # root.withdraw()
     imageList = formatImages(images)
 
-    # Ordner Auswahl, wenn noch kein Bild oder Bilder mitgegeben wurden
     while imageList == []:
         folder = filedialog.askdirectory(title="Wähle einen Ordner mit Bildern")
-        #root.destroy()
+        # root.destroy()
 
         if not folder:
             print("Kein Ordner ausgewählt.")
             break
         imageList = formatImages(folder)
 
-    #if models is not None:
     start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn)
-    
-    # Frag nach jedem Bild nicht am Ende des ganzen Ordners!!! TODO
-    #if imageList:
-        #show_image_gui(imageList[0])
-     
-    #print(EXCLUSION_ZONES)
+    return EXCLUSION_ZONES
+
 
 def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
     retinaFace_mode = use_retinaFace
     mtcnn_mode = use_mtcnn
     dlib_cnn_mode = use_dlib_cnn
     for image_path in imageList:
-        pil_image = Image.open(image_path)
+        pil_image = Image.open(image_path).convert("RGB")
         image = np.asarray(pil_image)
-        #overlay = use_models(image_path, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
-        start_gui(image, image_path, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
+        # overlay = use_models(image_path, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
+        start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
 
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
 def formatImages(images) -> list:
@@ -104,22 +94,31 @@ def formatImages(images) -> list:
         return [path] if path.suffix.lower() in exts else []
     else:
         raise TypeError(f"Unbekannter Typ oder Pfad: {images!r}")
-    
+
 # wendet alle Modelle auf alle Bilder in image_paths an
-def use_models(image, image_path, use_retinaFace, use_mtcnn, use_dlib_cnn):
+def use_models(
+    image,
+    image_name,
+    use_retinaFace,
+    use_mtcnn,
+    use_dlib_cnn,
+    retina_threshold=retina_confidence,
+    mtcnn_threshold=mtcnn_confidence,
+    dlib_cnn_threshold=dlib_cnn_confidence,
+):
     print("testing modells")
-    #pil_bild = Image.open(image_path)
-    #bild = np.asarray(pil_bild) 
-    #bild = cv2.imread(img_path)
-    #bild_hoehe, bild_breite = bild.shape[:2]
+    # pil_bild = Image.open(image_path)
+    # bild = np.asarray(pil_bild)
+    # bild = cv2.imread(img_path)
+    # bild_hoehe, bild_breite = bild.shape[:2]
 
     # Modelle ausführen
     if use_dlib_cnn:
-        print(f"Teste {image_path.name} mit Dlib CNN")
+        print(f"Teste {image_name} mit Dlib CNN")
         faces = cnn_detector(image)
         for face in faces:
             confidence = face.confidence
-            if confidence >= cnn_confidence:
+            if confidence >= dlib_cnn_threshold:
                 start_x, start_y, width, height = (
                     face.rect.left(),
                     face.rect.top(),
@@ -127,71 +126,88 @@ def use_models(image, image_path, use_retinaFace, use_mtcnn, use_dlib_cnn):
                     face.rect.height(),
                 )
 
-                EXCLUSION_ZONES.append({
-                    "x": start_x,
-                    "y": start_y,
-                    "w": width,
-                    "h": height,
-                    "model": "Dlib CNN",
-                    "confidence": round(float(confidence), 2),
-                    "image_name": image_path.name
-                })
+                EXCLUSION_ZONES.append(
+                    {
+                        "x": start_x,
+                        "y": start_y,
+                        "w": width,
+                        "h": height,
+                        "model": "Dlib CNN",
+                        "confidence": round(float(confidence), 2),
+                        "image_name": image_name,
+                    }
+                )
 
     if use_mtcnn:
-        print(f"Teste {image_path.name} mit MTCNN")
-        faces = detector.detect_faces(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        print(f"Teste {image_name} mit MTCNN")
+        faces = detector.detect_faces(image)
         for face in faces:
             confidence = face["confidence"]
-            if confidence >= mtcnn_confidence:
+            if confidence >= mtcnn_threshold:
                 start_x, start_y, width, height = face["box"]
 
-                EXCLUSION_ZONES.append({
-                    "x": start_x,
-                    "y": start_y,
-                    "w": width,
-                    "h": height,
-                    "model": "MTCNN",
-                    "confidence": round(float(confidence), 2),
-                    "image_name": image_path.name
-                })
-    
+                EXCLUSION_ZONES.append(
+                    {
+                        "x": start_x,
+                        "y": start_y,
+                        "w": width,
+                        "h": height,
+                        "model": "MTCNN",
+                        "confidence": round(float(confidence), 2),
+                        "image_name": image_name,
+                    }
+                )
+
     if use_retinaFace:
-        print(f"Teste {image_path.name} mit RetinaFace")
+        print(f"Teste {image_name} mit RetinaFace")
         faces = app.get(image)
         for face in faces:
             confidence = face.det_score
-            if confidence >= retina_confidence:
+            if confidence >= retina_threshold:
                 start_x, start_y, end_x, end_y = map(int, face.bbox)
 
-                EXCLUSION_ZONES.append({
-                    "x": start_x,
-                    "y": start_y,
-                    "w": end_x - start_x,
-                    "h": end_y - start_y,
-                    "model": "RetinaFace",
-                    "confidence": round(float(confidence), 2),
-                    "image_name": image_path.name
-                })
+                EXCLUSION_ZONES.append(
+                    {
+                        "x": start_x,
+                        "y": start_y,
+                        "w": end_x - start_x,
+                        "h": end_y - start_y,
+                        "model": "RetinaFace",
+                        "confidence": round(float(confidence), 2),
+                        "image_name": image_name,
+                    }
+                )
 
     if not any([use_retinaFace, use_mtcnn, use_dlib_cnn]):
         print("Es wurde kein Modell angewendet.")
-                
-    return mark_faces(image, image_path.name)
-    
+
+    return mark_faces(image, image_name)
+
 # markiert alle erkannten Bereiche auf dem Bild
-def mark_faces(image, image_name):
+def mark_faces(image, image_name, use_dark_colors=False):
     overlay = image.copy()
     for zone in EXCLUSION_ZONES:
         if zone["image_name"] == image_name:
-            match zone["model"]:
-                case "Dlib CNN":
-                    model_color = CNN_COLOR
-                case "MTCNN":
-                    model_color = MTCNN_COLOR
-                case "RetinaFace":
-                    model_color = RETINA_COLOR
-                case _:
-                    model_color = EXTRA_MODEL_COLOR
+            if use_dark_colors:
+                match zone["model"]:
+                    case "Dlib CNN":
+                        model_color = DLIB_CNN_COLOR_DARK
+                    case "MTCNN":
+                        model_color = MTCNN_COLOR_DARK
+                    case "RetinaFace":
+                        model_color = RETINA_COLOR_DARK
+                    case _:
+                        model_color = EXTRA_MODEL_COLOR
+            else:
+                match zone["model"]:
+                    case "Dlib CNN":
+                        model_color = DLIB_CNN_COLOR
+                    case "MTCNN":
+                        model_color = MTCNN_COLOR
+                    case "RetinaFace":
+                        model_color = RETINA_COLOR
+                    case _:
+                        model_color = EXTRA_MODEL_COLOR
 
             cv2.rectangle(
                 overlay,
@@ -209,11 +225,24 @@ def mark_faces(image, image_name):
                 model_color,
                 DETECTION_THICKNESS,
             )
-    
+
     return overlay
 
+# Entfernt alle makierungen aus EXCLUSION_ZONES von Modellen die nicht auf das Bild angewendet werden
+def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
+    if all([use_retinaFace, use_mtcnn, use_dlib_cnn]):
+        return
 
-def start_gui(original_image, image_path, use_retinaFace, use_mtcnn, use_dlib_cnn):
+    EXCLUSION_ZONES[:] = [
+        zone
+        for zone in EXCLUSION_ZONES
+        if zone["image_name"] != image_name
+        or (zone["model"] == "RetinaFace" and use_retinaFace)
+        or (zone["model"] == "MTCNN" and use_mtcnn)
+        or (zone["model"] == "Dlib CNN" and use_dlib_cnn)
+    ]
+
+def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     root = tk.Tk()
     root.title("Cranach Detector GUI")
 
@@ -221,55 +250,106 @@ def start_gui(original_image, image_path, use_retinaFace, use_mtcnn, use_dlib_cn
     frame = tk.Frame(root)
     frame.pack(padx=10, pady=10)
 
-    print("gomme mode: " + str(use_retinaFace) + " " + str(use_mtcnn) + " " + str(use_dlib_cnn))
+    use_dark_color = False
     retinaFace_check = tk.BooleanVar(value=use_retinaFace)
     mtcnn_check = tk.BooleanVar(value=use_mtcnn)
     dlib_cnn_check = tk.BooleanVar(value=use_dlib_cnn)
+    retina_threshold = tk.DoubleVar(value=retina_confidence)
+    mtcnn_threshold = tk.DoubleVar(value=mtcnn_confidence)
+    dlib_cnn_threshold = tk.DoubleVar(value=dlib_cnn_confidence)
+
+    input_frame = tk.Frame(root)
+    input_frame.pack(pady=10)
 
     # Bild laden und proportional skalieren
-    #overlay_rgb = cv2.cvtColor(overlay, cv2.COLOR_BGR2RGB)
     def show_image(image):
         img = Image.fromarray(image)
-
-        max_width = 1080
-        max_height = 1080
-        original_width, original_height = img.size
-        ratio = min(max_width / original_width, max_height / original_height)
-        new_width = int(original_width * ratio)
-        new_height = int(original_height * ratio)
-        img = img.resize((new_width, new_height), Image.Resampling.LANCZOS)
-
+        max_w, max_h = 1080, 1080
+        w, h = img.size
+        ratio = min(max_w / w, max_h / h)
+        img = img.resize((int(w * ratio), int(h * ratio)), Image.Resampling.LANCZOS)
         img_tk = ImageTk.PhotoImage(img)
+        lbl = tk.Label(frame, image=img_tk)
+        lbl.image = img_tk
+        lbl.grid(row=0, column=0, columnspan=2)
 
-        # Bildanzeige
-        img_label = tk.Label(frame, image=img_tk)
-        img_label.image = img_tk
-        img_label.grid(row=0, column=0, columnspan=2)
-    
     def start_detection(image):
-        overlay = use_models(image, image_path, retinaFace_check.get(), mtcnn_check.get(), dlib_cnn_check.get())
-        show_image(overlay)
+        nonlocal use_dark_color
+        clean_marks(
+            image_name, retinaFace_check.get(), mtcnn_check.get(), dlib_cnn_check.get()
+        )
+        overlay = use_models(
+            image,
+            image_name,
+            retinaFace_check.get(),
+            mtcnn_check.get(),
+            dlib_cnn_check.get(),
+            retina_threshold.get(),
+            mtcnn_threshold.get(),
+            dlib_cnn_threshold.get(),
+        )
+        if use_dark_color:
+            show_image(mark_faces(original_image, image_name, use_dark_color))
+        else:
+            show_image(overlay)
+        print(EXCLUSION_ZONES)
 
-    # Buttons unter dem Bild
-    btn_next = tk.Button(frame, text="Weiter", command=lambda: print("Nächstes Bild"))
-    btn_next.grid(row=1, column=1, sticky="e", padx=5, pady=5)
+    def toggle_detection_color():
+        nonlocal use_dark_color
+        if use_dark_color:
+            use_dark_color = False
+        else:
+            use_dark_color = True
+        show_image(mark_faces(original_image, image_name, use_dark_color))
 
-    btn_process = tk.Button(frame, text="Gesichter erkennen", command=lambda: start_detection(original_image))
-    btn_process.grid(row=1, column=0, sticky="w", padx=5, pady=5)
+    # Buttons
+    # RetinaFace
+    tk.Checkbutton(input_frame, text="RetinaFace", variable=retinaFace_check).grid(
+        row=0, column=0, sticky="w"
+    )
+    tk.Entry(input_frame, textvariable=retina_threshold, validate="key", width=5).grid(
+        row=0, column=1
+    )
+    tk.Label(input_frame, text="Confidence Grenzwert").grid(
+        row=0, column=2, padx=(0, 20)
+    )
 
-    check_retinaFace = tk.Checkbutton(root, text="RetinaFace", variable=retinaFace_check)
-    check_retinaFace.pack(padx=20, pady=20)
+    # MTCNN
+    tk.Checkbutton(input_frame, text="MTCNN", variable=mtcnn_check).grid(
+        row=1, column=0, sticky="w"
+    )
+    tk.Entry(input_frame, textvariable=mtcnn_threshold, validate="key", width=5).grid(
+        row=1, column=1
+    )
+    tk.Label(input_frame, text="Confidence Grenzwert").grid(
+        row=1, column=2, padx=(0, 20)
+    )
 
-    check_mtcnn = tk.Checkbutton(root, text="MTCNN", variable=mtcnn_check)
-    check_mtcnn.pack(padx=20, pady=20)
+    # Dlib CNN
+    tk.Checkbutton(input_frame, text="Dlib CNN", variable=dlib_cnn_check).grid(
+        row=2, column=0, sticky="w"
+    )
+    tk.Entry(
+        input_frame, textvariable=dlib_cnn_threshold, validate="key", width=5
+    ).grid(row=2, column=1)
+    tk.Label(input_frame, text="Confidence Grenzwert").grid(
+        row=2, column=2, padx=(0, 20)
+    )
 
-    check_dlib_cnn = tk.Checkbutton(root, text="Dlib CNN", variable=dlib_cnn_check)
-    check_dlib_cnn.pack(padx=20, pady=20)
+    tk.Button(frame, text="Weiter", command=lambda: print("Nächstes Bild")).grid(
+        row=1, column=1, sticky="e", padx=5, pady=5
+    )
+    tk.Button(
+        frame,
+        text="Gesichter erkennen",
+        command=lambda: start_detection(original_image),
+    ).grid(row=1, column=0, sticky="w", padx=5, pady=5)
+    tk.Button(frame, text="Dunkele Makierungen", command=toggle_detection_color).grid(
+        row=2, column=0, columnspan=2, pady=(0, 5)
+    )
 
-    show_image(original_image)
-
+    start_detection(original_image)
     root.mainloop()
-
 
 
 CranachDetector()
