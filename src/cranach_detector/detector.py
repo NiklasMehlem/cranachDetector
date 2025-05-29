@@ -76,7 +76,6 @@ def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
         # overlay = use_models(image_path, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
         start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
 
-
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
 def formatImages(images) -> list:
     if images is None:
@@ -95,7 +94,6 @@ def formatImages(images) -> list:
         return [path] if path.suffix.lower() in exts else []
     else:
         raise TypeError(f"Unbekannter Typ oder Pfad: {images!r}")
-
 
 # wendet alle Modelle auf alle Bilder in image_paths an
 def use_models(
@@ -185,7 +183,6 @@ def use_models(
 
     return mark_faces(image, image_name)
 
-
 # markiert alle erkannten Bereiche auf dem Bild
 def mark_faces(image, image_name, use_dark_colors=False):
     overlay = image.copy()
@@ -231,7 +228,6 @@ def mark_faces(image, image_name, use_dark_colors=False):
 
     return overlay
 
-
 # Entfernt alle makierungen aus EXCLUSION_ZONES von Modellen die nicht auf das Bild angewendet werden
 def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     if all([use_retinaFace, use_mtcnn, use_dlib_cnn]):
@@ -249,11 +245,41 @@ def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
 
 def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     root = tk.Tk()
-    root.title("Cranach Detector GUI")
+    root.title("Cranach Detector")
+    root.geometry("1280x720")
+    root.minsize(854, 480)
+    root.rowconfigure(0, weight=1)
+    root.columnconfigure(0, weight=1)
+    root.columnconfigure(1, weight=0)
 
-    # Haupt-Container
-    frame = tk.Frame(root)
-    frame.pack(padx=10, pady=10)
+    canvas = tk.Canvas(root)
+    v_scroll = tk.Scrollbar(root, orient="vertical", command=canvas.yview)
+    h_scroll = tk.Scrollbar(root, orient="horizontal", command=canvas.xview)
+    canvas.configure(yscrollcommand=v_scroll.set, xscrollcommand=h_scroll.set)
+    canvas.bind_all(
+        "<MouseWheel>",
+        lambda e: canvas.yview_scroll(int(-1 * (e.delta / 120)), "units"),
+    )
+    canvas.bind_all("<Button-4>", lambda e: canvas.yview_scroll(-1, "units"))
+    canvas.bind_all("<Button-5>", lambda e: canvas.yview_scroll(1, "units"))
+
+    canvas.grid(row=0, column=0, sticky="nsew")
+    v_scroll.grid(row=0, column=0, sticky="nse")
+    h_scroll.grid(row=1, column=0, sticky="ew")
+
+    # Frame in der Canvas
+    frame = tk.Frame(canvas)
+    frame.grid_columnconfigure(0, weight=1)
+    canvas.create_window((0, 0), window=frame, anchor="nw")
+    frame.bind(
+        "<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+    )
+
+    # --- Controls direkt rechts neben dem Bild ---
+    input_frame = tk.Frame(root)
+    input_frame.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
+    for col in range(3):
+        input_frame.columnconfigure(col, weight=1)
 
     use_dark_color = False
     retina_used = (False, 0.0)
@@ -266,11 +292,10 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
     mtcnn_threshold = tk.DoubleVar(value=mtcnn_confidence)
     dlib_cnn_threshold = tk.DoubleVar(value=dlib_cnn_confidence)
 
-    input_frame = tk.Frame(root)
-    input_frame.pack(pady=10)
-
     # Bild laden und proportional skalieren
     def show_image(image):
+        for w in frame.winfo_children():
+            w.destroy()
         img = Image.fromarray(image)
         max_w, max_h = 1080, 1080
         w, h = img.size
@@ -279,8 +304,8 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
         img_tk = ImageTk.PhotoImage(img)
         lbl = tk.Label(frame, image=img_tk)
         lbl.image = img_tk
-        lbl.grid(row=0, column=0, columnspan=2)
-
+        lbl.pack(anchor='ne', expand=True)
+        
     def start_detection(image):
         nonlocal use_dark_color
         nonlocal retina_used
@@ -325,7 +350,6 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
             show_image(mark_faces(original_image, image_name, use_dark_color))
         else:
             show_image(overlay)
-        print(EXCLUSION_ZONES)
 
     def toggle_detection_color():
         nonlocal use_dark_color
@@ -369,20 +393,21 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
         row=2, column=2, padx=(0, 20)
     )
 
-    tk.Button(frame, text="Weiter", command=lambda: print("Nächstes Bild")).grid(
-        row=1, column=1, sticky="e", padx=5, pady=5
+    # Buttons
+    tk.Button(input_frame, text="Weiter", command=lambda: print("Nächstes Bild")).grid(
+        row=5, column=0, columnspan=3, pady=40, sticky="ew"
     )
     tk.Button(
-        frame,
-        text="Gesichter erkennen",
+        input_frame,
+        text="Modell/e anwenden",
         command=lambda: start_detection(original_image),
-    ).grid(row=1, column=0, sticky="w", padx=5, pady=5)
-    tk.Button(frame, text="Dunkele Makierungen", command=toggle_detection_color).grid(
-        row=2, column=0, columnspan=2, pady=(0, 5)
-    )
+    ).grid(row=4, column=0, columnspan=3, pady=5, sticky="ew")
+    tk.Button(
+        input_frame, text="Dunkle Makierungen", command=toggle_detection_color
+    ).grid(row=3, column=0, columnspan=3, pady=5, sticky="ew")
 
     start_detection(original_image)
     root.mainloop()
 
 
-CranachDetector()
+print(CranachDetector())
