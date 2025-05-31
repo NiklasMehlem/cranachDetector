@@ -60,18 +60,19 @@ def CranachDetector(
     Returns:
         bool: True, wenn sich die Rechtecke überschneiden.
     """
-    imageList = formatImages(images)
+    image_list = formatImages(images)
 
-    while imageList == []:
+    while image_list == []:
         folder = filedialog.askdirectory(title="Wähle einen Ordner mit Bildern")
         if not folder:
             print("Kein Ordner ausgewählt.")
             break
-        imageList = formatImages(folder)
+        image_list = formatImages(folder)
 
-    start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn)
+    start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn)
     return EXCLUSION_ZONES
 
+"""
 # Läd die Bilder aus imageList und startet die GUI anzeige
 def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
     retinaFace_mode = use_retinaFace
@@ -81,6 +82,7 @@ def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
         pil_image = Image.open(image_path).convert("RGB")
         image = np.asarray(pil_image)
         start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
+"""
 
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
 def formatImages(images) -> list:
@@ -112,12 +114,6 @@ def use_models(
     mtcnn_threshold=mtcnn_confidence,
     dlib_cnn_threshold=dlib_cnn_confidence,
 ):
-    print("testing modells")
-    # pil_bild = Image.open(image_path)
-    # bild = np.asarray(pil_bild)
-    # bild = cv2.imread(img_path)
-    # bild_hoehe, bild_breite = bild.shape[:2]
-
     # Modelle ausführen
     if use_dlib_cnn:
         print(f"Teste {image_name} mit Dlib CNN")
@@ -188,7 +184,7 @@ def use_models(
         print("Es wurde kein Modell angewendet.")
 
     remove_intersections(image_name)
-    print(EXCLUSION_ZONES)
+    #print(EXCLUSION_ZONES)
     return mark_faces(image, image_name)
 
 # markiert alle erkannten Bereiche auf dem Bild
@@ -327,7 +323,7 @@ def overlap_ratio(boxA, boxB):
     return inner_area / smaller_area
 
 
-def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
+def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
     ### GUI Fenster
     root = tk.Tk()
     root.title("Cranach Detector")
@@ -366,14 +362,29 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
 
     ### Variablen
     use_dark_color = False
+    image_index = 0
+    image_name = ""
+    original_image = ""
     retinaFace_check = tk.BooleanVar(value=use_retinaFace)
     mtcnn_check = tk.BooleanVar(value=use_mtcnn)
     dlib_cnn_check = tk.BooleanVar(value=use_dlib_cnn)
     retina_threshold = tk.DoubleVar(value=retina_confidence)
     mtcnn_threshold = tk.DoubleVar(value=mtcnn_confidence)
     dlib_cnn_threshold = tk.DoubleVar(value=dlib_cnn_confidence)
+    retina_used = (False, 0.0, 0)
+    mtcnn_used = (False, 0.0, 0)
+    dlib_cnn_used = (False, 0.0, 0)
 
     ### Fuktionen die für Variablen Initierung gebraucht werden
+    def loading_image():
+        nonlocal image_index
+        nonlocal image_name
+        nonlocal original_image
+        image_path = image_list[image_index]
+        image_name = image_path.name
+        pil_image = Image.open(image_path).convert("RGB")
+        original_image = np.asarray(pil_image)
+
     def count_entries(image_name, model):
         return sum(
             1
@@ -381,12 +392,7 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
             if box["image_name"] == image_name and box["model"] == model
         )
 
-    retina_sum = count_entries(image_name, "RetinaFace")
-    mtcnn_sum = count_entries(image_name, "MTCNN")
-    dlib_cnn_sum = count_entries(image_name, "Dlib CNN")
-    retina_used = (False, 0.0, retina_sum)
-    mtcnn_used = (False, 0.0, mtcnn_sum)
-    dlib_cnn_used = (False, 0.0, dlib_cnn_sum)
+    loading_image()
 
     # Bild laden und proportional skalieren
     def show_image(image):
@@ -456,6 +462,20 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
             use_dark_color = True
         show_image(mark_faces(original_image, image_name, use_dark_color))
 
+    def next_image():
+        nonlocal image_index
+        nonlocal retina_used
+        nonlocal mtcnn_used
+        nonlocal dlib_cnn_used
+        if image_index < len(image_list) - 1:
+            image_index += 1
+            loading_image()
+            retina_used = (False, 0.0, 0)
+            mtcnn_used = (False, 0.0, 0)
+            dlib_cnn_used = (False, 0.0, 0)
+            start_detection(original_image)
+        else: root.quit()
+    
     # Buttons
     # RetinaFace
     tk.Checkbutton(input_frame, text="RetinaFace", variable=retinaFace_check).grid(
@@ -491,7 +511,7 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
     )
 
     # Buttons
-    tk.Button(input_frame, text="Weiter", command=lambda: print("Nächstes Bild")).grid(
+    tk.Button(input_frame, text="Weiter", command=next_image).grid(
         row=5, column=0, columnspan=3, pady=40, sticky="ew"
     )
     tk.Button(
