@@ -29,7 +29,7 @@ retina_confidence = 0.52
 RETINA_COLOR = (87, 144, 252)  # Blau
 RETINA_COLOR_DARK = (37, 94, 255)
 EXTRA_MODEL_COLOR = (150, 74, 139)  # Lila
-
+MAX_OVERLAP = 0.75
 
 DETECTION_OFFSET = 10
 DETECTION_THICKNESS = 2
@@ -49,14 +49,21 @@ app.prepare(ctx_id=0)
 def CranachDetector(
     images=None, use_retinaFace=True, use_mtcnn=False, use_dlib_cnn=False
 ):
-    # root = tk.Tk()
-    # root.withdraw()
+    """
+    Erstellt eine Liste mit allen erkannten Gesichtern aus images.
+
+    Args:
+        images (None): 
+        images (string_path): (x, y, width, height)
+        boxB: (x, y, width, height)
+
+    Returns:
+        bool: True, wenn sich die Rechtecke überschneiden.
+    """
     imageList = formatImages(images)
 
     while imageList == []:
         folder = filedialog.askdirectory(title="Wähle einen Ordner mit Bildern")
-        # root.destroy()
-
         if not folder:
             print("Kein Ordner ausgewählt.")
             break
@@ -65,7 +72,7 @@ def CranachDetector(
     start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn)
     return EXCLUSION_ZONES
 
-
+# Läd die Bilder aus imageList und startet die GUI anzeige
 def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
     retinaFace_mode = use_retinaFace
     mtcnn_mode = use_mtcnn
@@ -73,7 +80,6 @@ def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
     for image_path in imageList:
         pil_image = Image.open(image_path).convert("RGB")
         image = np.asarray(pil_image)
-        # overlay = use_models(image_path, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
         start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
 
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
@@ -181,6 +187,8 @@ def use_models(
     if not any([use_retinaFace, use_mtcnn, use_dlib_cnn]):
         print("Es wurde kein Modell angewendet.")
 
+    remove_intersections(image_name)
+    print(EXCLUSION_ZONES)
     return mark_faces(image, image_name)
 
 # markiert alle erkannten Bereiche auf dem Bild
@@ -242,8 +250,85 @@ def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
         or (zone["model"] == "Dlib CNN" and use_dlib_cnn)
     ]
 
+def remove_intersections(image_name):
+    index_to_remove = set()
+    for i, boxA in enumerate(EXCLUSION_ZONES):
+        if boxA["image_name"] != image_name:
+            continue
+
+        box_tupelA = (boxA["x"], boxA["y"], boxA["w"], boxA["h"])
+        for j, boxB in enumerate(EXCLUSION_ZONES):
+            if boxB["image_name"] != image_name or boxB["model"] == boxA["model"] or j <= i:
+                continue
+
+            box_tupelB = (boxB["x"], boxB["y"], boxB["w"], boxB["h"])
+            if not isIntersecting(box_tupelA, box_tupelB):
+                continue
+            
+            ratio = overlap_ratio(box_tupelA, box_tupelB)
+            if ratio >= MAX_OVERLAP:
+                areaA = boxA["w"] * boxA["h"]
+                areaB = boxB["w"] * boxB["h"]
+                if areaA > areaB:
+                    index_to_remove.add(i)
+                else:
+                    index_to_remove.add(j)
+
+    for index in sorted(index_to_remove, reverse=True):
+        del EXCLUSION_ZONES[index] 
+
+def isIntersecting(boxA: tuple[int, int, int, int], boxB: tuple[int, int, int, int]) -> bool:
+    """
+    Prüft, ob sich zwei Rechtecke überschneiden.
+
+    Args:
+        boxA: (x, y, width, height)
+        boxB: (x, y, width, height)
+
+    Returns:
+        bool: True, wenn sich die Rechtecke überschneiden.
+    """
+    a_x_start, a_y_start, a_width, a_height = boxA
+    a_x_end = a_x_start + a_width
+    a_y_end = a_y_start + a_height
+    b_x_start, b_y_start, b_width, b_height = boxB
+    b_x_end = b_x_start + b_width
+    b_y_end = b_y_start + b_height
+
+    overlap_x = (a_x_start < b_x_end) and (b_x_start < a_x_end)
+    overlap_y = (a_y_start < b_y_end) and (b_y_start < a_y_end)
+    return overlap_x and overlap_y
+
+# Berechnet wie groß der Anteil der Fläche ist, mit welcher sich zwei Rechtecke überschneiden
+def overlap_ratio(boxA, boxB):
+    a_x_start, a_y_start, a_width, a_height = boxA
+    b_x_start, b_y_start, b_width, b_height = boxB
+
+    a_x_end = a_x_start + a_width
+    a_y_end = a_y_start + a_height
+    b_x_end = b_x_start + b_width
+    b_y_end = b_y_start + b_height
+
+    inner_x1 = max(a_x_start, b_x_start)
+    inner_y1 = max(a_y_start, b_y_start)
+    inner_x2 = min(a_x_end, b_x_end)
+    inner_y2 = min(a_y_end, b_y_end)
+
+    inner_w = max(0, inner_x2 - inner_x1)
+    inner_h = max(0, inner_y2 - inner_y1)
+    inner_area = inner_w * inner_h
+
+    areaA = a_width * a_height
+    areaB = b_width * b_height
+    smaller_area = min(areaA, areaB)
+
+    if smaller_area == 0:
+        return 0.0
+    return inner_area / smaller_area
+
 
 def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
+    ### GUI Fenster
     root = tk.Tk()
     root.title("Cranach Detector")
     root.geometry("1280x720")
@@ -267,7 +352,6 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
     v_scroll.grid(row=0, column=0, sticky="nse")
     h_scroll.grid(row=1, column=0, sticky="ew")
 
-    # Frame in der Canvas
     frame = tk.Frame(canvas)
     frame.grid_columnconfigure(0, weight=1)
     canvas.create_window((0, 0), window=frame, anchor="nw")
@@ -275,22 +359,34 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
         "<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
     )
 
-    # --- Controls direkt rechts neben dem Bild ---
     input_frame = tk.Frame(root)
     input_frame.grid(row=0, column=1, sticky="nw", padx=5, pady=5)
     for col in range(3):
         input_frame.columnconfigure(col, weight=1)
 
+    ### Variablen
     use_dark_color = False
-    retina_used = (False, 0.0)
-    mtcnn_used = (False, 0.0)
-    dlib_cnn_used = (False, 0.0)
     retinaFace_check = tk.BooleanVar(value=use_retinaFace)
     mtcnn_check = tk.BooleanVar(value=use_mtcnn)
     dlib_cnn_check = tk.BooleanVar(value=use_dlib_cnn)
     retina_threshold = tk.DoubleVar(value=retina_confidence)
     mtcnn_threshold = tk.DoubleVar(value=mtcnn_confidence)
     dlib_cnn_threshold = tk.DoubleVar(value=dlib_cnn_confidence)
+
+    ### Fuktionen die für Variablen Initierung gebraucht werden
+    def count_entries(image_name, model):
+        return sum(
+            1
+            for box in EXCLUSION_ZONES
+            if box["image_name"] == image_name and box["model"] == model
+        )
+
+    retina_sum = count_entries(image_name, "RetinaFace")
+    mtcnn_sum = count_entries(image_name, "MTCNN")
+    dlib_cnn_sum = count_entries(image_name, "Dlib CNN")
+    retina_used = (False, 0.0, retina_sum)
+    mtcnn_used = (False, 0.0, mtcnn_sum)
+    dlib_cnn_used = (False, 0.0, dlib_cnn_sum)
 
     # Bild laden und proportional skalieren
     def show_image(image):
@@ -315,20 +411,21 @@ def start_gui(original_image, image_name, use_retinaFace, use_mtcnn, use_dlib_cn
         mtcnn_needs_rebuild = True
         dlib_cnn_needs_rebuild = True
 
-        if retina_used == (retinaFace_check.get(), retina_threshold.get()):
+        # Überprüft ob änderungen Vorgenommen wurden
+        if retina_used == (retinaFace_check.get(), retina_threshold.get(), count_entries(image_name, "RetinaFace")):
             retina_needs_rebuild = False
         else:
-            retina_used = retinaFace_check.get(), retina_threshold.get()
+            retina_used = retinaFace_check.get(), retina_threshold.get(), count_entries(image_name, "RetinaFace")
 
-        if mtcnn_used == (mtcnn_check.get(), mtcnn_threshold.get()):
+        if mtcnn_used == (mtcnn_check.get(), mtcnn_threshold.get(), count_entries(image_name, "MTCNN")):
             mtcnn_needs_rebuild = False
         else:
-            mtcnn_used = mtcnn_check.get(), mtcnn_threshold.get()
+            mtcnn_used = mtcnn_check.get(), mtcnn_threshold.get(), count_entries(image_name, "MTCNN")
 
-        if dlib_cnn_used == (dlib_cnn_check.get(), dlib_cnn_threshold.get()):
+        if dlib_cnn_used == (dlib_cnn_check.get(), dlib_cnn_threshold.get(), count_entries(image_name, "Dlib CNN")):
             dlib_cnn_needs_rebuild = False
         else:
-            dlib_cnn_used = dlib_cnn_check.get(), dlib_cnn_threshold.get()
+            dlib_cnn_used = dlib_cnn_check.get(), dlib_cnn_threshold.get(), count_entries(image_name, "Dlib CNN")
 
         clean_marks(
             image_name,
