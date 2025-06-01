@@ -46,6 +46,7 @@ app = FaceAnalysis(name="buffalo_l", providers=["CPUExecutionProvider"])
 app.prepare(ctx_id=0)
 
 
+# Main Funktion
 def CranachDetector(
     images=None, use_retinaFace=True, use_mtcnn=False, use_dlib_cnn=False
 ):
@@ -53,24 +54,25 @@ def CranachDetector(
     Erstellt eine Liste mit allen erkannten Gesichtern aus images.
 
     Args:
-        images (None): 
+        images (None):
         images (string_path): (x, y, width, height)
         boxB: (x, y, width, height)
 
     Returns:
         bool: True, wenn sich die Rechtecke überschneiden.
     """
-    image_list = formatImages(images)
+    image_list = format_images(images)
 
     while image_list == []:
         folder = filedialog.askdirectory(title="Wähle einen Ordner mit Bildern")
         if not folder:
             print("Kein Ordner ausgewählt.")
             break
-        image_list = formatImages(folder)
+        image_list = format_images(folder)
 
     start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn)
     return EXCLUSION_ZONES
+
 
 """
 # Läd die Bilder aus imageList und startet die GUI anzeige
@@ -84,8 +86,9 @@ def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
         start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
 """
 
+
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
-def formatImages(images) -> list:
+def format_images(images) -> list:
     if images is None:
         return []
     if isinstance(images, list):
@@ -102,6 +105,7 @@ def formatImages(images) -> list:
         return [path] if path.suffix.lower() in exts else []
     else:
         raise TypeError(f"Unbekannter Typ oder Pfad: {images!r}")
+
 
 # wendet alle Modelle auf alle Bilder in image_paths an
 def use_models(
@@ -184,8 +188,9 @@ def use_models(
         print("Es wurde kein Modell angewendet.")
 
     remove_intersections(image_name)
-    #print(EXCLUSION_ZONES)
+    # print(EXCLUSION_ZONES)
     return mark_faces(image, image_name)
+
 
 # markiert alle erkannten Bereiche auf dem Bild
 def mark_faces(image, image_name, use_dark_colors=False):
@@ -232,6 +237,7 @@ def mark_faces(image, image_name, use_dark_colors=False):
 
     return overlay
 
+
 # Entfernt alle makierungen aus EXCLUSION_ZONES von Modellen die nicht auf das Bild angewendet werden
 def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     if all([use_retinaFace, use_mtcnn, use_dlib_cnn]):
@@ -246,6 +252,7 @@ def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
         or (zone["model"] == "Dlib CNN" and use_dlib_cnn)
     ]
 
+
 def remove_intersections(image_name):
     index_to_remove = set()
     for i, boxA in enumerate(EXCLUSION_ZONES):
@@ -254,13 +261,17 @@ def remove_intersections(image_name):
 
         box_tupelA = (boxA["x"], boxA["y"], boxA["w"], boxA["h"])
         for j, boxB in enumerate(EXCLUSION_ZONES):
-            if boxB["image_name"] != image_name or boxB["model"] == boxA["model"] or j <= i:
+            if (
+                boxB["image_name"] != image_name
+                or boxB["model"] == boxA["model"]
+                or j <= i
+            ):
                 continue
 
             box_tupelB = (boxB["x"], boxB["y"], boxB["w"], boxB["h"])
             if not isIntersecting(box_tupelA, box_tupelB):
                 continue
-            
+
             ratio = overlap_ratio(box_tupelA, box_tupelB)
             if ratio >= MAX_OVERLAP:
                 areaA = boxA["w"] * boxA["h"]
@@ -271,9 +282,12 @@ def remove_intersections(image_name):
                     index_to_remove.add(j)
 
     for index in sorted(index_to_remove, reverse=True):
-        del EXCLUSION_ZONES[index] 
+        del EXCLUSION_ZONES[index]
 
-def isIntersecting(boxA: tuple[int, int, int, int], boxB: tuple[int, int, int, int]) -> bool:
+
+def isIntersecting(
+    boxA: tuple[int, int, int, int], boxB: tuple[int, int, int, int]
+) -> bool:
     """
     Prüft, ob sich zwei Rechtecke überschneiden.
 
@@ -294,6 +308,112 @@ def isIntersecting(boxA: tuple[int, int, int, int], boxB: tuple[int, int, int, i
     overlap_x = (a_x_start < b_x_end) and (b_x_start < a_x_end)
     overlap_y = (a_y_start < b_y_end) and (b_y_start < a_y_end)
     return overlap_x and overlap_y
+
+
+def position_isIntersecting(
+    position: tuple[
+        int,
+        int,
+    ],
+    image_name: str,
+    margin: int = 0,
+) -> bool:
+    """
+    Prüft, ob sich die Position in einem markierten Bereich des Bildes befindet.
+    Das Bild muss zuvor mit CranachDetector() bearbeitet worden sein.
+
+    Args:
+        position (tuple): (x, y)
+        image_name (str): Bsp: "img/Bild.jpg"
+        margin (int (Optional)): Mindestabstand in px, der zu position eingehalten werden muss.
+
+    Returns:
+        bool: True, wenn sich die Position in einem makierten Bereich befindet.
+    """
+    position_x, position_y = position
+    for zone in EXCLUSION_ZONES:
+        if zone["image_name"] != image_name:
+            continue
+
+        if margin > 0:
+            position_area_x = position_x - margin
+            position_area_y = position_y - margin
+            position_area_length = margin * 2
+            position_area = (
+                position_area_x,
+                position_area_y,
+                position_area_length,
+                position_area_length,
+            )
+            zone_tupel = (zone["x"], zone["y"], zone["w"], zone["h"])
+
+            if isIntersecting(position_area, zone_tupel):
+                return True
+
+        zone_x_end = zone["x"] + zone["w"]
+        zone_y_end = zone["y"] + zone["h"]
+
+        overlap_x = (position_x < zone_x_end) and (zone["x"] < position_x)
+        overlap_y = (position_y < zone_y_end) and (zone["y"] < position_y)
+        if overlap_x and overlap_y:
+            return True
+
+    return False
+
+
+def area_isIntersecting(
+    area: tuple[int, int, int, int], image_name: str, margin: int = 0
+) -> bool:
+    """
+    Prüft, ob sich area in einem markierten Bereich des Bildes befindet.
+    Das Bild muss zuvor mit CranachDetector() bearbeitet worden sein.
+
+    Args:
+        position (tuple): (x, y, width, height)
+        image_name (str): Bsp: "img/Bild.jpg"
+        margin (int (Optional)): Mindestabstand in px, der zu position eingehalten werden muss.
+
+    Returns:
+        bool: True, wenn sich die Position in einem makierten Bereich befindet.
+    """
+    (
+        area_x_start,
+        area_y_start,
+        area_width,
+        area_height,
+    ) = area
+    area_x_end = area_x_start + area_width
+    area_y_end = area_y_start + area_height
+    for zone in EXCLUSION_ZONES:
+        if zone["image_name"] != image_name:
+            continue
+
+        zone_x_end = zone["x"] + zone["w"]
+        zone_y_end = zone["y"] + zone["h"]
+
+        if margin > 0:
+            margin_area_x = area_x_start - margin
+            margin_area_y = area_y_start - margin
+            margin_area_width = area_width + margin * 2
+            margin_area_height = area_height + margin * 2
+            margin_area = (
+                margin_area_x,
+                margin_area_y,
+                margin_area_width,
+                margin_area_height,
+            )
+            zone_tupel = (zone["x"], zone["y"], zone["w"], zone["h"])
+
+            if isIntersecting(margin_area, zone_tupel):
+                return True
+
+        overlap_x = (area_x_start < zone_x_end) and (zone["x"] < area_x_end)
+        overlap_y = (area_y_start < zone_y_end) and (zone["y"] < area_y_end)
+        if overlap_x and overlap_y:
+            return True
+
+    return False
+
 
 # Berechnet wie groß der Anteil der Fläche ist, mit welcher sich zwei Rechtecke überschneiden
 def overlap_ratio(boxA, boxB):
@@ -323,6 +443,7 @@ def overlap_ratio(boxA, boxB):
     return inner_area / smaller_area
 
 
+# Main Funktion des GUI, inklusiver nötiger Funktionen
 def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
     ### GUI Fenster
     root = tk.Tk()
@@ -406,8 +527,8 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
         img_tk = ImageTk.PhotoImage(img)
         lbl = tk.Label(frame, image=img_tk)
         lbl.image = img_tk
-        lbl.pack(anchor='ne', expand=True)
-        
+        lbl.pack(anchor="ne", expand=True)
+
     def start_detection(image):
         nonlocal use_dark_color
         nonlocal retina_used
@@ -418,20 +539,44 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
         dlib_cnn_needs_rebuild = True
 
         # Überprüft ob änderungen Vorgenommen wurden
-        if retina_used == (retinaFace_check.get(), retina_threshold.get(), count_entries(image_name, "RetinaFace")):
+        if retina_used == (
+            retinaFace_check.get(),
+            retina_threshold.get(),
+            count_entries(image_name, "RetinaFace"),
+        ):
             retina_needs_rebuild = False
         else:
-            retina_used = retinaFace_check.get(), retina_threshold.get(), count_entries(image_name, "RetinaFace")
+            retina_used = (
+                retinaFace_check.get(),
+                retina_threshold.get(),
+                count_entries(image_name, "RetinaFace"),
+            )
 
-        if mtcnn_used == (mtcnn_check.get(), mtcnn_threshold.get(), count_entries(image_name, "MTCNN")):
+        if mtcnn_used == (
+            mtcnn_check.get(),
+            mtcnn_threshold.get(),
+            count_entries(image_name, "MTCNN"),
+        ):
             mtcnn_needs_rebuild = False
         else:
-            mtcnn_used = mtcnn_check.get(), mtcnn_threshold.get(), count_entries(image_name, "MTCNN")
+            mtcnn_used = (
+                mtcnn_check.get(),
+                mtcnn_threshold.get(),
+                count_entries(image_name, "MTCNN"),
+            )
 
-        if dlib_cnn_used == (dlib_cnn_check.get(), dlib_cnn_threshold.get(), count_entries(image_name, "Dlib CNN")):
+        if dlib_cnn_used == (
+            dlib_cnn_check.get(),
+            dlib_cnn_threshold.get(),
+            count_entries(image_name, "Dlib CNN"),
+        ):
             dlib_cnn_needs_rebuild = False
         else:
-            dlib_cnn_used = dlib_cnn_check.get(), dlib_cnn_threshold.get(), count_entries(image_name, "Dlib CNN")
+            dlib_cnn_used = (
+                dlib_cnn_check.get(),
+                dlib_cnn_threshold.get(),
+                count_entries(image_name, "Dlib CNN"),
+            )
 
         clean_marks(
             image_name,
@@ -474,8 +619,9 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
             mtcnn_used = (False, 0.0, 0)
             dlib_cnn_used = (False, 0.0, 0)
             start_detection(original_image)
-        else: root.quit()
-    
+        else:
+            root.quit()
+
     # Buttons
     # RetinaFace
     tk.Checkbutton(input_frame, text="RetinaFace", variable=retinaFace_check).grid(
