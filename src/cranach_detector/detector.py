@@ -47,48 +47,41 @@ app.prepare(ctx_id=0)
 
 
 # Main Funktion
-def CranachDetector(
-    images=None, use_retinaFace=True, use_mtcnn=False, use_dlib_cnn=False
-):
+def cranach_detector(
+    images=None, use_retinaFace: bool=True, use_mtcnn: bool=False, use_dlib_cnn: bool=False
+) -> list:
     """
     Erstellt eine Liste mit allen erkannten Gesichtern aus images.
 
     Args:
-        images (None):
-        images (string_path): (x, y, width, height)
-        boxB: (x, y, width, height)
+        images (None | str | list):  
+            - None: Öffnet beim Aufruf der Funktion ein Fenster zur Ordnerauswahl.  
+            - str: Entweder ein Pfad zu einer Bilddatei oder zu einem Ordner mit Bildern.  
+            Bsp: "img/Bildersammlung" oder "img/Bild.jpg"  
+            - list[Path]: Liste von Path-Objekten zu Bilddateien.
+
+        use_retinaFace (bool): Wendet RetinaFace auf das erste Bild an, wenn True
+        use_mtcnn (bool): Wendet MTCNN auf das erste Bild an, wenn True
+        use_dlib_cnn (bool): Wendet Dlib CNN auf das erste Bild an, wenn True
 
     Returns:
-        bool: True, wenn sich die Rechtecke überschneiden.
+        list[dict]: 
+            [{'x': int, 'y': int, 'w': int, 'h': int, 'model': str, 'confidence': float, 'image_name': str}, ...] \n
+            Liste mit allen Bereichen, die während des Ausführens markiert wurden.
     """
-    image_list = format_images(images)
-
+    image_list = _format_images(images)
     while image_list == []:
         folder = filedialog.askdirectory(title="Wähle einen Ordner mit Bildern")
         if not folder:
             print("Kein Ordner ausgewählt.")
             break
-        image_list = format_images(folder)
+        image_list = _format_images(folder)
 
-    start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn)
+    _start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn)
     return EXCLUSION_ZONES
 
-
-"""
-# Läd die Bilder aus imageList und startet die GUI anzeige
-def start_process(imageList, use_retinaFace, use_mtcnn, use_dlib_cnn):
-    retinaFace_mode = use_retinaFace
-    mtcnn_mode = use_mtcnn
-    dlib_cnn_mode = use_dlib_cnn
-    for image_path in imageList:
-        pil_image = Image.open(image_path).convert("RGB")
-        image = np.asarray(pil_image)
-        start_gui(image, image_path.name, retinaFace_mode, mtcnn_mode, dlib_cnn_mode)
-"""
-
-
 # Überprüft die Art der Bild eingabe und formatiert sie zu einer Liste
-def format_images(images) -> list:
+def _format_images(images) -> list:
     if images is None:
         return []
     if isinstance(images, list):
@@ -98,7 +91,6 @@ def format_images(images) -> list:
     exts = (".jpg", ".jpeg", ".jfif", ".png")
     if path.is_dir():
         imgs = []
-        # for folder in path:
         imgs += path.rglob("*")
         return [p for p in imgs if p.suffix.lower() in exts]
     elif path.is_file():
@@ -106,9 +98,8 @@ def format_images(images) -> list:
     else:
         raise TypeError(f"Unbekannter Typ oder Pfad: {images!r}")
 
-
 # wendet alle Modelle auf alle Bilder in image_paths an
-def use_models(
+def _use_models(
     image,
     image_name,
     use_retinaFace,
@@ -187,13 +178,11 @@ def use_models(
     if not any([use_retinaFace, use_mtcnn, use_dlib_cnn]):
         print("Es wurde kein Modell angewendet.")
 
-    remove_intersections(image_name)
-    # print(EXCLUSION_ZONES)
-    return mark_faces(image, image_name)
-
+    _remove_intersections(image_name)
+    return _mark_faces(image, image_name)
 
 # markiert alle erkannten Bereiche auf dem Bild
-def mark_faces(image, image_name, use_dark_colors=False):
+def _mark_faces(image, image_name, use_dark_colors=False):
     overlay = image.copy()
     for zone in EXCLUSION_ZONES:
         if zone["image_name"] == image_name:
@@ -237,9 +226,8 @@ def mark_faces(image, image_name, use_dark_colors=False):
 
     return overlay
 
-
 # Entfernt alle makierungen aus EXCLUSION_ZONES von Modellen die nicht auf das Bild angewendet werden
-def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
+def _clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     if all([use_retinaFace, use_mtcnn, use_dlib_cnn]):
         return
 
@@ -253,7 +241,7 @@ def clean_marks(image_name, use_retinaFace, use_mtcnn, use_dlib_cnn):
     ]
 
 
-def remove_intersections(image_name):
+def _remove_intersections(image_name):
     index_to_remove = set()
     for i, boxA in enumerate(EXCLUSION_ZONES):
         if boxA["image_name"] != image_name:
@@ -272,7 +260,7 @@ def remove_intersections(image_name):
             if not isIntersecting(box_tupelA, box_tupelB):
                 continue
 
-            ratio = overlap_ratio(box_tupelA, box_tupelB)
+            ratio = _overlap_ratio(box_tupelA, box_tupelB)
             if ratio >= MAX_OVERLAP:
                 areaA = boxA["w"] * boxA["h"]
                 areaB = boxB["w"] * boxB["h"]
@@ -289,14 +277,14 @@ def isIntersecting(
     boxA: tuple[int, int, int, int], boxB: tuple[int, int, int, int]
 ) -> bool:
     """
-    Prüft, ob sich zwei Rechtecke überschneiden.
+    Prüft, ob sich zwei rechteckige Bereiche überschneiden.
 
     Args:
         boxA: (x, y, width, height)
         boxB: (x, y, width, height)
 
     Returns:
-        bool: True, wenn sich die Rechtecke überschneiden.
+        bool: True, wenn sich die Breiche überschneiden.
     """
     a_x_start, a_y_start, a_width, a_height = boxA
     a_x_end = a_x_start + a_width
@@ -311,16 +299,13 @@ def isIntersecting(
 
 
 def position_isIntersecting(
-    position: tuple[
-        int,
-        int,
-    ],
+    position: tuple[int, int],
     image_name: str,
     margin: int = 0,
 ) -> bool:
     """
     Prüft, ob sich die Position in einem markierten Bereich des Bildes befindet.
-    Das Bild muss zuvor mit CranachDetector() bearbeitet worden sein.
+    Das Bild muss zuvor mit cranach_detector() bearbeitet worden sein.
 
     Args:
         position (tuple): (x, y)
@@ -328,7 +313,7 @@ def position_isIntersecting(
         margin (int (Optional)): Mindestabstand in px, der zu position eingehalten werden muss.
 
     Returns:
-        bool: True, wenn sich die Position in einem makierten Bereich befindet.
+        bool: True, wenn sich die Position in einem markierten Bereich befindet.
     """
     position_x, position_y = position
     for zone in EXCLUSION_ZONES:
@@ -366,7 +351,7 @@ def area_isIntersecting(
 ) -> bool:
     """
     Prüft, ob sich area in einem markierten Bereich des Bildes befindet.
-    Das Bild muss zuvor mit CranachDetector() bearbeitet worden sein.
+    Das Bild muss zuvor mit cranach_detector() bearbeitet worden sein.
 
     Args:
         position (tuple): (x, y, width, height)
@@ -374,7 +359,7 @@ def area_isIntersecting(
         margin (int (Optional)): Mindestabstand in px, der zu position eingehalten werden muss.
 
     Returns:
-        bool: True, wenn sich die Position in einem makierten Bereich befindet.
+        bool: True, wenn sich die Position in einem markierten Bereich befindet.
     """
     (
         area_x_start,
@@ -416,7 +401,7 @@ def area_isIntersecting(
 
 
 # Berechnet wie groß der Anteil der Fläche ist, mit welcher sich zwei Rechtecke überschneiden
-def overlap_ratio(boxA, boxB):
+def _overlap_ratio(boxA, boxB):
     a_x_start, a_y_start, a_width, a_height = boxA
     b_x_start, b_y_start, b_width, b_height = boxB
 
@@ -444,7 +429,7 @@ def overlap_ratio(boxA, boxB):
 
 
 # Main Funktion des GUI, inklusiver nötiger Funktionen
-def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
+def _start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
     ### GUI Fenster
     root = tk.Tk()
     root.title("Cranach Detector")
@@ -497,7 +482,8 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
     dlib_cnn_used = (False, 0.0, 0)
 
     ### Fuktionen die für Variablen Initierung gebraucht werden
-    def loading_image():
+    # Läd das Bild aus image_list[image_index] und updated zugehörige Variablen
+    def _loading_image():
         nonlocal image_index
         nonlocal image_name
         nonlocal original_image
@@ -506,17 +492,18 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
         pil_image = Image.open(image_path).convert("RGB")
         original_image = np.asarray(pil_image)
 
-    def count_entries(image_name, model):
+    # Zählt die Menge an Breichen die ein Modell in einem Bild markiert hat
+    def _count_entries(image_name, model):
         return sum(
             1
             for box in EXCLUSION_ZONES
             if box["image_name"] == image_name and box["model"] == model
         )
 
-    loading_image()
+    _loading_image()
 
-    # Bild laden und proportional skalieren
-    def show_image(image):
+    # Zeigt das Bild aus image im GUI an
+    def _show_image(image):
         for w in frame.winfo_children():
             w.destroy()
         img = Image.fromarray(image)
@@ -529,7 +516,8 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
         lbl.image = img_tk
         lbl.pack(anchor="ne", expand=True)
 
-    def start_detection(image):
+    # Wendet alle aufgewählten Modelle auf das aktuelle Bild an
+    def _start_detection(image):
         nonlocal use_dark_color
         nonlocal retina_used
         nonlocal mtcnn_used
@@ -538,53 +526,53 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
         mtcnn_needs_rebuild = True
         dlib_cnn_needs_rebuild = True
 
-        # Überprüft ob änderungen Vorgenommen wurden
+        # Überprüft ob Änderungen Vorgenommen wurden
         if retina_used == (
             retinaFace_check.get(),
             retina_threshold.get(),
-            count_entries(image_name, "RetinaFace"),
+            _count_entries(image_name, "RetinaFace"),
         ):
             retina_needs_rebuild = False
         else:
             retina_used = (
                 retinaFace_check.get(),
                 retina_threshold.get(),
-                count_entries(image_name, "RetinaFace"),
+                _count_entries(image_name, "RetinaFace"),
             )
 
         if mtcnn_used == (
             mtcnn_check.get(),
             mtcnn_threshold.get(),
-            count_entries(image_name, "MTCNN"),
+            _count_entries(image_name, "MTCNN"),
         ):
             mtcnn_needs_rebuild = False
         else:
             mtcnn_used = (
                 mtcnn_check.get(),
                 mtcnn_threshold.get(),
-                count_entries(image_name, "MTCNN"),
+                _count_entries(image_name, "MTCNN"),
             )
 
         if dlib_cnn_used == (
             dlib_cnn_check.get(),
             dlib_cnn_threshold.get(),
-            count_entries(image_name, "Dlib CNN"),
+            _count_entries(image_name, "Dlib CNN"),
         ):
             dlib_cnn_needs_rebuild = False
         else:
             dlib_cnn_used = (
                 dlib_cnn_check.get(),
                 dlib_cnn_threshold.get(),
-                count_entries(image_name, "Dlib CNN"),
+                _count_entries(image_name, "Dlib CNN"),
             )
 
-        clean_marks(
+        _clean_marks(
             image_name,
             retinaFace_check.get() and not retina_needs_rebuild,
             mtcnn_check.get() and not mtcnn_needs_rebuild,
             dlib_cnn_check.get() and not dlib_cnn_needs_rebuild,
         )
-        overlay = use_models(
+        overlay = _use_models(
             image,
             image_name,
             retinaFace_check.get() and retina_needs_rebuild,
@@ -595,30 +583,32 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
             dlib_cnn_threshold.get(),
         )
         if use_dark_color:
-            show_image(mark_faces(original_image, image_name, use_dark_color))
+            _show_image(_mark_faces(original_image, image_name, use_dark_color))
         else:
-            show_image(overlay)
+            _show_image(overlay)
 
-    def toggle_detection_color():
+    # Wechselt zwischen dunkelen und hellen Farben für makierte Bereiche
+    def _toggle_detection_color():
         nonlocal use_dark_color
         if use_dark_color:
             use_dark_color = False
         else:
             use_dark_color = True
-        show_image(mark_faces(original_image, image_name, use_dark_color))
+        _show_image(_mark_faces(original_image, image_name, use_dark_color))
 
-    def next_image():
+    # lädt das nächste Bild aus image_list wendet direkt _start_detection() auf es an
+    def _next_image():
         nonlocal image_index
         nonlocal retina_used
         nonlocal mtcnn_used
         nonlocal dlib_cnn_used
         if image_index < len(image_list) - 1:
             image_index += 1
-            loading_image()
+            _loading_image()
             retina_used = (False, 0.0, 0)
             mtcnn_used = (False, 0.0, 0)
             dlib_cnn_used = (False, 0.0, 0)
-            start_detection(original_image)
+            _start_detection(original_image)
         else:
             root.quit()
 
@@ -657,20 +647,17 @@ def start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
     )
 
     # Buttons
-    tk.Button(input_frame, text="Weiter", command=next_image).grid(
+    tk.Button(input_frame, text="Weiter", command=_next_image).grid(
         row=5, column=0, columnspan=3, pady=40, sticky="ew"
     )
     tk.Button(
         input_frame,
         text="Modell/e anwenden",
-        command=lambda: start_detection(original_image),
+        command=lambda: _start_detection(original_image),
     ).grid(row=4, column=0, columnspan=3, pady=5, sticky="ew")
     tk.Button(
-        input_frame, text="Dunkle Makierungen", command=toggle_detection_color
+        input_frame, text="Dunkle Makierungen", command=_toggle_detection_color
     ).grid(row=3, column=0, columnspan=3, pady=5, sticky="ew")
 
-    start_detection(original_image)
+    _start_detection(original_image)
     root.mainloop()
-
-
-print(CranachDetector())

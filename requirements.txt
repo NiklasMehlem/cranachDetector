@@ -1,0 +1,7 @@
+opencv-python==4.11.0.86
+numpy==2.2.2
+matplotlib>=3.6.0
+Pillow==11.1.0
+dlib>=19.24.0
+insightface>=0.8.0
+mtcnn>=0.1.0

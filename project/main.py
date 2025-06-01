@@ -7,80 +7,30 @@ import numpy as np
 from insightface.app import FaceAnalysis
 from mtcnn import MTCNN
 from pathlib import Path
+from cranach_detector import cranach_detector
 
 ### variables
 ########## Selection Menu ##########
-# | 51 -> 1er Portrait | 52 -> 2er Portrait | 53 -> 3er Portrait | 54 -> GruppenBild
-# | 61 -> 1er S | 62 -> 2er S | 63 -> 3er S | 64 -> Gruppen S |
-# | 71 -> 1er M | 72 -> 2er M | 73 -> 3er M | 74 -> Gruppen M |
-# | 10 -> 1er Portrait L | 20 -> 2er Portrait L | 30 -> 3er Portrait L | 40 -> Gruppen Bild L
-SELECTED_PICTURE = 73
+# | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
+TEST_MODELS = ["cnn", "mtcnn", "retina"]
 ########## Selection Menu END ##########
 
 FOLDER_PATHS = ["project/img/3Portrait"]
-# | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
-# | ---- |(caffe)| ---- | --- | -------- |(cnn)|(mtcnn)| yunet | retina | (Liste für mich welche Modelle weiter getestet werden sollen)
-# TEST_MODELS = ["caffe", "cnn", "mtcnn", "yunet", "retina"]
-TEST_MODELS = ["cnn", "mtcnn", "retina"]
-
 CAFFE_CONFIDENCE = 0.14
-CAFFE_COLOR = (255, 50, 50) # Blau
+CAFFE_COLOR = (255, 50, 50)  # Blau
 CNN_CONFIDENCE = 0.6
-CNN_COLOR = (0, 255, 0) # Grün
+CNN_COLOR = (0, 255, 0)  # Grün
 MTCNN_CONFIDENCE = 0.82
-MTCNN_COLOR = (0, 0, 255) # Rot
+MTCNN_COLOR = (0, 0, 255)  # Rot
 YUNET_CONFIDENCE = 125
-YUNET_COLOR = (255, 255, 0) # Türkis
+YUNET_COLOR = (255, 255, 0)  # Türkis
 RETINA_CONFIDENCE = 0.52
-RETINA_COLOR = (0, 255, 255) # Gelb
+RETINA_COLOR = (0, 255, 255)  # Gelb
 
 DETECTION_OFFSET = 10
 DETECTION_THICKNESS = 2
 DETECTION_FONT_SCALE = 0.6
 
-match SELECTED_PICTURE:
-    case 51:
-        BILD_PFAD = "project/img/stichproben/1Portrait.png"
-    case 52:
-        BILD_PFAD = "project/img/stichproben/2Portrait.png"
-    case 53:
-        BILD_PFAD = "project/img/stichproben/3Portrait.png"
-    case 54:
-        BILD_PFAD = "project/img/stichproben/GruppenBild.jpg"
-    case 61:
-        BILD_PFAD = "project/img/stichproben/Bildnis_des_Johannes_Cuspinian_S.jfif"
-    case 62:
-        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Genoveva_und_Hl_Apollonia_S.jfif"
-    case 63:
-        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Dorothea_Hl_Agnes_Hl_Kunigunde_S.jfif"
-    case 64:
-        BILD_PFAD = (
-            "project/img/stichproben/Kreuzigung_Christi_Schottenkreuzigung_S.jfif"
-        )
-    case 71:
-        BILD_PFAD = "project/img/stichproben/Bildnis_des_Johannes_Cuspinian_M.jfif"
-    case 72:
-        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Genoveva_und_Hl_Apollonia_M.jfif"
-    case 73:
-        BILD_PFAD = "project/img/stichproben/Katharinenaltar_Hl_Dorothea_Hl_Agnes_Hl_Kunigunde_M.jfif"
-    case 74:
-        BILD_PFAD = (
-            "project/img/stichproben/Kreuzigung_Christi_Schottenkreuzigung_M.jfif"
-        )
-    case 10:
-        BILD_PFAD = "project/img/1Portrait/Bildnis_des_Johannes_Cuspinian.jfif"
-    case 20:
-        BILD_PFAD = (
-            "project/img/2Portrait/Katharinenaltar_Hl_Genoveva_und_Hl_Apollonia.jfif"
-        )
-    case 30:
-        BILD_PFAD = "project/img/3Portrait/Katharinenaltar_Hl_Dorothea_Hl_Agnes_Hl_Kunigunde.jfif"
-    case 40:
-        BILD_PFAD = (
-            "project\img\gruppen_bild\Kreuzigung_Christi_Schottenkreuzigung.jfif"
-        )
-    case _:
-        BILD_PFAD = "project/img/stichproben/GruppenBild.jpg"
 ### initierung
 for model in TEST_MODELS:
     match model:
@@ -125,10 +75,10 @@ for model in TEST_MODELS:
             )  # oder CUDA für GPU
             app.prepare(ctx_id=0)
         case _:
-            print("Initiniere nichts 🎉")
+            print("Initiniere nichts.")
 
 
-# erzeugt eine Liste aus allen .jfif Bildern aus folder_paths
+## Erzeugt eine Liste aus allen .jfif Bildern aus folder_paths
 def get_images(folder_paths, exts=(".jfif",)):
     print("getting images")
     imgs = []
@@ -137,7 +87,7 @@ def get_images(folder_paths, exts=(".jfif",)):
     return [p for p in imgs if p.suffix.lower() in exts]
 
 
-# wendet das Modell auf alle Bilder in image_paths an
+## Wendet das Modell auf alle Bilder in image_paths an
 def test_models(image_paths, models):
     print("testing modells")
     for img_path in image_paths:
@@ -145,7 +95,6 @@ def test_models(image_paths, models):
         overlay = bild.copy()
         bild_hoehe, bild_breite = bild.shape[:2]
 
-        # Modell ausführen
         for model in models:
             print(f"Teste {img_path.name} mit {model}")
             match model:
@@ -153,12 +102,10 @@ def test_models(image_paths, models):
                     grau = cv2.cvtColor(
                         bild, cv2.COLOR_BGR2GRAY
                     )  # In Graustufen umwandeln (erforderlich für Haar-Cascades)
-                    # Gesichter erkennen
                     gesichter = haar_cascade.detectMultiScale(
                         grau, scaleFactor=1.1, minNeighbors=3, minSize=(30, 30)
                     )
 
-                    # Rechtecke um erkannte Gesichter zeichnen
                     for start_x, start_y, width, height in gesichter:
                         cv2.rectangle(
                             overlay,
@@ -168,15 +115,12 @@ def test_models(image_paths, models):
                             DETECTION_THICKNESS,
                         )
                 case "caffe":
-                    # Bild vorverarbeiten
                     blob = cv2.dnn.blobFromImage(
                         bild, 1.0, (300, 300), (104.0, 177.0, 123.0)
                     )
-                    # Gesichtserkennung durchführen
                     netz.setInput(blob)
                     ergebnisse = netz.forward()
 
-                    # Ergebnisse durchgehen
                     for i in range(0, ergebnisse.shape[2]):
                         confidence = ergebnisse[0, 0, i, 2]
                         if confidence >= CAFFE_CONFIDENCE:
@@ -188,9 +132,12 @@ def test_models(image_paths, models):
                             ]
                             (start_x, start_y, end_x, end_y) = box.astype("int")
 
-                            # Rechteck zeichnen
                             cv2.rectangle(
-                                overlay, (start_x, start_y), (end_x, end_y), CAFFE_COLOR, DETECTION_THICKNESS
+                                overlay,
+                                (start_x, start_y),
+                                (end_x, end_y),
+                                CAFFE_COLOR,
+                                DETECTION_THICKNESS,
                             )
                             cv2.putText(
                                 overlay,
@@ -202,27 +149,23 @@ def test_models(image_paths, models):
                                 DETECTION_THICKNESS,
                             )
                 case "pipe":
-                    # MediaPipe Face Detection Setup (MediaPipe arbeitet mit RGB)
+                    ## MediaPipe Face Detection Setup (MediaPipe arbeitet mit RGB)
                     with mp_face_detection.FaceDetection(
                         min_detection_confidence=0.2
                     ) as face_detection:
                         rgb_image = cv2.cvtColor(bild, cv2.COLOR_BGR2RGB)
 
-                        # Gesichtserkennung
                         results = face_detection.process(rgb_image)
-
-                        # Gesichter zeichnen
                         if results.detections:
                             for detection in results.detections:
                                 mp_drawing.draw_detection(overlay, detection)
                 case "hog":
-                    # Konvertiere Bild in Graustufen
+                    ## Konvertiere Bild in Graustufen
                     gray = cv2.cvtColor(bild, cv2.COLOR_BGR2GRAY)
-                    # Erster Wert: Skalen (mehr Skalen = genauere Erkennung, aber langsamer; Standard ist 1).
-                    # Zweiter Wert: Confidence-Schwelle (Standard ist 0.0).
-                    faces, scores, _ = detector.run(gray, 2, -0.5)
+                    faces, scores, _ = detector.run(
+                        gray, 2, -0.5
+                    )  ## Zweiter Wert: Confidence-Schwelle (Standard ist 0.0).
 
-                    # Zeichne Rechtecke um erkannte Gesichter
                     for face in faces:
                         start_x, start_y, width, height = (
                             face.left(),
@@ -238,10 +181,7 @@ def test_models(image_paths, models):
                             DETECTION_THICKNESS,
                         )
                 case "cnn":
-                    # Erkenne Gesichter mit CNN
                     faces = cnn_detector(bild)
-
-                    # Zeichne Rechtecke um erkannte Gesichter
                     for face in faces:
                         confidence = face.confidence
                         if confidence >= CNN_CONFIDENCE:
@@ -268,7 +208,7 @@ def test_models(image_paths, models):
                                 DETECTION_THICKNESS,
                             )
                 case "landmark":
-                    # ChatGPT Code Start.
+                    ###### ChatGPT Code Start. (Filter für erkannte Landmark Gesichter für genauere Ergbnisse) ######
                     # Funktionen zur Landmark-Validierung
                     def validate_landmarks(
                         rect,
@@ -293,7 +233,9 @@ def test_models(image_paths, models):
                         le_center = left_eye.mean(axis=0)
                         re_center = right_eye.mean(axis=0)
                         eye_dist = np.linalg.norm(le_center - re_center)
-                        sym_diff = abs((le_center[0] + re_center[0]) / 2 - rect.center().x)
+                        sym_diff = abs(
+                            (le_center[0] + re_center[0]) / 2 - rect.center().x
+                        )
                         if sym_diff / eye_dist > sym_thresh:
                             return False
 
@@ -310,7 +252,10 @@ def test_models(image_paths, models):
 
                         # Konvexhüllen-Check
                         pts = np.array(
-                            [[landmarks.part(i).x, landmarks.part(i).y] for i in range(68)]
+                            [
+                                [landmarks.part(i).x, landmarks.part(i).y]
+                                for i in range(68)
+                            ]
                         )
                         hull = cv2.convexHull(pts)
                         hull_area = cv2.contourArea(hull)
@@ -329,29 +274,25 @@ def test_models(image_paths, models):
                                 valid_faces.append((rect, shape))
                         return valid_faces
 
-                    # ChatGPT Code Ende.
+                    ###### ChatGPT Code Ende. ######
 
-                    # Bildvorbereitung
                     gray = cv2.cvtColor(bild, cv2.COLOR_BGR2GRAY)
+                    faces, scores, _ = detector.run(gray, 2, -0.5)  ## HOG-Detektion
+                    faces_validated = filter_faces_with_landmarks(
+                        gray, faces, predictor
+                    )  ## Filtern mit Landmark-Validierung
 
-                    # HOG-Detektion
-                    faces, scores, _ = detector.run(gray, 2, -0.5)
-
-                    # Filtern mit Landmark-Validierung
-                    faces_validated = filter_faces_with_landmarks(gray, faces, predictor)
-
-                    # Zeichne Rechtecke um erkannte Gesichter
                     for rect, landmarks in faces_validated:
                         print(f"Bestätigtes Gesicht bei {rect}")
 
                         for j in range(68):
                             x, y = landmarks.part(j).x, landmarks.part(j).y
-                            cv2.circle(overlay, (x, y), DETECTION_THICKNESS, (0, 255, 0), -1)
+                            cv2.circle(
+                                overlay, (x, y), DETECTION_THICKNESS, (0, 255, 0), -1
+                            )
                 case "mtcnn":
-                    # Erkenne Gesichter (MTCNN braucht RGB)
+                    ## Erkenne Gesichter (MTCNN braucht RGB)
                     faces = detector.detect_faces(cv2.cvtColor(bild, cv2.COLOR_BGR2RGB))
-
-                    # Zeichne Rechtecke um erkannte Gesichter
                     for face in faces:
                         confidence = face["confidence"]
                         if confidence >= MTCNN_CONFIDENCE:
@@ -373,12 +314,9 @@ def test_models(image_paths, models):
                                 DETECTION_THICKNESS,
                             )
                 case "yunet":
-                    # Eingabedimension setzen
                     detektor.setInputSize((bild_breite, bild_hoehe))
 
-                    # Gesicht erkennen
                     _, gesichter = detektor.detect(bild)
-
                     if gesichter is not None and len(gesichter) > 0:
                         for gesicht in gesichter:
                             start_x, start_y, width, height, confidence = gesicht[:5]
@@ -408,16 +346,17 @@ def test_models(image_paths, models):
                     else:
                         print("Kein Gesicht erkannt.")
                 case "retina":
-                    # Gesichtserkennung
                     gesichter = app.get(bild)
-
-                    # Rechtecke um erkannte Gesichter zeichnen
                     for gesicht in gesichter:
                         confidence = gesicht.det_score
                         if confidence >= RETINA_CONFIDENCE:
                             start_x, start_y, end_x, end_y = map(int, gesicht.bbox)
                             cv2.rectangle(
-                                overlay, (start_x, start_y), (end_x, end_y), RETINA_COLOR, DETECTION_THICKNESS
+                                overlay,
+                                (start_x, start_y),
+                                (end_x, end_y),
+                                RETINA_COLOR,
+                                DETECTION_THICKNESS,
                             )
                             cv2.putText(
                                 overlay,
@@ -429,7 +368,7 @@ def test_models(image_paths, models):
                                 DETECTION_THICKNESS,
                             )
                 case _:
-                    print("Ich mach dann mal nichts 🎉")
+                    print("Ich mach dann mal nichts...")
 
         if overlay is None:
             print("Bild konnte nicht geladen werden. Überprüfe den Pfad.")
@@ -442,6 +381,7 @@ def test_models(image_paths, models):
             plt.show()
 
 
-# ausführung
-imgs = get_images(FOLDER_PATHS)
-test_models(imgs, TEST_MODELS)
+### ausführung
+# imgs = get_images(FOLDER_PATHS)
+# test_models(imgs, TEST_MODELS)
+print(cranach_detector())
