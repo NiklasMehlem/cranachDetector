@@ -959,6 +959,44 @@
       \field{pages}{21\bibrangedash 37}
       \range{pages}{17}
     \endentry
+    \entry{lizardNttstar25}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=35e70d8ef1163911f84ad677535529b4}{%
+           family={lounging-lizard},
+           familyi={l\bibinithyphendelim l\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=c72f913d11f277681e168fab2e23df04}{%
+           family={nttstar},
+           familyi={n\bibinitperiod}}}%
+      }
+      \strng{namehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{fullhash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{fullhashraw}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{bibnamehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authorbibnamehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authornamehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authorfullhash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authorfullhashraw}{c116ba3a308c8f8764745b0176fc0c44}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{GitHub Issue zu FacialAnalysis.get}
+      \field{title}{Does FacialAnalysis.get expect BGR or RGB?}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/deepinsight/insightface/issues/2741
+      \endverb
+      \verb{url}
+      \verb https://github.com/deepinsight/insightface/issues/2741
+      \endverb
+    \endentry
     \entry{abs-2107-02270}{article}{}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=fea4214ad88ffd4d9f8f731b211daa28}{%
@@ -2182,6 +2220,44 @@
       \field{year}{2016}
       \field{pages}{21\bibrangedash 37}
       \range{pages}{17}
+    \endentry
+    \entry{lizardNttstar25}{online}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=35e70d8ef1163911f84ad677535529b4}{%
+           family={lounging-lizard},
+           familyi={l\bibinithyphendelim l\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=c72f913d11f277681e168fab2e23df04}{%
+           family={nttstar},
+           familyi={n\bibinitperiod}}}%
+      }
+      \strng{namehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{fullhash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{fullhashraw}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{bibnamehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authorbibnamehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authornamehash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authorfullhash}{c116ba3a308c8f8764745b0176fc0c44}
+      \strng{authorfullhashraw}{c116ba3a308c8f8764745b0176fc0c44}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{GitHub Issue zu FacialAnalysis.get}
+      \field{title}{Does FacialAnalysis.get expect BGR or RGB?}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/deepinsight/insightface/issues/2741
+      \endverb
+      \verb{url}
+      \verb https://github.com/deepinsight/insightface/issues/2741
+      \endverb
     \endentry
     \entry{abs-2107-02270}{article}{}{}
       \name{author}{1}{}{%
