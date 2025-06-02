@@ -304,7 +304,7 @@ def position_isIntersecting(
     margin: int = 0,
 ) -> bool:
     """
-    Prüft, ob sich die Position in einem markierten Bereich des Bildes befindet.
+    Prüft, ob sich die Position in einem markierten Bereich des Bildes befindet. \n
     Das Bild muss zuvor mit cranach_detector() bearbeitet worden sein.
 
     Args:
@@ -350,7 +350,7 @@ def area_isIntersecting(
     area: tuple[int, int, int, int], image_name: str, margin: int = 0
 ) -> bool:
     """
-    Prüft, ob sich area in einem markierten Bereich des Bildes befindet.
+    Prüft, ob sich area in einem markierten Bereich des Bildes befindet. \n
     Das Bild muss zuvor mit cranach_detector() bearbeitet worden sein.
 
     Args:

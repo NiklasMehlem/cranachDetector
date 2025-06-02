@@ -7,7 +7,7 @@ import numpy as np
 from insightface.app import FaceAnalysis
 from mtcnn import MTCNN
 from pathlib import Path
-from cranach_detector import cranach_detector
+from cranach_detector import *
 
 ### variables
 ########## Selection Menu ##########
@@ -384,4 +384,5 @@ def test_models(image_paths, models):
 ### ausführung
 # imgs = get_images(FOLDER_PATHS)
 # test_models(imgs, TEST_MODELS)
-print(cranach_detector())
+#cranach_detector()
+#print(position_isIntersecting((10, 10), "Familie_der_Naturmenschen.jfif"))
