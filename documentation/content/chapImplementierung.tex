@@ -1,5 +1,5 @@
 \chapter{Implementierung}
-
+%
 Ursprünglich war die Idee ein Eigenständiges Programm zu entwickeln, welches Selbstständig Wasserzeichen auf Bildern platziert. Dabei sollten die Gesichter freigelassen werden um die Ästhetik des Bildes nicht zu stören. Aufgrund der limitierten Zeit wird dieser Ansatz reduziert, was ebenfalls ermöglicht ihn flexibler zu gestalten. Indem statt eines eigenständigen Programms ein Modul erstellt wird, ermöglicht man mehr Anwendungszwecke über das einfache Platzieren von Wasserzeichen hinaus.
 
 Bisher wurden für das Laden der Bilder in dieser Arbeit CV2 genutzt, genauer die Funktion \texttt{cv2.imread()}, welche Bilder im BGR-Format lädt. Bei der Implementierung ist allerdings aufgefallen das diese Funktion Probleme mit Umlauten hat, was Problematisch ist wenn Dateipfade geladen werden die diese Enthalten. Also wurde auf die Funktion \texttt{Image.open().convert("RGB")} von PIL gewechselt. Interessanter Weise waren die Ergebnisse von RetinaFace mit RGB-Input, obwohl angegeben wurde das BGR als Input verwendet werden sollte \parencite{lizardNttstar25}. Die confidence Werte waren minimal anders ca. 0.02 und es kam zu weniger weniger False-Negatives, weshalb RGB nun als Input für RetinaFace verwendet wird.
@@ -8,7 +8,7 @@ Hauptfunktion des Moduls ist \texttt{cranach\_detector()}, welche gleichzeitig m
 
 Um möglichst viele Verschiedene Anwendungszwecke abzudecken akzeptiert die Funktion \texttt{cranach\_detector()} verschiedene Arten von eingaben:
 \begin{itemize}
-  \item None: Lässt den Nutzer einen Ordner in einem GUI Manuell wählen durch den Iteriert werden soll.
+  \item None: Lässt Nutzer*innen einen Ordner in einem GUI Manuell wählen durch den Iteriert werden soll.
   \item File: Es kann ein Pfad zu einer einzelnen Bild Datei hinterlegt werden welche bearbeitet werden soll.
   \item Path: Wird stattdessen der Pfad eines Ordners übergeben, so werden alle Bilder dieses Ordners zu einer Liste verarbeitet durch die dann iteriert wird.
   \item List: Wenn die interne Funktion unzureichend ist für den Anwendungskontext oder man einfach bereits eine List mit Bilderpfaden hat so kann man diese an das Paket übergeben um diese direkt zu verwenden.
