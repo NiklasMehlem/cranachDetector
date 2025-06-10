@@ -1,26 +1,16 @@
 \babel@toc {ngerman}{}\relax 
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{V}{chapter*.3}%
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{VI}{chapter*.4}%
-\contentsline {chapter}{Glossar}{VII}{section*.5}%
-\contentsline {chapter}{Abkürzungsverzeichnis}{VIII}{section*.7}%
-\contentsline {chapter}{Symbolverzeichnis}{IX}{section*.9}%
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{III}{chapter*.2}%
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{IV}{chapter*.3}%
+\contentsline {chapter}{Glossar}{V}{section*.4}%
+\contentsline {chapter}{Abkürzungsverzeichnis}{VII}{section*.6}%
+\contentsline {chapter}{Symbolverzeichnis}{VIII}{section*.8}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Recherche}{2}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Haar-Cascade}{2}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Caffe}{3}{section.2.2}%
-\contentsline {section}{\numberline {2.3}MediaPipe}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Dlib HOG}{5}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Dlib HOG Landmark}{6}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Dlib CNN}{7}{section.2.6}%
-\contentsline {section}{\numberline {2.7}MTCNN}{8}{section.2.7}%
-\contentsline {section}{\numberline {2.8}Yunet}{9}{section.2.8}%
-\contentsline {section}{\numberline {2.9}RetinaFace (CPU)}{9}{section.2.9}%
-\contentsline {chapter}{\numberline {3}Tests}{11}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Caffe}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Dlib CNN}{12}{section.3.2}%
-\contentsline {section}{\numberline {3.3}MTCNN}{12}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Yunet}{13}{section.3.4}%
-\contentsline {section}{\numberline {3.5}RetinaFace (CPU)}{13}{section.3.5}%
+\contentsline {chapter}{\numberline {2}Recherche}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Tests}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Stichprobentests}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Größentests}{11}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Confidencetests}{11}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Vergleich}{13}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Implementierung}{15}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Fazit}{18}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Formaler Aufbau}{19}{chapter.6}%
@@ -65,6 +55,6 @@
 \contentsline {section}{\numberline {8.2}Literaturverzeichnis}{38}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Inhalt und Anordnung der Literaturangaben}{38}{subsection.8.2.1}%
 \contentsline {subsection}{\numberline {8.2.2}Bibliographische Angaben im Literaturverzeichnis}{39}{subsection.8.2.2}%
-\contentsline {chapter}{\nonumberline Literatur}{40}{chapter*.11}%
-\contentsline {chapter}{\nonumberline Anhang}{43}{chapter*.12}%
+\contentsline {chapter}{\nonumberline Literatur}{40}{chapter*.10}%
+\contentsline {chapter}{\nonumberline Anhang}{43}{chapter*.11}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
