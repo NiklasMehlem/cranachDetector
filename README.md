@@ -1,5 +1,6 @@
 # Evaluierung von Gesichtserkennungsmodellen für historische Gemälde am Beispiel ausgewählter Werke Lucas Cranachs zur optimierten Positionierung von Overlays
 Bachelorarbeit SS 25 im Studiengang Medieninformatik an der TH Köln Campus Gummersbach
+
 CranachDetector: GUI + Gesichtserkennung via dlib/MTCNN/RetinaFace
 
 Das Projekt wird von [Prof. Christian Noss](https://www.th-koeln.de/personen/christian.noss/) betreut.
@@ -40,7 +41,7 @@ from cranach_detector import *
 from cranach_detector import cranach_detector, isIntersecting, position_isIntersecting, area_isIntersecting
 ```
 
-# Bedienungshinweise
+## Bedienungshinweise
 
 1. Rufen Sie cranach_detector() auf, um den Gesichterkennungsprozess zu starten. Detaillierte Informationen finden Sie in der Funktionsdokumentation.
 
@@ -63,6 +64,7 @@ Sollten die markierten Bereiche auf dem Bild optisch schwer erkennbar sein, kön
 <img width="300" align="right" src="./project/repo_img/weiter.png">
 Mit dem Button „Weiter“ gelangen Sie zum nächsten Bild im Ordner bzw. in der Liste. Dabei werden automatisch alle aktuellen Modelle und Grenzwerte auf das nächste Bild angewendet. Sollten keine weiteren Bilder vorhanden sein, wird die Funktion beendet und die Liste aller markierten Bereiche zurückgegeben.
 <br clear="both">
+<br>
 
 2. position_isIntersecting((x, y), "file_name") Überprüft, ob sich eine Position auf einem von cranach_detector() markierten Gesichtsbereich befindet. Gibt True zurück, falls die Position auf einem Gesicht liegt:
 
