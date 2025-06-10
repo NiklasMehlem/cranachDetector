@@ -1,6 +1,6 @@
 \chapter{Implementierung}
 %
-Ursprünglich war die Idee, ein eigenständiges Programm zu entwickeln, welches selbstständig Wasserzeichen auf Bildern platziert. Dabei sollten die Gesichter freigelassen werden, um die Ästhetik des Bildes nicht zu stören. Aufgrund der limitierten Zeit wird dieser Ansatz reduziert. Diese Reduktion erlaubt zugleich eine flexiblere Implementierung des Programms. Indem statt eines eigenständigen Programms ein Modul erstellt wird, ermöglicht man mehr Anwendungszwecke über das einfache Platzieren von Wasserzeichen hinaus.
+Ursprünglich war der Ansatz, ein eigenständiges Programm zu entwickeln, welches selbstständig Wasserzeichen auf Bildern platziert. Dabei sollten die Gesichter ausgespart werden, um die Ästhetik des Bildes nicht zu stören. Aufgrund der limitierten Zeit wird dieser Ansatz auf das Markieren von Gesichtsbereichen reduziert. Diese Reduktion erlaubt eine flexiblere Implementierung, indem statt eines eigenständigen Programms ein Modul erstellt wird. Damit ergeben sich mehr Anwendungsmöglichkeiten, die über das einfache Platzieren von Wasserzeichen hinaus gehen.
 
 Bisher wurde für das Laden der Bilder in dieser Arbeit \texttt{cv2} genutzt, genauer die Funktion \texttt{cv2.imread()}, welche Bilder im BGR-Format lädt. Bei der Implementierung ist allerdings aufgefallen, dass diese Funktion Probleme mit Umlauten hat. Aus diesem Grund wurde auf die Funktion \texttt{Image.open().convert("RGB")} von PIL gewechselt. Bemerkenswert ist, dass RetinaFace mit RGB-Input weniger False-Negatives generiert. Dieses Ergebnis ist insofern unerwartet, da BGR als Input-Format angegeben wurde \parencite{lizardNttstar25}. Die Abweichung der \gls{confidence}-Werte war mit etwa 0{,}02 gering, weshalb RGB nun als Eingabeformat für RetinaFace verwendet wird.
 
@@ -14,7 +14,7 @@ Um möglichst viele verschiedene Anwendungszwecke abzudecken, akzeptiert die Fun
   \item List: Falls die interne Funktion für den jeweiligen Anwendungskontext nicht ausreicht oder bereits eine Liste mit Bildpfaden vorliegt, kann diese direkt übergeben werden.
 \end{itemize}
 
-Weiter können auch alle Modelle einzeln zu- oder abgeschaltet werden – sowohl beim Funktionsaufruf als auch während der Laufzeit. RetinaFace ist dabei standardmäßig aktiviert und alle anderen Modelle deaktiviert. Da RetinaFace bereits gute Ergebnisse liefert, reicht es meist alleine aus. Dies spart Rechenzeit und verringert die Anzahl von False-Positives.
+Weiter können auch alle Modelle einzeln zu- oder abgeschaltet werden – sowohl beim Funktionsaufruf als auch während der Laufzeit. RetinaFace ist dabei standardmäßig aktiviert und alle anderen Modelle deaktiviert. Da RetinaFace bereits gute Ergebnisse liefert, reicht es in den meisten Fällen aus. Dies spart Rechenzeit und verringert die Anzahl von False-Positives.
 
 Auch wenn die \gls{confidence}-Grenzwerte optimiert wurden, kann es dennoch sein, dass bestimmte Bilder andere Werte benötigen. Aus diesem Grund wurde die Möglichkeit hinzugefügt, die \gls{confidence}-Werte während der Laufzeit zu konfigurieren, um für jedes Bild und jedes Modell einzeln Grenzwerte festzulegen, sofern dies erforderlich ist.
 
