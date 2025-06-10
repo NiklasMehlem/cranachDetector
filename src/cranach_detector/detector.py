@@ -1,9 +1,14 @@
 # =============================================================================
-# Dieses Modul verwendet:
+# License-Hinweise:
 # - Dlib CNN (Boost Software License 1.0)
 # - MTCNN (MIT License)
 # - InsightFace Code (MIT License)
 # - RetinaFace (MIT License)
+# - OpenCV (cv2) (BSD-3-Clause)
+# - NumPy (BSD-3-Clause)
+# - Matplotlib (PSF-License)
+# - Pillow (PIL Software License)
+# - Tkinter (Python Software Foundation License)
 # =============================================================================
 
 ### imports
@@ -399,7 +404,6 @@ def area_isIntersecting(
 
     return False
 
-
 # Berechnet wie groß der Anteil der Fläche ist, mit welcher sich zwei Rechtecke überschneiden
 def _overlap_ratio(boxA, boxB):
     a_x_start, a_y_start, a_width, a_height = boxA
@@ -426,7 +430,6 @@ def _overlap_ratio(boxA, boxB):
     if smaller_area == 0:
         return 0.0
     return inner_area / smaller_area
-
 
 # Main Funktion des GUI, inklusiver nötiger Funktionen
 def _start_gui(image_list, use_retinaFace, use_mtcnn, use_dlib_cnn):
