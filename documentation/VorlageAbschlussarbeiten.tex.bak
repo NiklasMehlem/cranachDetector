@@ -30,7 +30,7 @@
 %=== für schnelleres kopilieren alle ungeänderten Dateien auskommentieren =====
 \includeonly{
 	content/chapDeclaration,
-	%content/chapAbstract,
+	content/chapAbstract,
 	content/chapEinleitung,
 	content/chapRecherche,
 	content/chapTests,
@@ -59,7 +59,7 @@
 \listoffigures
 \printglossary
 \printglossary[type=\acronymtype, title={Abkürzungsverzeichnis}]
-\printglossary[type=symbols, title={Symbolverzeichnis}]
+%\printglossary[type=symbols, title={Symbolverzeichnis}]
 %
 \cleardoublepage
 \KOMAoptions{open=right}
@@ -70,9 +70,9 @@
 \include{content/chapImplementierung}
 \include{content/chapFazit}
 
-\include{content/chapForm}
-\include{content/chapGestaltung}
-\include{content/chapLiteratur}
+%\include{content/chapForm}
+%\include{content/chapGestaltung}
+%\include{content/chapLiteratur}
 %
 %\printbibliography[prenote=mynote]
 \printbibliography
@@ -89,10 +89,11 @@
 %\printbibliography[type=misc,title={\_\_\_}]
 %
 \appendix
-\addchap{Anhang}
+%\addchap{Anhang}
 \KOMAoptions{open=any}
 %
-\include{content/chapDeclaration}
+%\include{content/chapDeclaration}
+\includepdf[pages=-]{content/BachelorEigenständigkeitserklärung.pdf}
 %
 %
 \end{document}

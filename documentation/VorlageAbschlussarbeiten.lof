@@ -2,14 +2,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Stichprobenergebnis des Haar-Cascade-Modells bei einem Zwei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarGenovevaApollonia})}}{8}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Stichprobenergebnis des Caffe-Modells bei einem Drei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarDorotheaAgnesKunigunde})}}{10}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Stichprobenergebnis des MediaPipe-Modells bei einem Einzelporträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {bildnisCuspinian})}}{11}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Stichprobenergebnis des Dlib-HOG-Modells bei einem Zwei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarGenovevaApollonia})}}{12}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Stichprobenergebnis des Dlib-HOG-Landmark-Modells bei einem Zwei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarGenovevaApollonia})}}{13}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Stichprobenergebnis des Dlib-CNN-Modells bei einem Zwei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarGenovevaApollonia})}}{14}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Stichprobenergebnis des MTCNN-Modells bei einem Drei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarDorotheaAgnesKunigunde})}}{15}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Stichprobenergebnis des Yunet-Modells bei einem Drei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarDorotheaAgnesKunigunde})}}{16}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Stichprobenergebnis des RetinaFace-Modells bei einem Drei-Personen-Porträt (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {katharinenaltarDorotheaAgnesKunigunde})}}{17}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Confidenceergebnis des Caffe-Modells bei dem ein erkanntes Gesicht einen geringeren Wert als ein False-Positives hat (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {hochaltarNicolaiDoebeln})}}{20}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Confidenceergebnis des MTCNN-Modells mit False-Positives (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {cdaJudith})}}{21}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces MTCNN und RetinaFace haben jeweils Gesichter, die nur von ihnen markiert wurden (Gemälde aus dem \gls {cda}, \blx@tocontentsinit {0}\cite {stigmatisationFranziskus})}}{24}{figure.3.12}%
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Vielleicht handelt es sich hierbei um Kunst?}}{26}{figure.7.1}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Eine schöne Grafik, die im Quellcode erzeugt wird!}}{27}{figure.7.2}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Beispiel für ein listing}}{30}{figure.7.3}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces GUI von \texttt {cranach\_detector()} (Eigenes Bild)}}{26}{figure.4.1}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
