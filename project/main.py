@@ -7,15 +7,15 @@ import numpy as np
 from insightface.app import FaceAnalysis
 from mtcnn import MTCNN
 from pathlib import Path
-from cranach_detector import cranach_detector
+from cranach_detector import *
 
 ### variables
 ########## Selection Menu ##########
 # | haar | caffe | pipe | hog | landmark | cnn | mtcnn | yunet | retina |
-TEST_MODELS = ["cnn", "mtcnn", "retina"]
+TEST_MODELS = ["caffe"]
 ########## Selection Menu END ##########
 
-FOLDER_PATHS = ["project/img/3Portrait"]
+FOLDER_PATHS = ["project/img/1Portrait"]
 CAFFE_CONFIDENCE = 0.14
 CAFFE_COLOR = (255, 50, 50)  # Blau
 CNN_CONFIDENCE = 0.6
@@ -382,6 +382,7 @@ def test_models(image_paths, models):
 
 
 ### ausführung
-# imgs = get_images(FOLDER_PATHS)
-# test_models(imgs, TEST_MODELS)
-print(cranach_detector())
+#imgs = get_images(FOLDER_PATHS)
+#test_models(imgs, TEST_MODELS)
+print(cranach_detector("project/img/3Portrait"))
+#print(position_isIntersecting((367, 718), "Familie_der_Naturmenschen.jfif", 20))

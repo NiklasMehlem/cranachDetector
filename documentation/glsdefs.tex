@@ -3,28 +3,55 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %=== Glossar ==================================================================
-\newglossaryentry{dog}{
-	name={Hund},
-	description={Behaartes, vierbeiniges Säugetier. Bester Freund des
-	Menschen}
+\newglossaryentry{klassifikator}{
+    name=Klassifikator,
+    description={Ein Algorithmus oder Modell, das Eingabedaten bestimmten Klassen zuordnet, um in der Bildverarbeitung beispielsweise Muster, Objekte oder Merkmale auf deren Vorhandensein zu überprüfen}
+}
+\newglossaryentry{detektor}{
+    name=Detektor,
+    description={In der Bildverarbeitung ein System oder Algorithmus, das bzw. der bestimmte Objekte in einem Bild lokalisiert}
+}
+\newglossaryentry{boosting}{
+    name=Boosting,
+    description={Ein Verfahren des überwachenden Lernens, bei dem mehrere schwache Lernalgorithmen sequenziell trainiert und zu einem starken Klassifikator kombiniert werden. Jeder neue Klassifikator konzentriert sich auf die Fehler der vorherigen, um die Gesamtgenauigkeit zu erhöhen}
+}
+\newglossaryentry{bildpyramide}{
+    name=Bildpyramide,
+    description={Mehrstufige Darstellung eines Bildes in verschiedenen Auflösungen. Höhere Ebenen der Pyramide enthalten kleinere, herunterskalierte Versionen des Originalbildes. Wird verwendet, um Objekterkennung effizient auf unterschiedlichen Skalen durchzuführen}
+}
+\newglossaryentry{featurevektor}{
+    name=Feature-Vektor,
+    description={Ein numerischer Vektor, der die Merkmale (engl. \textit{features}) eines Objekts oder eines Bildausschnitts in strukturierter Form repräsentiert. Er dient als Eingabe für maschinelle Lernverfahren und Klassifikatoren}
+}
+\newglossaryentry{boundingbox}{
+    name=Bounding-Box,
+    description={Rechteckiger Bereich in einem Bild, der ein Objekt umschließt, um dessen Lage und Größe zu bestimmen}
+}
+\newglossaryentry{anker}{
+  name=Anker,
+  description={In der Objekterkennung vordefinierte Referenzrechtecke unterschiedlicher Größen und Seitenverhältnisse, die verwendet werden, um mögliche Positionen und Größen von Objekten in einem Bild vorab zu definieren. Detektoren vergleichen diese Anker (engl. \textit{anchors} oder \textit{anchor boxes}) mit tatsächlichen Objekten, um deren Lage und Größe genauer zu bestimmen}
+}
+\newglossaryentry{backbone}{
+    name=Backbone,
+    description={Grundlegendes neuronales Netzwerk-Modul in einem tiefen Lernmodell, das für die Extraktion von Merkmalen aus Eingabedaten zuständig ist. Im Kontext der Bildverarbeitung bezeichnet der Begriff oft ein vortrainiertes Convolutional Neural Network, das als Basis für weitere Aufgaben wie Klassifikation oder Objekterkennung dient}
+}
+\newglossaryentry{confidence}{
+    name=Confidence,
+    description={Alternativ bezeichnet als \textit{Score}. Numerischer Wert, der die Wahrscheinlichkeit angibt, mit der ein Modell eine bestimmte Vorhersage für korrekt hält. Beschreibt in der Gesichtserkennung typischerweise die Sicherheit, mit der ein erkannter Bereich als Gesicht klassifiziert wird} 
 }
 
 %=== Abkürzungen ==============================================================
-\newacronym{svm}{SVM}{\textbf{Support Vector Machine}}
-\newacronym{ssd}{SSD}{\textbf{Single Shot MultiBox Detector}}
-\newacronym{hog}{HOG}{\textbf{Histogram of Oriented Gradients}}
-\newacronym{mmod}{MMOD}{\textbf{Max-Margin Object Detection}}
-\newacronym{mtcnn}{MTCNN}{\textbf{Multi-task Cascaded Convolutional Networks}}
-\newacronym{cnn}{CNN}{\textbf{Convolutional Neural Network}}
-\newacronym{pnet}{P-Net}{\textbf{Proposal Network}}
-\newacronym{rnet}{R-Net}{\textbf{Refine Network}}
-\newacronym{onet}{O-Net}{\textbf{Output Network}}
-\newacronym{nms}{NMS}{\textbf{Non-Maximum Suppression}}
-\newacronym{caffe}{Caffe}{\textbf{Convolutional Architecture for Fast Feature Embedding}}
+\newacronym{svm}{SVM}{Support Vector Machine}
+\newacronym{ssd}{SSD}{Single Shot MultiBox Detector}
+\newacronym{hog}{HOG}{Histogram of Oriented Gradients}
+\newacronym{mmod}{MMOD}{Max-Margin Object Detection}
+\newacronym{mtcnn}{MTCNN}{Multi-task Cascaded Convolutional Networks}
+\newacronym{cnn}{CNN}{Convolutional Neural Network}
+\newacronym{pnet}{P-Net}{Proposal Network}
+\newacronym{rnet}{R-Net}{Refine Network}
+\newacronym{onet}{O-Net}{Output Network}
+\newacronym{nms}{NMS}{Non-Maximum Suppression}
+\newacronym{caffe}{Caffe}{Convolutional Architecture for Fast Feature Embedding}
+\newacronym{cda}{CDA}{Cranach Digital Archive}
 
 %=== Symbole ==================================================================
-\newglossaryentry{sym:force}{
-	name=\ensuremath{\vec{F}},
-	description={Kraft, vektorielle Größe},
-	type=symbols,
-}

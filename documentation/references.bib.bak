@@ -124,6 +124,21 @@
   bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 
+@article{OSheaN15,
+  author       = {Keiron O'Shea and
+                  Ryan Nash},
+  title        = {An Introduction to Convolutional Neural Networks},
+  journal      = {CoRR},
+  volume       = {abs/1511.08458},
+  year         = {2015},
+  url          = {http://arxiv.org/abs/1511.08458},
+  eprinttype    = {arXiv},
+  eprint       = {1511.08458},
+  timestamp    = {Mon, 13 Aug 2018 16:46:52 +0200},
+  biburl       = {https://dblp.org/rec/journals/corr/OSheaN15.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
 @book{howse2019opencv,
   title={OpenCV 4 for Secret Agents: Use OpenCV 4 in secret projects to classify cats, reveal the unseen, and react to rogue drivers, 2nd Edition},
   author={Howse, J.},
@@ -320,5 +335,68 @@ doi = {10.1109/ICPR.2018.8545814}
   note    = {GitHub Issue zu FacialAnalysis.get}
 }
 
+@online{katharinenaltarGenovevaApollonia,
+  author  = {{Cranach Digital Archive}},
+  title   = {Katharinenaltar: Hl. Genoveva und Hl. Apollonia [linker Seitenflügel, Außenseite]},
+  year    = {o.D.},
+  url     = {https://lucascranach.org/de/UK_NGL_6511-1/},
+  urldate = {2025-06-11},
+  note    = {Malerei auf Lindenholz}
+}
+
+@online{katharinenaltarDorotheaAgnesKunigunde,
+  author  = {{Cranach Digital Archive}},
+  title   = {Katharinenaltar: Hl. Dorothea, Hl. Agnes, Hl. Kunigunde [linker Seitenflügel, Innenseite]},
+  year    = {o.D.},
+  url     = {https://lucascranach.org/de/DE_SKD_GG1906BB/},
+  urldate = {2025-06-11},
+  note    = {Malerei auf Lindenholz}
+}
+
+@online{bildnisCuspinian,
+  author  = {{Cranach Digital Archive}},
+  title   = {Bildnis des Johannes Cuspinian},
+  year    = {o.D.},
+  url     = {https://lucascranach.org/de/CH_SORW_1925-1b/},
+  urldate = {2025-06-11},
+  note    = {Malerei auf Fichtenholz}
+}
+
+@online{hochaltarNicolaiDoebeln,
+  author  = {{Cranach Digital Archive}},
+  title   = {Hochaltar der St. Nicolaikirche Döbeln [innerer beweglicher Flügel, links]: Segnender Papst},
+  year    = {o.D.},
+  url     = {https://lucascranach.org/de/DE_ND_ND001b/},
+  urldate = {2025-06-11},
+  note    = {Malerei auf Holz}
+}
+
+@online{cdaJudith,
+  author  = {{Cranach Digital Archive}},
+  title   = {Judith mit dem Haupt des Holofernes},
+  year    = {o.D.},
+  url     = {https://lucascranach.org/de/DE_SRU_GR1-691/},
+  urldate = {2025-06-11},
+  note    = {Malerei auf Holz}
+}
+
+@online{stigmatisationFranziskus,
+  author  = {{Cranach Digital Archive}},
+  title   = {Stigmatisation des Hl. Franziskus},
+  year    = {o.D.},
+  url     = {https://lucascranach.org/de/DE_GNMN_Gm1352/},
+  urldate = {2025-06-11},
+  note    = {Malerei auf Lindenholz (Tilia sp)}
+}
+
+
+@thesis{pagelsdorf2024,
+  author       = {Benjamin Pagelsdorf},
+  title        = {Analyse und Konzeption von Maßnahmen zum Schutz von Bildern im Web am Beispiel der offenen Forschungsdatenbank Cranach Digital Archive mit über 20000 Abbildungen},
+  type         = {Masterarbeit},
+  institution  = {Technische Hochschule Köln},
+  year         = {2024},
+  note         = {Unveröffentlicht}
+}
 
 %%% END OF BIB %%%

@@ -33,8 +33,9 @@
 	content/chapAbstract,
 	content/chapEinleitung,
 	content/chapRecherche,
-	content/chapImplementierung,
 	content/chapTests,
+	content/chapImplementierung,
+	content/chapFazit,
 	content/chapForm,
 	content/chapGestaltung,
 	content/chapLiteratur,
@@ -49,7 +50,7 @@
 \input{content/Cover}
 \cleardoublepage
 \pagenumbering{Roman}
-\include{content/chapAbstract}
+%\include{content/chapAbstract}
 
 \cleardoublepage
 \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
@@ -58,7 +59,7 @@
 \listoffigures
 \printglossary
 \printglossary[type=\acronymtype, title={Abkürzungsverzeichnis}]
-\printglossary[type=symbols, title={Symbolverzeichnis}]
+%\printglossary[type=symbols, title={Symbolverzeichnis}]
 %
 \cleardoublepage
 \KOMAoptions{open=right}
@@ -67,10 +68,11 @@
 \include{content/chapRecherche}
 \include{content/chapTests}
 \include{content/chapImplementierung}
+\include{content/chapFazit}
 
-\include{content/chapForm}
-\include{content/chapGestaltung}
-\include{content/chapLiteratur}
+%\include{content/chapForm}
+%\include{content/chapGestaltung}
+%\include{content/chapLiteratur}
 %
 %\printbibliography[prenote=mynote]
 \printbibliography
@@ -87,10 +89,11 @@
 %\printbibliography[type=misc,title={\_\_\_}]
 %
 \appendix
-\addchap{Anhang}
+%\addchap{Anhang}
 \KOMAoptions{open=any}
 %
-\include{content/chapDeclaration}
+%\include{content/chapDeclaration}
+\includepdf[pages=-]{content/BachelorEigenständigkeitserklärung.pdf}
 %
 %
 \end{document}

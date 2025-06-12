@@ -82,6 +82,228 @@
       \verb http://arxiv.org/abs/1907.05047
       \endverb
     \endentry
+    \entry{bildnisCuspinian}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Fichtenholz}
+      \field{title}{Bildnis des Johannes Cuspinian}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/CH_SORW_1925-1b/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/CH_SORW_1925-1b/
+      \endverb
+    \endentry
+    \entry{hochaltarNicolaiDoebeln}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Holz}
+      \field{title}{Hochaltar der St. Nicolaikirche Döbeln [innerer beweglicher Flügel, links]: Segnender Papst}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_ND_ND001b/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_ND_ND001b/
+      \endverb
+    \endentry
+    \entry{cdaJudith}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Holz}
+      \field{title}{Judith mit dem Haupt des Holofernes}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_SRU_GR1-691/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_SRU_GR1-691/
+      \endverb
+    \endentry
+    \entry{katharinenaltarDorotheaAgnesKunigunde}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Lindenholz}
+      \field{title}{Katharinenaltar: Hl. Dorothea, Hl. Agnes, Hl. Kunigunde [linker Seitenflügel, Innenseite]}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_SKD_GG1906BB/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_SKD_GG1906BB/
+      \endverb
+    \endentry
+    \entry{katharinenaltarGenovevaApollonia}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Lindenholz}
+      \field{title}{Katharinenaltar: Hl. Genoveva und Hl. Apollonia [linker Seitenflügel, Außenseite]}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/UK_NGL_6511-1/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/UK_NGL_6511-1/
+      \endverb
+    \endentry
+    \entry{stigmatisationFranziskus}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Lindenholz (Tilia sp)}
+      \field{title}{Stigmatisation des Hl. Franziskus}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_GNMN_Gm1352/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_GNMN_Gm1352/
+      \endverb
+    \endentry
     \entry{1467360}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=521763e082baf91e4935f956c6c0f8b3}{%
@@ -996,6 +1218,83 @@
       \verb{url}
       \verb https://github.com/deepinsight/insightface/issues/2741
       \endverb
+    \endentry
+    \entry{OSheaN15}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f92af5765968c6de4c1e42d397224c9c}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Keiron},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b5da23fc726b6d32ee9a3247fa6663fc}{%
+           family={Nash},
+           familyi={N\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhashraw}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{bibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhashraw}{1e0b31097f3d41e61dd78e46b147642a}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{An Introduction to Convolutional Neural Networks}
+      \field{volume}{abs/1511.08458}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1511.08458
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1511.08458
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.08458
+      \endverb
+    \endentry
+    \entry{pagelsdorf2024}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc29d89aa3c147f4606d0893d8bed70f}{%
+           family={Pagelsdorf},
+           familyi={P\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Technische Hochschule Köln}%
+      }
+      \strng{namehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{fullhash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{fullhashraw}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{bibnamehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authorbibnamehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authornamehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authorfullhash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authorfullhashraw}{fc29d89aa3c147f4606d0893d8bed70f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unveröffentlicht}
+      \field{title}{Analyse und Konzeption von Maßnahmen zum Schutz von Bildern im Web am Beispiel der offenen Forschungsdatenbank Cranach Digital Archive mit über 20000 Abbildungen}
+      \field{type}{Masterarbeit}
+      \field{year}{2024}
     \endentry
     \entry{abs-2107-02270}{article}{}{}
       \name{author}{1}{}{%
@@ -1344,6 +1643,228 @@
       \verb http://arxiv.org/abs/1907.05047
       \endverb
     \endentry
+    \entry{bildnisCuspinian}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Fichtenholz}
+      \field{title}{Bildnis des Johannes Cuspinian}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/CH_SORW_1925-1b/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/CH_SORW_1925-1b/
+      \endverb
+    \endentry
+    \entry{hochaltarNicolaiDoebeln}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Holz}
+      \field{title}{Hochaltar der St. Nicolaikirche Döbeln [innerer beweglicher Flügel, links]: Segnender Papst}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_ND_ND001b/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_ND_ND001b/
+      \endverb
+    \endentry
+    \entry{cdaJudith}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Holz}
+      \field{title}{Judith mit dem Haupt des Holofernes}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_SRU_GR1-691/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_SRU_GR1-691/
+      \endverb
+    \endentry
+    \entry{katharinenaltarDorotheaAgnesKunigunde}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Lindenholz}
+      \field{title}{Katharinenaltar: Hl. Dorothea, Hl. Agnes, Hl. Kunigunde [linker Seitenflügel, Innenseite]}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_SKD_GG1906BB/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_SKD_GG1906BB/
+      \endverb
+    \endentry
+    \entry{katharinenaltarGenovevaApollonia}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Lindenholz}
+      \field{title}{Katharinenaltar: Hl. Genoveva und Hl. Apollonia [linker Seitenflügel, Außenseite]}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/UK_NGL_6511-1/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/UK_NGL_6511-1/
+      \endverb
+    \endentry
+    \entry{stigmatisationFranziskus}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f16134608ea6358b45ab018efac2e170}{%
+           family={{Cranach Digital Archive}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{fullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \strng{bibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorbibnamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authornamehash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhash}{f16134608ea6358b45ab018efac2e170}
+      \strng{authorfullhashraw}{f16134608ea6358b45ab018efac2e170}
+      \field{extraname}{6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Malerei auf Lindenholz (Tilia sp)}
+      \field{title}{Stigmatisation des Hl. Franziskus}
+      \field{urlday}{11}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{year}{o.D.}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lucascranach.org/de/DE_GNMN_Gm1352/
+      \endverb
+      \verb{url}
+      \verb https://lucascranach.org/de/DE_GNMN_Gm1352/
+      \endverb
+    \endentry
     \entry{1467360}{article}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=521763e082baf91e4935f956c6c0f8b3}{%
@@ -2258,6 +2779,83 @@
       \verb{url}
       \verb https://github.com/deepinsight/insightface/issues/2741
       \endverb
+    \endentry
+    \entry{OSheaN15}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f92af5765968c6de4c1e42d397224c9c}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Keiron},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b5da23fc726b6d32ee9a3247fa6663fc}{%
+           family={Nash},
+           familyi={N\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{fullhashraw}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{bibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorbibnamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authornamehash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhash}{1e0b31097f3d41e61dd78e46b147642a}
+      \strng{authorfullhashraw}{1e0b31097f3d41e61dd78e46b147642a}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{An Introduction to Convolutional Neural Networks}
+      \field{volume}{abs/1511.08458}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1511.08458
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1511.08458
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.08458
+      \endverb
+    \endentry
+    \entry{pagelsdorf2024}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fc29d89aa3c147f4606d0893d8bed70f}{%
+           family={Pagelsdorf},
+           familyi={P\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Technische Hochschule Köln}%
+      }
+      \strng{namehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{fullhash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{fullhashraw}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{bibnamehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authorbibnamehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authornamehash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authorfullhash}{fc29d89aa3c147f4606d0893d8bed70f}
+      \strng{authorfullhashraw}{fc29d89aa3c147f4606d0893d8bed70f}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unveröffentlicht}
+      \field{title}{Analyse und Konzeption von Maßnahmen zum Schutz von Bildern im Web am Beispiel der offenen Forschungsdatenbank Cranach Digital Archive mit über 20000 Abbildungen}
+      \field{type}{Masterarbeit}
+      \field{year}{2024}
     \endentry
     \entry{abs-2107-02270}{article}{}{}
       \name{author}{1}{}{%

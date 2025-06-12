@@ -25,6 +25,7 @@
 %
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage{pdfpages}
 %
 \usepackage[
   backend=biber,
@@ -58,6 +59,7 @@
 \usepackage[x11names]{xcolor}
 %
 \usepackage{hyperref}
+\usepackage{placeins}
 %
 %=== wichtig, dass folgende Pakete NACH hyperref geladen werden ===============
 \usepackage{scrhack}% Um Warnung bzgl. \float@addtolists im listings-Paket (s.u.) zu vermeiden
