@@ -12,7 +12,7 @@ Des Weiteren werden erkannte Gesichtsbereiche als Liste ausgegeben, falls die in
 
 Im Rahmen einer Masterarbeit wurden für das Cranach Digital Archive neue Wasserzeichen erstellt. Infolgedessen wurde der Ansatz entwickelt, diese automatisiert auf den verschiedenen Bildern der Werke zu platzieren. Unter Zuhilfenahme von Gesichtserkennungsmodellen sollten die Gesichter aus ästhetischen Gründen ausgespart werden. Das Problem hierbei ist, dass Gesichtserkennungsmodelle hauptsächlich mit Trainingsdaten bestehend aus Gesichtern realer Menschen entwickelt werden und darauf ausgelegt sind, Gesichter realer Personen zu erkennen. Ziel dieser Arbeit ist das Testen und Vergleichen bestehender Gesichtserkennungsmodelle. Es soll festgestellt werden, ob sich diese für den Einsatz auf historischen Gemälden eignen. Sollten sich mehrere Modelle eigenen wird überprüft, welche für den bestimmten Anwendungskontext priorisiert werden. Hierfür werden die Modelle Haar-Cascade, Caffe, MediaPipe, Dlib HOG, Dlib Landmark, Dlib CNN, MTCNN, Yunet und RetinaFace verglichen. Aus den am besten geeigneten Modellen soll anschließend ein Python-Modul entwickelt werden, das die Gesichtsbereiche eines Bildes ausgibt. Mithilfe dieser Daten soll die Möglichkeit gegeben werden zu überprüfen, ob sich ein Overlay potenziell auf einem Gesicht befindet um so einen Automatisierungsprozess für dessen Platzierung zu ermöglichen.
 
-Hier finden Sie das Abschlussvideo zur Arbeit, in dem das Projekt im Videoformat vorgestellt wird: [Abschlussvideo (WIP)]()
+Hier finden Sie das Abschlussvideo zur Arbeit, in dem das Projekt im Videoformat vorgestellt wird: [Abschlussvideo](https://youtu.be/lD2ZZbAO25I)
 
 ## Installationsanweisungen
 
@@ -112,3 +112,5 @@ position_isIntersecting((100,100, 75, 75), (200, 200, 50, 50))
 niklas.mehlem@smail.th-koeln.de
 oder
 niklas.mehlem@gmail.com
+
+Link zum Repository: https://github.com/NiklasMehlem/cranachDetector

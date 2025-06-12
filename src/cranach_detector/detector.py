@@ -9,6 +9,8 @@
 # - Matplotlib (PSF-License)
 # - Pillow (PIL Software License)
 # - Tkinter (Python Software Foundation License)
+#
+# Link zum Repository: https://github.com/NiklasMehlem/cranachDetector/tree/main
 # =============================================================================
 
 ### imports
